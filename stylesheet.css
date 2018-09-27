@@ -1,0 +1,102 @@
+body {
+	background-image: url("background_1.png");
+	font-family: "Alice", serif;
+	color: lightgrey;
+}
+
+h1 {
+	text-align: center;
+	font-size: 300%;
+	font-variant: small-caps;
+	
+	background-color: black;
+	border-style: double;
+	border-color: lightgrey;
+	
+	max-width: 50%; 
+	padding: 25px;
+	margin: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+	
+h2 {
+	text-align: center;
+	font-size: 200%;
+	font-variant: small-caps;
+}
+
+h3, h4, h5, h6 {
+	text-align: center;
+	font-size: 150%;
+	font-variant: small-caps;
+}
+
+div {
+	background-color: black;
+	border-style: double;
+	border-color: lightgrey;
+	
+	width: 50%; 
+	padding: 25px;
+	margin: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+p {
+	text-align: justify;
+	font-family: "Alice", serif;
+	color: lightgrey;
+}
+
+
+
+a:link { /* Unvisited hyperlinks */
+	color: red;
+}
+
+a:visited {
+	color: darkred;
+}
+
+a:hover {
+	color:white;
+}
+
+a:active { /* Hyperlinks being clicked */
+	color:white;
+}
+
+
+
+ul {
+	list-style-type: square;
+}
+
+ol {
+	list-style-type: lower-roman;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
