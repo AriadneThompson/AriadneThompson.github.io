@@ -1,5 +1,6 @@
 body {
-	background-image: url("background_1.png");
+	background-color: black;
+	background-image: url("background_1_dark.png");
 	font-family: "Alice", serif;
 	color: lightgrey;
 }
@@ -19,12 +20,13 @@ h1 {
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
-
 	
 h2 {
 	text-align: center;
 	font-size: 200%;
 	font-variant: small-caps;
+
+	margin-top:25px;
 }
 
 h3, h4, h5, h6 {
@@ -39,7 +41,7 @@ div {
 	border-color: lightgrey;
 	
 	width: 50%; 
-	padding: 25px;
+	padding: 0px 25px 25px;
 	margin: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
@@ -73,6 +75,17 @@ a:active { /* Hyperlinks being clicked */
 
 ul {
 	list-style-type: square;
+}
+
+li.horizontal {
+	display: inline;
+}
+
+ul.centred {
+	text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 ol {
