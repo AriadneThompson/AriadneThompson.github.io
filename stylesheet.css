@@ -89,7 +89,17 @@ ul.centred {
 }
 
 ol {
-	list-style-type: lower-roman;
+	list-style-type: lower-alpha;
+}
+
+dt {
+    font-style: italic;
+    color:deeppink;
+}
+
+em {
+    font-style: italic;
+    color:deeppink;
 }
 
 
