@@ -1,7 +1,8 @@
 body {
 	background-color: black;
-	background-image: url("background_1_dark.png");
-	font-family: "Alice", serif;
+	background-image: url("Background_Dark_1.png");
+	font-family: "Garamond", serif;
+	font-size: 110%;
 	color: lightgrey;
 }
 
@@ -15,24 +16,24 @@ h1 {
 	border-color: lightgrey;
 	
 	max-width: 50%; 
-	padding: 25px;
-	margin: auto;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	margin: 25px auto;
+	padding: 25px 0px;
 }
 	
 h2 {
 	text-align: center;
 	font-size: 200%;
 	font-variant: small-caps;
-
-	margin-top:25px;
+	
+	margin: 25px;
 }
 
 h3, h4, h5, h6 {
 	text-align: center;
 	font-size: 150%;
 	font-variant: small-caps;
+	
+	margin: 25px;
 }
 
 div {
@@ -41,7 +42,6 @@ div {
 	border-color: lightgrey;
 	
 	width: 50%; 
-	padding: 0px 25px 25px;
 	margin: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
@@ -51,12 +51,14 @@ p {
 	text-align: justify;
 	font-family: "Alice", serif;
 	color: lightgrey;
+	
+	margin: 25px;
 }
 
 
 
 a:link { /* Unvisited hyperlinks */
-	color: red;
+	color: crimson;
 }
 
 a:visited {
@@ -64,17 +66,18 @@ a:visited {
 }
 
 a:hover {
-	color:white;
+	color:floralwhite;
 }
 
 a:active { /* Hyperlinks being clicked */
-	color:white;
+	color:floralwhite;
 }
 
 
 
 ul {
 	list-style-type: square;
+	margin: 25px
 }
 
 li.horizontal {
@@ -89,12 +92,10 @@ li.horizontal + li.horizontal:before{
 ul.centred {
 	text-align: center;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 ol {
-	list-style-type: lower-alpha;
+	list-style-type: lower-roman;
 }
 
 dt {

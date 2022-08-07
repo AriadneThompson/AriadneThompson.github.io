@@ -1,0 +1,12 @@
+<h1>Ariadne's Website</h1>
+	
+<div>
+
+<ul class="centred">
+
+	<li><a href="Writing.html" title="Writing">Writing</a></li>
+	<li><a href="Contact_Me.html" title="Contact Me">Contact Me</a></li>
+
+</ul>
+
+</div>
