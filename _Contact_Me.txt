@@ -1,7 +1,0 @@
-<h1>Contact Ariadne</h1>
-	
-<div>
-
-<p>You can contact me at: my full name, without any spaces or punctuation, @protonmail.com. </p>
-
-</div>
