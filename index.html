@@ -12,23 +12,37 @@
 	<link rel="stylesheet" type="text/css" href="dark.css" title="Dark">
 	<link rel="alternate stylesheet" type="text/css" href="light.css" title="Light">
 
+	<script type="text/javascript" src="switch_css.js"></script>
+
 </head>
 
 
 
-<body>
+<body onload="set_style_from_cookie()">
 
 	<h1>Ariadne's Website</h1>
 		
 	<div>
 	
-	<ul class="centred">
+	<h3><a href="writing.html" title="Writing">Writing</a></h3>
 	
-		<li><a href="writing.html" title="Writing">Writing</a></li>
-		<li><a href="contact_me.html" title="Contact Me">Contact Me</a></li>
+	<h3><a href="https://www.youtube.com/user/EoyaBosan/videos" title="Videos">Videos</a></h3>
+	
+	<h3><a href="contact_me.html" title="Contact Me">Contact Me</a></h3>
 	
 	</ul>
 	
+	</div>
+
+	<div>
+
+	<ul class="centred">
+
+		<li class="horizontal"><a href="javascript:switch_style('Dark')">Dark theme</a></li>
+		<li class="horizontal"><a href="javascript:switch_style('Light')">Light theme</a></li>
+
+	</ul>
+
 	</div>
 
 </body>

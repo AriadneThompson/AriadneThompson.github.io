@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
 	background-color: black;
 	background-image: url("background_dark_1.png");
@@ -77,7 +82,7 @@ a:active { /* Hyperlinks being clicked */
 
 ul {
 	list-style-type: square;
-	margin: 25px
+	margin: 25px;
 }
 
 li.horizontal {

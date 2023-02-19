@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
 	background-color: white;
 	background-image: url("background_light_1.png");
@@ -58,26 +63,26 @@ p {
 
 
 a:link { /* Unvisited hyperlinks */
-	color: cornflowerblue;
+	color: deepskyblue;
 }
 
 a:visited {
-	color: indigo;
+	color: slateblue;
 }
 
 a:hover {
-	color: black;
+	color: indigo;
 }
 
 a:active { /* Hyperlinks being clicked */
-	color: black;
+	color: indigo;
 }
 
 
 
 ul {
 	list-style-type: square;
-	margin: 25px
+	margin: 25px;
 }
 
 li.horizontal {

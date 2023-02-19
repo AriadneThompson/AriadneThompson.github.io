@@ -12,11 +12,13 @@
 	<link rel="stylesheet" type="text/css" href="dark.css" title="Dark">
 	<link rel="alternate stylesheet" type="text/css" href="light.css" title="Light">
 
+	<script type="text/javascript" src="switch_css.js"></script>
+
 </head>
 
 
 
-<body>
+<body onload="set_style_from_cookie()">
 
 	<h1>Wretched Creatures</h1>
 	
@@ -139,6 +141,13 @@
 	<div>
 
 	<h3><a href="writing.html">Return to Writing</a></h3>
+
+	<ul class="centred">
+
+		<li class="horizontal"><a href="javascript:switch_style('Dark')">Dark theme</a></li>
+		<li class="horizontal"><a href="javascript:switch_style('Light')">Light theme</a></li>
+
+	</ul>
 
 	</div>
 

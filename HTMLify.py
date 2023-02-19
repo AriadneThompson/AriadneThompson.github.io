@@ -48,13 +48,14 @@ for page in pages:
     html.write("\t<link rel=\"shortcut icon\" href=\"favicon.svg\">\n")
     html.write("\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dark.css\" title=\"Dark\">\n")
     html.write("\t<link rel=\"alternate stylesheet\" type=\"text/css\" href=\"light.css\" title=\"Light\">\n\n")
+    html.write("\t<script type=\"text/javascript\" src=\"switch_css.js\"></script>\n\n")
     
     if page[MATHJAX]:
         html.write("\t<script src=\"https://polyfill.io/v3/polyfill.min.js?features=es6\"></script>\n")
         html.write("\t<script id=\"MathJax-script\" async src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\"></script>\n\n")
     
     html.write("</head>\n\n\n\n")
-    html.write("<body>\n\n")
+    html.write("<body onload=\"set_style_from_cookie()\">\n\n")
     
     
     
@@ -70,14 +71,21 @@ for page in pages:
     
     
     # Footer
+    html.write("\n\n\t<div>\n\n")
+    
     if page[RETURNTO] is not None:
-        html.write("\n\n\t<div>\n\n")
         html.write("\t<h3><a href=\"" + page[RETURNTO] + ".html\">" + page[RETURNTEXT] + "</a></h3>\n\n")
-        html.write("\t</div>")
+    
+    html.write("\t<ul class=\"centred\">\n\n")
+    html.write("\t\t<li class=\"horizontal\"><a href=\"javascript:switch_style('Dark')\">Dark theme</a></li>\n")
+    html.write("\t\t<li class=\"horizontal\"><a href=\"javascript:switch_style('Light')\">Light theme</a></li>\n\n")
+    html.write("\t</ul>\n\n")
+    
+    html.write("\t</div>\n\n")
     
     
     
-    html.write("\n\n</body>\n\n")
+    html.write("</body>\n\n")
     html.write("</html>")
     
     html.close()

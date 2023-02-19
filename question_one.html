@@ -12,6 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="dark.css" title="Dark">
 	<link rel="alternate stylesheet" type="text/css" href="light.css" title="Light">
 
+	<script type="text/javascript" src="switch_css.js"></script>
+
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -19,7 +21,7 @@
 
 
 
-<body>
+<body onload="set_style_from_cookie()">
 
 	<h1>Question One</h1>
 	
@@ -84,6 +86,13 @@
 	<div>
 
 	<h3><a href="writing.html">Return to Writing</a></h3>
+
+	<ul class="centred">
+
+		<li class="horizontal"><a href="javascript:switch_style('Dark')">Dark theme</a></li>
+		<li class="horizontal"><a href="javascript:switch_style('Light')">Light theme</a></li>
+
+	</ul>
 
 	</div>
 

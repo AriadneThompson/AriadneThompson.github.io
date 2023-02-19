@@ -2,10 +2,11 @@
 	
 <div>
 
-<ul class="centred">
+<h3><a href="writing.html" title="Writing">Writing</a></h3>
 
-	<li><a href="writing.html" title="Writing">Writing</a></li>
-	<li><a href="contact_me.html" title="Contact Me">Contact Me</a></li>
+<h3><a href="https://www.youtube.com/user/EoyaBosan/videos" title="Videos">Videos</a></h3>
+
+<h3><a href="contact_me.html" title="Contact Me">Contact Me</a></h3>
 
 </ul>
 
