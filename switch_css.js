@@ -3,7 +3,7 @@
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 3653 ;		// About ten years should be long enough? 
-var style_domain = "ariadnethompson.github.io" ;
+var style_domain = "ariadne.love" ;
 
 function switch_style ( css_title )
 {
