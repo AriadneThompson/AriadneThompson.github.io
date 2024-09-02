@@ -1,0 +1,25 @@
+<h1>Ariadne's Friends</h1>
+
+<div>
+
+<h3><a href="https://flanchan.moe/">Flanchan.moe</a></h3>
+
+<p>My beautiful talented amazing partner's website. Make sure you check out <a href="https://hatachi8.bandcamp.com/">her music</a> as well!</p>
+
+</div>
+
+<div>
+
+<h3><a href="https://shyolet.com/">Shyolet.com</a></h3>
+
+<p>The blog of a close friend of mine, mostly focused on playing the piano. Don't miss <a href="https://shyolet.com/music/ailesgrises">the most hauntingly beautiful rendition of <i>Ailes Grises</i> that you will ever hear</a>!</p>
+
+</div>
+
+<div>
+
+<h3><a href="https://www.barrucadu.co.uk/">Barrucadu.co.uk</a></h3>
+
+<p>The personal website of another friend of mine. He also runs <a href="https://www.lookwhattheshoggothdraggedin.com/">a very interesting TTRPG blog</a> which is worth checking out. I particularly liked his article <a href="https://www.lookwhattheshoggothdraggedin.com/post/roll-in-the-open.html"><i>I roll in the open</i></a>.</p>
+
+</div>

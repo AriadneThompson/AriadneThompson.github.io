@@ -1,0 +1,31 @@
+<h1>REDACTED</h1>
+
+<div>
+
+<p>To prove that you are over the age of eighteen, please solve the following differential equation.</p>
+
+<script>
+	function checkForm() {
+		let answer = document.getElementById("answer").value;
+
+		if (answer == "password") {
+			
+			//Oh my, cheating? You naughty thing~
+			document.getElementById("response").innerHTML = "Correct!";
+			
+		} else {
+		
+			document.getElementById("response").innerHTML = "That's not the right answer. Check your working, and make sure you formatted it correctly.";
+		}
+	}
+</script>
+
+
+<label for="y=">y=</label>
+<input type="text" id="answer" name="answer"><br><br>
+
+<button onclick="return checkForm()">Submit</button>
+
+<p id="response"></p>
+
+</div>

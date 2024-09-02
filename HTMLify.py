@@ -25,6 +25,13 @@ pages = ({FILENAME: "index", TITLE: "Ariadne's Website", RETURNTO: None, RETURNT
          {FILENAME: "wretched_creatures", TITLE: "Wretched Creatures", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
          {FILENAME: "the_human_nature", TITLE: "The Human Nature", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
          {FILENAME: "fifty_princesses", TITLE: "Fifty Princesses", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         {FILENAME: "variations_on_yoshinoya", TITLE: "Variations on Yoshinoya", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         {FILENAME: "redacted", TITLE: "Redacted", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: True},
+         {FILENAME: "dungeon_24", TITLE: "Dungeon 24", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         {FILENAME: "january", TITLE: "January: Temple of the Yearning Maw", RETURNTO: "dungeon_24", RETURNTEXT: "Return to Dungeon 24", MATHJAX: False},
+         {FILENAME: "friends", TITLE: "Ariadne's Friends", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         {FILENAME: "work", TITLE: "Ariadne's Work", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         {FILENAME: "404", TITLE: "404", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
          )
           
           

@@ -60,7 +60,14 @@ p {
 	margin: 25px;
 }
 
+p.dense {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
 
+p.dense_end {
+	margin-top: 0px;
+}
 
 a:link { /* Unvisited hyperlinks */
 	color: deepskyblue;
@@ -78,11 +85,10 @@ a:active { /* Hyperlinks being clicked */
 	color: indigo;
 }
 
-
-
 ul {
 	list-style-type: square;
 	margin: 25px;
+	padding-left: 40px;
 }
 
 li.horizontal {
@@ -97,10 +103,13 @@ li.horizontal + li.horizontal:before{
 ul.centred {
 	text-align: center;
     list-style-type: none;
+	padding-left: 0px;
 }
 
 ol {
 	list-style-type: lower-roman;
+	margin: 25px;
+	padding-left: 40px;
 }
 
 dt {
@@ -113,7 +122,22 @@ em {
     color:deeppink;
 }
 
+form {
+	margin: 25px;
+}
 
+table {
+	width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+	text-align: center;
+	border: 1px solid;
+}
+
+th, td {
+	border: 1px solid;
+	padding: 10px;
+}
 
 
 

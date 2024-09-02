@@ -1,0 +1,7 @@
+<h1>Error 404: You are lost in Ariadne's Labyrinth...</h1>
+	
+<div>
+
+<p>Whatever you were looking for, this isn't it. If you think there's supposed to be a webpage here please <a href="contact_me.html">let me know</a>.</p>
+
+</div>
