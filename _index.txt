@@ -6,9 +6,13 @@
 
 <h3><a href="friends.html" title="Friends">Friends</a></h3>
 
+<h3><a href="games.html" title="Games">Games</a></h3>
+
 <h3><a href="https://www.youtube.com/user/EoyaBosan/videos" title="Videos">Videos</a></h3>
 
 <h3><a href="work.html" title="Work">Work</a></h3>
+
+<h3><a href="haibane_renmei.html" title="Haibane Renmei">Haibane Renmei</a></h3>
 
 <h3><a href="contact_me.html" title="Contact Me">Contact Me</a></h3>
 

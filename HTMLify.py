@@ -5,6 +5,8 @@ For every page in pages, writes an HTML file with the header at the top and
 footer at the bottom. 
 """
 
+import io
+
 
 
 FILENAME = 0
@@ -31,6 +33,8 @@ pages = ({FILENAME: "index", TITLE: "Ariadne's Website", RETURNTO: None, RETURNT
          {FILENAME: "friends", TITLE: "Ariadne's Friends", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
          {FILENAME: "work", TITLE: "Ariadne's Work", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
          {FILENAME: "404", TITLE: "404", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         {FILENAME: "haibane_renmei", TITLE: "Haibane Renmei", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         {FILENAME: "games", TITLE: "Games", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
          )
           
           
@@ -40,7 +44,7 @@ pages = ({FILENAME: "index", TITLE: "Ariadne's Website", RETURNTO: None, RETURNT
 
 
 for page in pages:
-    html = open(page[FILENAME] + ".html", "w")
+    html = open(page[FILENAME] + ".html", "w", encoding="utf-8")
     
     
     
@@ -65,12 +69,10 @@ for page in pages:
     
     
     
-    txt = open("_" + page[FILENAME] + ".txt", "r")
-    
-    
+    with io.open("_" + page[FILENAME] + ".txt", "r", encoding="utf-8") as txt:
         
-    for line in txt: 
-        html.write("\t" + line)
+        for line in txt: 
+            html.write("\t" + line)
             
     txt.close()
         
