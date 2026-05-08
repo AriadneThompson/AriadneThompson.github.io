@@ -1,0 +1,31 @@
+<h1>Ariadne's Tabletop Role Playing Games</h1>
+
+
+
+<div>
+
+<h2><a href="random_equipment.html">Random Starting Equipment</a></h2>
+
+<p>A set of tables for randomly generating player characters' starting equipment.</p>
+
+</div>
+
+
+
+<div>
+
+<h2><a href="house_rules.html">House Rules</a></h2>
+
+<p>The house rules I use for my home game.</p>
+
+</div>
+
+
+
+<!--<div>
+
+<h2><a href="betwixt_her_teeth.html">Betwixt Her Teeth</a></h2>
+
+<p>A dungeon centred around a temple to The Yearning Maw, forbidden goddess of cannibalism and decadence. Intended for characters around level 2-4.</p>
+
+</div>-->

@@ -1,0 +1,3559 @@
+<script>
+
+function fill_id(id, filler) {
+	// Puts the given filler string in the HTML tag with the given id.
+	document.getElementById(id).innerHTML = filler;
+}
+
+function roll_on_table(id, table) {
+	// Chooses a random element from a table (list of strings) and returns it.
+	return table[Math.floor(Math.random() * table.length)];
+}
+
+function fill_from_table(id, table) {
+	// Chooses a random element from a table (list of strings) and puts it in the HTML tag with the given id.
+	document.getElementById(id).innerHTML = table[Math.floor(Math.random() * table.length)];
+}
+
+
+function d(n) {
+	// The result of rolling an n sided die.
+	return Math.floor(Math.random() * n) + 1;
+}
+
+</script>
+
+
+
+<h1>Harrowing of the Cocoon Goddess</h1>
+
+
+<div>
+
+<h3><a href="#mourning_halls">Mourning Halls</a></h3>
+
+<h3><a href="#spells">Spells</a></h3>
+
+<h3><a href="#treasure">Treasure</a></h3>
+
+<h3><a href="#bestiary">Bestiary</a></h3>
+
+<h3><a href="#diseases">Diseases and Parasites</a></h3>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="mourning_halls">Mourning Halls</a></h2>
+
+<ul class="centred">
+
+	<li class="horizontal"><a href="#weeping_violinist">Hall of the Weeping Violinist</a></li>
+	<li class="horizontal"><a href="#chamber_of_smokey_apparitions">Chamber of Smokey Apparitions</a></li>
+	<li class="horizontal"><a href="#crypts_of_clemency">Crypts of Clemency</a></li>
+	<li class="horizontal"><a href="#east_atrium">East Atrium</a></li>
+	<li class="horizontal"><a href="#three_crypts">Three Crypts</a></li>
+	<li class="horizontal"><a href="#vernons_repose">Vernon's Repose</a></li>
+	<li class="horizontal"><a href="#x_of_swords">X of Swords</a></li>
+	<li class="horizontal"><a href="#looted_tomb">Looted Tomb</a></li>
+	<li class="horizontal"><a href="#hall_of_signs">Hall of Signs</a></li>
+	<li class="horizontal"><a href="#hungry_graveyard">Hungry Graveyard</a></li>
+
+</ul>
+
+
+
+<h3><a id="weeping_violinist">Hall of the Weeping Violinist</a></h3>
+
+<p><b>Statue:</b> a statue of a weeping woman with <a href="#widows_bellflower">widow's bellflowers</a> woven into her hair stands atop a 10ft wide 1ft high dais to the south. This is a teleportation statue [DETAILS GO HERE].</p>
+
+<p><b>Portcullis:</b> a portcullis stands at the east entrance. It is operated by a lever on the northeast wall. Normally the portcullis is left down to prevent wandering creatures entering the <a href="second_society">Second Society</a>.</p>
+
+<p><b>Exits:</b> the southeast door has an inverted U drawn on it in chalk. The northwest corridor has an inverted U on the ground at the entrance, and smells strongly of smoke.</p>
+
+
+
+<h3><a id="chamber_of_smokey_apparitions">Chamber of Smokey Apparitions</a></h3>
+
+<p><b>Chimney:</b> smoke pours from a 3ft square hole in the centre of the chamber floor, leading directly to the [CREMATORIUM] below.</p>
+
+<p><b>Smoke:</b> the entire room is filled with thick choking smoke, causing 1hp damage per round to those inhaling it. Covering one's mouth and nose reduces this to 1hp every other round, while those with lung damage take double damage. Wailing faces can occasionally be glimpsed in the shifting whorls of smoke.</p>
+
+<p><b>Summoning apparitions:</b> burning a corpse in the [CREMATORIUM] summons an apparition of the creature in the smoke here lasting for one turn. The apparition cannot move or attack, but can be communicated with as though it were alive.</p>
+
+
+
+<h3><a id="crypts_of_clemency">Crypts of Clemency</a></h3>
+
+<p><b>Coffins:</b> simple stone coffins line both the northwest and southeast walls. All of them lie open and already looted, containing nothing but shriveled corpses wrapped in funerary shrouds. The lids bear names, dates (all more than 800 years ago), and causes of death, usually disease or injury; these were patients of the Well of Clemency who died in the course of treatment.</p>
+
+<p><b>Ventilation shaft:</b> to the west, at floor height, a horizontal stone shaft 1.5ft tall, 2ft wide shaft extends into the rock. It lies covered by one of the coffins and not immediately obvious from the entrance.</p>
+
+
+
+<h3><a id="east_atrium">East Atrium</a></h3>
+
+<p><b>Balconies:</b> 20ft up, there are balconies with 2ft balustrades overlooking the lower floor on the north, east, and west sides.</p>
+
+<p><b>Triptych mural:</b> three old faded murals cover the southwest, west, and northwest walls at the ground floor.</p>
+
+<p>[TODO: murals]</p>
+
+
+
+<h3><a id="three_crypts">Three Crypts</a></h3>
+
+<p><b>Northeast door:</b> marked with a red hand. No doorhandle or keyhole. A plaque above the door reads "Until his return" in Ecclesiastic, with a translation in Common Imperial written in chalk underneath.</p>
+
+<p><b>East door:</b> locked. A stylised swan with its neck tied in a knot is emblazoned on the door. A symbol of a key is drawn beside it in chalk.</p>
+
+<p><b>Southeast door:</b> slightly ajar, has clearly been forced open. An inverted U is drawn on it in chalk.</p>
+
+
+
+<h3><a id="vernons_repose">Vernon's Repose</a></h3>
+
+<p><b>Urn:</b> a 5ft tall ornate terracotta urn decorated with geometric patterns in lapis lazuli, worth around 2500gp, stands on a pedestal to the northeast. It contains the ashes of Patriarch Vernon, former high priest of the Hand Incarnadine. Shortly before death his consciousness was transferred into the urn by means of a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Magic_Jar"><i>Magic Jar</i></a> spell, in case he is needed again. He remains there in a state of dormancy until the urn is touched, at which point he will attempt to possess whoever is nearest.</p>
+
+<p><b>Patriarch Vernon:</b> he is a 9th level cleric with the following spells prepared: <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Light_Wounds_(Cause_Light_Wounds)"><i>Cure Light Wounds</i></a> × 2, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Fear_(Cause_Fear)"><i>Remove Fear</i></a>; <a href="#steel_suture"><i>Steel Suture</i></a> × 2, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(C)"><i>Hold Person</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Disease_(Cause_Disease)"><i>Cure Disease</i></a> × 2, <a href="#umbilical_cord"><i>Umbilical Cord</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Serious_Wounds_(Cause_Serious_Wounds)"><i>Cure Serious Wounds</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Neutralize_Poison"><i>Neutralise Poison</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Raise_Dead_(Finger_of_Death)"><i>Raise Dead</i></a> × 2. He is disgusted by possessing a disabled person and demands an abled body to possess instead. He is also horrified to learn The Hand Incarnadine is dead—note this means he is unable to prepare more spells once his current ones are cast. Nonetheless he will abide by his vows and heal the sick to the best of his ability.</p>
+
+<p><b>Door:</b> opens normally from this side (with doorhandle).</p>
+
+
+
+<h3><a id="x_of_swords">X of Swords</a></h3>
+
+<p><b>Coffin:</b> an open coffin in the centre of the room contains a contorted corpse impaled by ten swords. Nine are ordinary nonmagical silver swords (100gp each) while the tenth is the solid silver blade of the [SWORD].</p>
+
+<p><b>Corpse:</b> the corpse is actually a <a href="#greater_husk"><b>Greater Husk</b></a>, its regeneration impeded by the swords impaling it. If any of the swords are removed it reanimates after a number of rounds equal to the remaining swords. [BACKSTORY GOES HERE]</p>
+
+
+
+<h3><a id="looted_tomb">Looted Tomb</a></h3>
+
+<p><b>Sarcophagus:</b> a stone sarcophagus lies in the centre of the room. Slumped over one side is the remains of a mummy, hacked to pieces and with its face badly burned, having evidently animated and subsequently been slain. Nothing of value remains.</p>
+
+
+
+<h3><a id="hall_of_signs">Hall of Signs</a></h3>
+
+<p><b>Northwest door:</b> spiked shut from this side and marked with a large X in chalk.</p>
+
+<p><b>Northeast door:</b> a stylised hand is drawn on the wall nearby with an arrow pointing to the door.</p>
+
+<p><b>South entrance:</b> a pile of blocks suggesting a stylised cityscape is drawn on the wall nearby with an arrow pointing up the stairs.</p>
+
+
+
+<h3><a id="hungry_graveyard">Hungry Graveyard</a></h3>
+
+<p><b>Graveyard:</b> the ground here is soft clotting grave dirt, dotted with crooked tombstones with faded inscriptions.</p>
+
+<p><b>Sinking:</b> the grave dirt sucks anything heavy down like quicksand, where it sinks through the ground into the <a href="#council_of_vermin">Council of Vermin</a>. Victims grasping at the tombstones will only pull the tombstone through with them. This unenviable fate can be avoided by use of levitation, sprinting through the room, jumping from tombstone to tombstone, wearing snowshoes, etc.</p>
+
+
+
+<h3><a id="an_inauspicious_sight">An Inauspicious Sight</a></h3>
+
+<p><b>Bloodstains:</b> splatters of dried blood coat the centre of the room, with a large smear suggesting a body dragged to the northwest.</p>
+
+<p><b>Ghouls:</b> three ghouls arrive from the <a href="#demesne_of_the_ghoul_princess">Demesne of the Ghoul Princess</a> in 1d3 rounds to greet guests. They will attempt to circle around to prevent retreat and corral guests towards the princess.</p>
+
+<p><b>Burial niches</b> line all the walls from floor to ceiling. Searching them thoroughly takes six turns and yields 12gp in coins. One niche contains a partially animated skeletal hand that grasps at anything that moves (startling, but harmless).</p>
+
+
+
+<h3><a id="demesne_of_the_ghoul_princess">Demesne of the Ghoul Princess</a></h3>
+
+<p><b>Ghoul princess:</b> a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Ghoul"><b>Ghoul</b></a> wearing a rose gold tiara worth 1200gp, tattered remains of silk robes, and wielding a femur as a sceptre. The only thing she loves more than entertaining guests is feasting upon human flesh. She speaks High Imperial only.</p>
+
+<p><b>Ghoul courtiers:</b> three <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Ghoul"><b>Ghouls</b></a> are here prostrating themselves before the princess, while a fourth is on all fours being used as her throne. They unquestioningly obey anyone wearing the princess's tiara. They understand High Imperial but do not speak.</p>
+
+<p><b>Gore:</b> shreds of dessicated flesh and dried blood coat the floor where previous guests have been cannibalised. Piles of shattered bones lie swept into the corners.</p>
+
+<p><b>Treasure:</b> around the princess's feet are piled 780gp in coins, 300gp in gems, a set of studded leather armour +2, a glaive, two throwing axes +1, a <a href="#crest_of_the_falcon">Crest of the Falcon</a>, and a scroll case containing scrolls of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dimension_Door"><i>Dimension Door</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Growth_of_Plants"><i>Growth of Plants</i></a>, and <a href="#glyph"><i>Glyph (Petrification)</i></a>.</p>
+
+<p><b>Burial niches</b> line all the walls from floor to ceiling. Searching them thoroughly takes six turns and yields 6gp in coins and two swords rusted beyond use. One niche contains a crude shrine to the Yearning Maw set up by the princess.</p>
+
+
+
+<h3><a id="banquet_of_doom">Banquet of Doom</a></h3>
+
+<p><b>Banquet table:</b> a simple wooden table holds a sumptuous banquet, including bowls of fruit, stuffed quail, a leg of lamb, a whole roasted suckling pig, etc. In reality this is simply an illusion cast over a pile of rotting maggot-ridden meat. Food taken from the table retains its illusion for six turns. Missing food is magically replaced with more on the table when unobserved.</p>
+
+<p><b>Eating from the banquet:</b> it is delicious and causes no immediate harm. After six turns the eater must save vs spells. On a success they get away with just being incapacitated by gastrointestinal illness for 2d12 days. On a failure, their skin turns pallid, their eyes go dim, and their phalanges burst through their fingertips as raking claws, as they are transformed into a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Ghoul"><b>Ghoul</b></a>!</p>
+
+<p><b>Ghouls:</b> the ghouls from <a href="#demesne_of_the_ghoul_princess">Demesne of the Ghoul Princess</a> are aware of the secret door and will come in 1d3 rounds if they hear significant noise. They do not eat from the banquet; due to its enchanted nature it provides no sustenance to them.</p>
+
+<p><b>Burial niches</b> line all the walls from floor to ceiling. Searching them thoroughly takes six turns and yields 10gp in coins and a silver ring worth 25gp.</p>
+
+
+
+<h3><a id="five_boxed_wizards">Five Boxed Wizards</a></h3>
+
+<p><b>Coffins:</b> five simple stone coffins line the southwest wall. Each is engraved with a name and contains a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Skeleton"><b>Skeleton</b></a> with one first level spell prepared, wielding a gemstone-tipped staff worth 50gp. If any coffin is opened then all skeletons simultaneously animate and emerge from their coffins to attack. From northwest to southeast, the coffins contain:</p>
+
+<ul>
+
+	<li><b>Amity:</b> casts <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Charm_Person"><i>Charm Person</i></a>, wields a jade-tipped staff.</li>
+	<li><b>Clarity:</b> casts <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)"><i>Light</i></a>, wields a citrine-tipped staff.</li>
+	<li><b>Dignity:</b> casts <i>Spook</i>, wields a moonstone-tipped staff. This coffin additionally contains a <a href="#wand_of_portalcraft">Wand of Portalcraft</a>, concealed by cobwebs and dust.</li>
+	<li><b>Verity:</b> casts <i>Chromatic Orb (Light)</i></a>, wields a clear quartz-tipped staff.</li>
+	<li><b>Serenity:</b> casts <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Shield"><i>Shield</i></a>, wields a lapis lazuli-tipped staff.</li>
+	
+</ul>
+
+<p><b>Mural:</b> a large mural on the southwest wall depicts six wizards joining hands in a circle and dancing in clearing ringed by standing stones [LINK]. The artistry is enthusiastic but not especially good.</p>
+
+<p><b>Burying Sincerity:</b> if Sincerity's body is brought from [ROOM] and entombed similarly to her former companions, the party is granted 1000xp and the ability to see through all her illusions, plus a 1-in-6 chance to see through any illusion in general.</p>
+
+
+
+<h3><a id="a_convenient_lever">A Convenient Lever</a></h3>
+
+<p><b>Lever:</b> by default both lever and portcullis are down. Approaching from the west, one could conveniently reach one's arm through to raise the lever, however this causes the portcullis to slam up into the ceiling, dragging the unfortunate arm with it and causing 1d12 damage (no save). The shoulder joint is shattered and the arm cannot be used without first casting <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Serious_Wounds_(Cause_Serious_Wounds)"><i>Cure Serious Wounds</i></a>.</p>
+
+
+
+</div>
+
+
+
+<div>
+
+<h2><a id="spells">Spells</a></h2>
+
+
+
+<ul class="centred">
+
+	<li class="horizontal"><a href="#alter_memory">Alter Memory</a></li>
+	<li class="horizontal"><a href="#blunt">Blunt</a></li>
+	<li class="horizontal"><a href="#cannibalistic_frenzy">Cannibalistic Frenzy</a></li>
+	<li class="horizontal"><a href="#chromatic_beam">Chromatic Beam</a></li>
+	<li class="horizontal"><a href="#conjure_persimmons">Conjure Persimmons</a></li>
+	<li class="horizontal"><a href="#continual_silence">Continual Silence</a></li>
+	<li class="horizontal"><a href="#damnatio_memoriae">Damnatio Memoriae</a></li>
+	<li class="horizontal"><a href="#dance_worms">Dance, Worms!</a></li>
+	<li class="horizontal"><a href="#detect_good">Detect Good</a></li>
+	<li class="horizontal"><a href="#dominate_undead">Dominate Undead</a></li>
+	<li class="horizontal"><a href="#dryad_step">Dryad Step</a></li>
+	<li class="horizontal"><a href="#exile">Exile</a></li>
+	<li class="horizontal"><a href="#fallow">Fallow</a></li>
+	<li class="horizontal"><a href="#go_away">Go Away</a></li>
+	<li class="horizontal"><a href="#glyph">Glyph</a></li>
+	<li class="horizontal"><a href="#holy_vow">Holy Vow</a></li>
+	<li class="horizontal"><a href="#human_charm">Human Charm</a></li>
+	<li class="horizontal"><a href="#illusory_wall">Illusory Wall</a></li>
+	<li class="horizontal"><a href="#knotted_fates">Knotted Fates</a></li>
+	<li class="horizontal"><a href="#little_quentin">Little Quentin</a></li>
+	<li class="horizontal"><a href="#mass_water_breathing">Mass Water Breathing</a></li>
+	<li class="horizontal"><a href="#mazarines_brain_explosion">Mazarine's Brain Explosion</a></li>
+	<li class="horizontal"><a href="#mute">Mute</a></li>
+	<li class="horizontal"><a href="#purifying_flame">Purifying Flame</a></li>
+	<li class="horizontal"><a href="#scapegoat">Scapegoat</a></li>
+	<li class="horizontal"><a href="#senseless">Senseless</a></li>
+	<li class="horizontal"><a href="#steel_suture">Steel Suture</a></li>
+	<li class="horizontal"><a href="#stones_to_children">Stones to Children</a></li>
+	<li class="horizontal"><a href="#summon_demon">Summon Demon</a></li>
+	<li class="horizontal"><a href="#summon_greater_extraplanar_being">Summon Greater Extraplanar Being</a></li>
+	<li class="horizontal"><a href="#summon_lesser_extraplanar_being">Summon Lesser Extraplanar Being</a></li>
+	<li class="horizontal"><a href="#superior_continual_light">Superior Continual Light/Superior Continual Darkness</a></li>
+	<li class="horizontal"><a href="#swap_minds">Swap Minds</a></li>
+	<li class="horizontal"><a href="#tear_reality">Tear Reality</a></li>
+	<li class="horizontal"><a href="#transmute_water">Transmute Water</a></li>
+	<li class="horizontal"><a href="#umbilical_cord">Umbilical Cord</a></li>
+	<li class="horizontal"><a href="#wall_of_slime">Wall of Slime</a></li>
+	<li class="horizontal"><a href="#water_of_life">Water of Life</a></li>
+
+</ul>
+
+
+
+<h3><a id="alter_memory">Alter Memory (Illusionist 1, Magic-User 2)</a></h3>
+
+<p><b>Duration:</b> Permanent</p>
+
+<p><b>Range:</b> Caster</p>
+
+<p>By means of this spell, the caster can alter their own memory to sincerely convince themselves of anything. If used to remove a phobia or delusion, the caster must save vs spells, with failure indicating that the belief is too deeply ingrained to be affected by this spell.</p>
+
+
+
+<h3><a id="blunt">Blunt (Magic-User 1)</a></h3>
+
+<p><b>Duration:</b> Permanent</p>
+
+<p><b>Range:</b> 90ft</p>
+
+<p>A sharp object in range is blunted, causing its damage to be halved. If the object is in the possession of a creature (e.g. a wielded sword or a monster's teeth) the creature may save vs spells to resist. On a success, the duration is reduced to 1d6 rounds.</p>
+
+
+
+<h3><a id="cannibalistic_frenzy">Cannibalistic Frenzy (Cleric 1)</a></h3>
+
+<p><b>Duration:</b> 1 round per level</p>
+
+<p><b>Range:</b> 90ft</p>
+
+<p>A single creature gains +1 to hit, +3 damage, and 5 temporary hit points. They must attempt to bite and eat the nearest creature. Unwilling targets may save vs spells to resist.</p>
+
+
+
+<h3><a id="chromatic_beam">Chromatic Beam (Illusionist 1)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> 60ft</p>
+
+<p>This spell is identical to <i>Chromatic Orb</i>, except that it takes the visual form of a coloured laser beam instead of an orb.</p>
+
+
+
+<h3><a id="conjure_persimmons">Conjure Persimmons (Druid 1)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>If this spell is cast targetting open ground, a sapling sprouts bearing 1d6 delicious ripe persimmons. If targetting a tree, the tree bears 5d6 delicious ripe persimmons, irrespective of species. Otherwise the spell fails. Four persimmons are equivalent to one ration of food.</p>
+
+
+
+<h3><a id="continual_silence">Continual Silence (Cleric 3)</a></h3>
+
+<p><b>Duration:</b> Permanent</p>
+
+<p><b>Range:</b> 180ft</p>
+
+<p>A 30ft radius area is rendered utterly silent. Conversation and spellcasting are impossible in the area, but noise from outside can be heard. Unlike <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Silence_15%E2%80%99_Radius"><i>Silence 15ft Radius</i></a> it may not be cast on a creature. The reversed version of this spell cancels an area of <i>Continual Silence</i>.</p>
+
+
+
+<h3><a id="damnatio_memoriae">Damnatio Memoriae (Cleric 5, Magic-User 6)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> Caster</p>
+
+<p>This spell permanently erases one creature, object, or (at referee's discretion) concept from existence. The subject vanishes, text or images of the subject become blank, memories of the subject are erased, etc. The effect is not retroactive, that is, past events involving the subject still happened, but memories or records of them will have conspicuous gaps where the subject is involved. Once cast, the spell itself is similarly erased and can never again be researched or cast by anyone.</p>
+
+
+
+<h3><a id="dance_worms">Dance, Worms! (Illusionist 3, Magic-User 3)</a></h3>
+
+<p><b>Duration:</b> 1 round per level</p>
+
+<p><b>Range:</b> 60ft</p>
+
+<p>Up to 2HD of creatures per level of caster must save vs spells or be compelled to dance for the duration. Dancing creatures suffer a -2 penalty to AC and saves, and have a 2-in-6 chance for any spellcasting or attack to fail.</p>
+
+
+
+<h3><a id="detect_good">Detect Good (Magic-User 2)</a></h3>
+
+<p><b>Duration:</b> 2 turns</p>
+
+<p><b>Range:</b> 60ft</p>
+
+<p>This spell is identical to <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Evil_(MU)"><i>Detect Evil</i></a> but detects good instead.</p>
+
+
+
+<h3><a id="dominate_undead">Dominate Undead (Cleric 4, Magic-User 4)</a></h3>
+
+<p><b>Duration:</b> 1 turn</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>A number of HD of undead equal to the caster's level come under the caster's complete control.</p>
+
+
+
+<h3><a id="dryad_step">Dryad Step (Druid 3)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> Touch</p>
+
+<p>The caster may step into a tree and reappear at any other tree they have touched before. They may bring one additional creature with them for every level above 5th.</p>
+
+
+
+<h3><a id="exile">Exile (Cleric 2)</a></h3>
+
+<p><b>Duration:</b> 1 week per level</p>
+
+<p><b>Range:</b> 10ft per level</p>
+
+<p>This spell affects an area with a radius up to 10ft per level. A single creature in range must save vs spells or be compelled to leave the area and be unable to willingly return for the duration. Mindless or undead creatures are unaffected.</p>
+
+
+
+<h3><a id="fallow">Fallow (Cleric 1, Druid 1)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>If the target creature is bearing a child, the pregnancy is terminated. Unwilling creatures may save vs spells to resist. A caster of fifth level or above may apply an additional effect, permanently sterilising the target creature.</p>
+
+
+
+<h3><a id="go_away">Go Away (Magic-User 5)</a></h3>
+
+<p><b>Duration:</b> Permanent</p>
+
+<p><b>Range:</b> 60ft</p>
+
+<p>Casting this spell requires a gemstone or crystal worth at least 10,000gp. A target creature is banished to a featureless demiplane of roiling mist and strange disembodied light. After one hour the target may save vs spells, and on a success they return to the nearest unoccupied space to where they previously were. While in the demiplane creatures' bodily processes are suspended and they can survive indefinitely. If the spell is cast on multiple creatures using the same crystal, they are all sent to the same demiplane. If the crystal is destroyed, all creatures return to this plane of existence.</p>
+
+
+
+<h3><a id="glyph">Glyph (Cleric 4, Magic-User 3)</a></h3>
+
+<p><b>Duration:</b> Permanent until triggered</p>
+
+<p><b>Range:</b> Touch</p>
+
+<p>Using a ritual taking one hour and powdered gems worth 500gp, an object or section of wall or floor is marked with an invisible glyph. If the glyph is touched by a creature, they must save vs spells or suffer some effect, according to the specific glyph. Possible glyphs include:</p>
+
+<ul>
+
+	<li>Blinding (permanent)</li>
+	<li>Paralysis (permanent)</li>
+	<li>Banishment (extradimensional beings save or be banished to their home plane, no effect on other creatures)</li>
+	<li>Smiting (electrocuted for 8d6 damage, save for half)</li>
+	<li>Death (instant death, no effect on undead)</li>
+	<li>Petrification</li>
+
+</ul>
+
+
+
+<h3><a id="holy_vow">Holy Vow (Cleric 2)</a></h3>
+
+<p><b>Duration:</b> Until vow is fulfilled or failed</p>
+
+<p><b>Range:</b> Caster</p>
+
+<p>The caster vows to their deity to accomplish a quest in their name, for example to slay an enemy, rescue a captive, or avenge a fallen companion. They gain +1 to all rolls directly furthering the goal. The caster may only commit themself to one holy vow at a time. If the caster gives up or becomes unable to fulfil the vow, they lose all spellcasting powers until this is atoned for.</p>
+
+
+
+<h3><a id="human_charm">Human Charm (Cleric 2, Druid 2)</a></h3>
+
+<p><b>Duration:</b> 1d4+1 rounds or turns</p>
+
+<p><b>Range:</b> 60ft</p>
+
+<p>One or more humans are rendered non-hostile, standing straight and swaying to and fro but not attacking.</p>
+
+<ul>
+
+	<li><b>HD affected:</b> The spell affects humans whose total Hit Dice do not exceed the caster’s level. For example, a 7th level caster can affect 7 HD of humans, which can equal seven 1 HD humans, or two 3 HD huamns and one 1 HD human, or any other combination.</li>
+	<li><b>Duration:</b> When cast on humans that are already attacking, the spell lasts for 1d4+1 rounds. Otherwise, it lasts for 1d4+1 turns.</li>
+
+</ul>
+
+
+
+<h3><a id="illusory_wall">Illusory Wall (Illusionist 2, Magic-User 4)</a></h3>
+
+<p><b>Duration:</b> Permanent</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>This spell conjures a featureless illusory wall across a doorway or other opening, no more than 10ft in any dimension. The wall superficially matches the surrounding architecture and stonework.</p>
+
+
+
+<h3><a id="knotted_fates">Knotted Fates (Druid 3, Magic-User 4)</a></h3>
+
+<p><b>Duration:</b> Permanent</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>This spell binds the fates of the caster and subject, such that if one dies then the other dies simultaneously. An unwilling subject may save vs spells to negate the effect. An affected subject intuitively understands the effects of the spell even if they do not share a language with the caster.</p>
+
+
+
+<h3><a id="little_quentin">Little Quentin (Illusionist 1, Magic-User 1)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> Caster</p>
+
+<p>This bizarre creation of an eccentric psychomancer is a sentient spell. While prepared but not yet cast, Little Quentin manifests as a voice in the back of the user's head. He is shy but friendly and desperately wishes to be liked. Little Quentin may cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Magic_(MU)"><i>Detect Magic</i></a> three times a day and can identify the general properties of any magic item held by the user for at least a turn. Unfortunately, he is terrified of danger or death. In the case of combat or other mortal peril, the user must save vs spells or be compelled to flee for one turn.</p>
+
+<p>Little Quentin may only be prepared by one caster at a time. If cast, the spell does nothing but create a dissonant screeching noise that deafens all within 30ft for 1d4 rounds, and may attract wandering monsters.</p>
+
+
+
+<h3><a id="mass_water_breathing">Mass Water Breathing (Druid 4, Magic-User 4)</a></h3>
+
+<p><b>Duration:</b> 1 day</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>Up to 25 creatures in range gain the ability to breathe underwater for the duration.</p>
+
+
+
+<h3><a id="mazarines_brain_explosion">Mazarine's Brain Explosion (Magic-User 2)</a></h3>
+
+<p><b>Duration:</b> 3 rounds</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>The caster builds pressure inside the subject's skull. For the duration they suffer -1 to all rolls due to pain, and at the end of the third round, their brain explodes killing them instantly. If the caster's concentration is broken or the subject exits the range then the spell ends prematurely. Undead and creatures without brains are unaffected.</p>
+
+
+
+<h3><a id="mute">Mute (Cleric 1, Magic-User 1)</a></h3>
+
+<p><b>Duration:</b> 1 turn</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>A single creature is unable to create any sound for the duration. An unwilling subject may save vs spells to resist.</p>
+
+
+
+<h3><a id="purifying_flame">Purifying Flame (Cleric 4, Druid 5)</a></h3>
+
+<p><b>Duration:</b> Concentration</p>
+
+<p><b>Range:</b> Touch</p>
+
+<p>A willing creature is engulfed in white spectral flame. Every round, they take 1d8 damage and recover one point each of INT, WIS, and CHA damage. If the damage is in any way blocked or reduced (e.g. by <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Resist_Fire"><i>Resist Fire</i></a>) the spell fails.</p>
+
+
+
+<h3><a id="scapegoat">Scapegoat (Illusionist 3, Druid 3)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> Touch</p>
+
+<p>Using rare magical herbs worth at least 500gp, the caster crafts a straw doll in the likeness of the subject. If the subject is under the effects of a curse, the curse is "tricked" into transferring to the doll. Alternatively, the doll can be worn around the neck to "catch" curses cast on the subject. Once cursed, the doll must immediately (within one round) be destroyed using magical fire or else the curse will transfer back to the subject in a more severe form.</p>
+
+
+
+<h3><a id="senseless">Senseless (Illusionist 4, Magic-User 5)</a></h3>
+
+<p><b>Duration:</b> 1 turn</p>
+
+<p><b>Range:</b> Caster</p>
+
+<p>All creatures in a 60ft radius of the caster lose use of all their senses for the duration. They are blinded, deafened, and cannot sense touch, position, or pain. For those who pass a save vs spells, the duration is reduced to 1d6 rounds. Affected creatures will usually fall over and writhe in confusion for the duration, but those aware of and expecting the effect may be able to take slow, careful, pre-planned actions.</p>
+
+
+
+<h3><a id="steel_suture">Steel Suture (Cleric 2)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>This spell has three uses.</p>
+
+<ul>
+
+	<li><b>Closing wounds:</b> The spell restores 1d6+1 HP to a creature, provided they lost that HP within the last turn from a sharp flesh wound.</li>
+	<li><b>Closing apertures:</b> The spell sutures closed a doorway, window, or other aperture with sharp, taut steel wire. If cut, the severed ends whip out causing 1d8 damage to any creature within 5ft that fails a save vs wands.</li>
+	<li><b>Closing orifices:</b> The spell sutures closed a target's eyelids (causing blindness), lips (preventing speech), or other orifice. An unwilling subject may save vs spells to resist. Sutures take one hour of careful work to remove without causing serious tissue damage.</li>
+	
+</ul>
+
+
+
+<h3><a id="stones_to_children">Stones to Children (Cleric 4, Druid 4)</a></h3>
+
+<p><b>Duration:</b> 6 turns</p>
+
+<p><b>Range:</b> 120ft</p>
+
+<p>2d8 normal stones are miraculously transformed into human children that follow the caster's orders.</p>
+
+<ul>
+
+	<li><b>Reversion:</b> When killed or at the end of the spell's duration, the children revert back into stones.</li>
+	<li><b>Conjured children:</b> use the statblock of a Normal Human, and can bite for 1d2 damage. They have no names or personalities and do not speak any language.</li>
+
+</ul>
+
+
+
+<h3><a id="summon_demon">Summon Demon (Magic-User 3, Cleric 4)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>By means of a ritual taking one hour and requiring killing a creature at least 666 days old, a demon is summoned. If the true name of a demon is used in the ritual then that demon is summoned, otherwise it is random. The demon is not beholden to the caster in any way and will probably immediately attack them.</p>
+
+<p>[TABLE GOES HERE]</p>
+
+
+
+<h3><a id="summon_greater_extraplanar_being">Summon Greater Extraplanar Being (Magic-User 5)</a></h3>
+
+<p><b>Duration:</b> Permanent</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>This spell summons a random greater being from an unknown plane beyond the stars.</p>
+
+<table>
+	<tr>
+		<td>1d4</td>
+		<td><button type="button" onclick='fill_from_table("greater_extraplanar_being", ["<a href=\"#the_goo_that_makes_you_pregnant\">The Goo That Makes You Pregnant</a>", "<a href=\"#the_radiation_hazard_that_wants_to_be_your_friend\">The Radiation Hazard That Wants To Be Your Friend</a>", "<a href=\"#the_tentacle_balloon_that_absorbs_you\">The Tentacle Balloon That Absorbs You</a>", "<a href=\"#the_umbrella_that_breaks_magic\">The Umbrella That Breaks Magic</a>"])'>Roll</button> <span id="greater_extraplanar_being"></span></td>
+	<tr>
+		<td>1</td>
+		<td><a href="#the_goo_that_makes_you_pregnant">The Goo That Makes You Pregnant</a></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td><a href="#the_radiation_hazard_that_wants_to_be_your_friend">The Radiation Hazard That Wants To Be Your Friend</a></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><a href="#the_tentacle_balloon_that_absorbs_you">The Tentacle Balloon That Absorbs You</a></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><a href="#the_umbrella_that_breaks_magic">The Umbrella That Breaks Magic</a></td>
+	</tr>
+</table>
+
+
+
+<h3><a id="summon_lesser_extraplanar_being">Summon Lesser Extraplanar Being (Magic-User 3)</a></h3>
+
+<p><b>Duration:</b> Permanent</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>This spell summons a random minor being from an unknown plane beyond the stars.</p>
+
+<table>
+	<tr>
+		<td>1d4</td>
+		<td><button type="button" onclick='fill_from_table("lesser_extraplanar_being", ["<a href=\"#the_disc_that_erases_you\">The Disc That Erases You</a>", "<a href=\"#the_shape_that_disintegrates_you\">The Shape That Disintegrates You</a>", "<a href=\"#the_sticks_that_set_you_on_fire\">The Sticks That Set You On Fire</a>", "<a href=\"#the_thing_that_doesnt_like_it_here_very_much\">The Thing That Doesn&apos;t Like It Here Very Much</a>"])'>Roll</button> <span id="lesser_extraplanar_being"></span></td>
+	<tr>
+		<td>1</td>
+		<td><a href="#the_disc_that_erases_you">The Disc That Erases You</a></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td><a href="#the_shape_that_disintegrates_you">The Shape That Disintegrates You</a></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><a href="#the_sticks_that_set_you_on_fire">The Sticks That Set You On Fire</a></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><a href="#the_thing_that_doesnt_like_it_here_very_much">The Thing That Doesn't Like It Here Very Much</a></td>
+	</tr>
+</table>
+
+
+
+
+
+<h3><a id="superior_continual_light">Superior Continual Light/Superior Continual Darkness (Illusionist 2, Magic-User 3)</a></h3>
+
+<p><b>Duration:</b> Permanent</p>
+
+<p><b>Range:</b> 120ft</p>
+
+<p>This spell is identical to <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(MU)"><i>Continual Light/Continual Darkness</i></a>, but in addition:</p>
+
+<ul>
+
+	<li>The effect may be of any colour the caster chooses, including shifting between colours.</li>
+	<li>The effect may be concentrated into a 60ft long 20ft wide beam instead of a 30ft radius, akin to a spotlight or bullseye lantern beam.</li>
+	<li>The caster may set a spoken password that turns the effect on or off, or changes its colour.</li>
+
+</ul>
+
+
+
+<h3><a id="swap_minds">Swap Minds (Magic-User 2)</a></h3>
+
+<p><b>Duration:</b> 1d6 turns</p>
+
+<p><b>Range:</b> 120ft</p>
+
+<p>Two creatures within range have their consciousnesses swapped. If either creature is unwilling, they may save vs spells to resist.</p>
+
+
+
+<h3><a id="tear_reality">Tear Reality (Magic-User 6)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> 30ft</p>
+
+<p>This spell rips a permanent ragged hole in the veil between worlds, creating a portal to a random plane:</p>
+
+<p>[TABLE GOES HERE]</p>
+
+<p>The caster may attempt to target a specific plane, with a percentage chance of success equal to their INT score.</p>
+
+
+
+<h3><a id="transmute_water">Transmute Water (Cleric 1)</a></h3>
+
+<p><b>Duration:</b> Instant</p>
+
+<p><b>Range:</b> Touch</p>
+
+<p>The caster miraculously transmutes one pint of holy water into one pint of any of the following substances:</p>
+
+<ul>
+
+	<li>Human blood</li>
+	<li>Strong acid or lye (1d8 damage)</li>
+	<li>Strong alcohol</li>
+	<li>Type I ingested poison</li>
+
+</ul>
+
+
+
+<h3><a id="umbilical_cord">Umbilical Cord (Cleric 3, Druid 3)</a></h3>
+
+<p><b>Duration:</b> 1 round per level</p>
+
+<p><b>Range:</b> 10ft</p>
+
+<p>This spell conjures a bloody cord of flesh tethering together the caster and target. Unwilling subjects may save vs spells to resist. Each round, the caster may transfer 1d6 hit points to, or drain 1d6 hit points from, the target. The subject and caster cannot move more than 10ft from one another. The cord may be attacked and has AC 9 [10] and 2 hit points. Using this spell to drain health from an unwilling target is a chaotic act.</p>
+
+
+
+<h3><a id="wall_of_slime">Wall of Slime (Magic-User 4)</a></h3>
+
+<p><b>Duration:</b> Concentration</p>
+
+<p><b>Range:</b> 60ft</p>
+
+<p>An immobile, opaque curtain of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Green_Slime">Green Slime</a> springs into existence.</p>
+
+<ul>
+
+	<li><b>Size:</b> The wall can be any size, and may be shaped in any manner and to any dimensions the caster desires, up to 1,200 sq. ft. For example, it may be a straight wall or curved into a protective circle.</li>
+	<li><b>Location:</b> The wall may not be evoked so that it appears where objects are.</li>
+	<li><b>Slime:</b> the acidic slime destroys wood, metal, and flesh in 6 rounds. 
+	<li><b>Destroying:</b> a 10ft by 10ft section of wall can be destroyed by 9hp of fire or cold damage.</li>
+	<li><b>Concentration:</b> The wall persists as long as the caster concentrates on the spell and does not move.</li>
+	
+</ul>
+
+
+
+<h3><a id="water_of_life">Water of Life (Cleric 5, Druid 4)</a></h3>
+
+<p><b>Duration:</b> Concentration</p>
+
+<p><b>Range:</b> Touch</p>
+
+<p>A willing creature is fully immersed in a natural body of water while the caster chants over them. They recover one point of STR, CON, and DEX damage every hour. This usually requires <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Water_Breathing"><i>Water Breathing</i></a> or at least a snorkel, in addition to some way to stave off hypothermia.</p>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="treasure">Treasure</a></h2>
+
+
+
+<ul class="centred">
+
+	<li class="horizontal"><a href="#amulets_of_reunion">Amulets of Reunion</a></li>
+	<li class="horizontal"><a href="#armour_of_sir_umbral">Armour of Sir Umbral</a></li>
+	<li class="horizontal"><a href="#battlestaff_of_the_cube">Battlestaff of the Cube</a></li>
+	<li class="horizontal"><a href="#black_scroll">Black Scroll</a></li>
+	<li class="horizontal"><a href="#blessed_ring_of_protection">Blessed Ring of Protection</a></li>
+	<li class="horizontal"><a href="#blessed_shadow_candle">Blessed Shadow-Candle</a></li>
+	<li class="horizontal"><a href="#blooming_bough">Blooming Bough</a></li>
+	<li class="horizontal"><a href="#bolt_of_explosion">Bolt of Explosion</a></li>
+	<li class="horizontal"><a href="#bolt_of_freezing">Bolt of Freezing</a></li>
+	<li class="horizontal"><a href="#bolt_of_healing">Bolt of Healing</a></li>
+	<li class="horizontal"><a href="#bolt_of_revelation">Bolt of Revelation</a></li>
+	<li class="horizontal"><a href="#bolt_of_teleportation">Bolt of Teleportation</a></li>
+	<li class="horizontal"><a href="#brainflayer">Brainflayer</a></li>
+	<li class="horizontal"><a href="#carpet_of_levitation">Carpet of Levitation</a></li>
+	<li class="horizontal"><a href="#choker_of_denial">Choker of Denial</a></li>
+	<li class="horizontal"><a href="#compass_key">Compass Key</a></li>
+	<li class="horizontal"><a href="#crest_of_the_falcon">Crest of the Falcon</a></li>
+	<li class="horizontal"><a href="#cursed_shadow_candle">Cursed Shadow-Candle</a></li>
+	<li class="horizontal"><a href="#heels_of_fascination">Heels of Fascination</a></li>
+	<li class="horizontal"><a href="#holy_oil">Holy Oil</a></li>
+	<li class="horizontal"><a href="#katana_of_superiority">Katana of Superiority</a></li>
+	<li class="horizontal"><a href="#lilac_chalk">Lilac Chalk</a></li>
+	<li class="horizontal"><a href="#living_paint">Living Paint</a></li>
+	<li class="horizontal"><a href="#ring_of_glamour">Ring of Glamour</a></li>
+	<li class="horizontal"><a href="#mace_of_gore">Mace of Gore</a></li>
+	<li class="horizontal"><a href="#mask_of_the_initiate">Mask of the Initiate</a></li>
+	<li class="horizontal"><a href="#mask_of_the_patriarch">Mask of the Patriarch</a></li>
+	<li class="horizontal"><a href="#master_key">Master Key</a></li>
+	<li class="horizontal"><a href="#mental_key">Mental Key</a></li>
+	<li class="horizontal"><a href="#necklace_of_ears">Necklace of Ears</a></li>
+	<li class="horizontal"><a href="#necklace_of_noses">Necklace of Noses</a></li>
+	<li class="horizontal"><a href="#ordinary_key">Ordinary Key</a></li>
+	<li class="horizontal"><a href="#periapt_of_preservation">Periapt of Preservation</a></li>
+	<li class="horizontal"><a href="#planar_key">Planar Key</a></li>
+	<li class="horizontal"><a href="#potion_of_agony">Potion of Agony</a></li>
+	<li class="horizontal"><a href="#potion_of_antimagic">Potion of Antimagic</a></li>
+	<li class="horizontal"><a href="#potion_of_antivenom">Potion of Antivenom</a></li>
+	<li class="horizontal"><a href="#potion_of_greater_healing">Potion of Greater Healing</a></li>
+	<li class="horizontal"><a href="#potion_of_greater_invisiblity">Potion of Greater Invisibility</a></li>
+	<li class="horizontal"><a href="#potion_of_lesser_healing">Potion of Lesser Healing</a></li>
+	<li class="horizontal"><a href="#potion_of_love">Potion of Love</a></li>
+	<li class="horizontal"><a href="#potion_of_petrification">Potion of Petrification</a></li>
+	<li class="horizontal"><a href="#potion_of_shrinking">Potion of Shrinking</a></li>
+	<li class="horizontal"><a href="#potion_of_slumber">Potion of Slumber</a></li>
+	<li class="horizontal"><a href="#potion_of_truesight">Potion of Truesight</a></li>
+	<li class="horizontal"><a href="#purple_spiral_tea_leaves">Purple Spiral Tea Leaves</a></li>
+	<li class="horizontal"><a href="#red_chalk">Red Chalk</a></li>
+	<li class="horizontal"><a href="#rod_of_homecoming">Rod of Homecoming</a></li>
+	<li class="horizontal"><a href="#scalpel_of_amputation">Scalpel of Amputation</a></li>
+	<li class="horizontal"><a href="#screen_of_detection">Screen of Detection</a></li>
+	<li class="horizontal"><a href="#scrubbing_charcoal">Scrubbing Charcoal</a></li>
+	<li class="horizontal"><a href="#secret_key">Secret Key</a></li>
+	<li class="horizontal"><a href="#shitblaster_2000">Shitblaster 2000</a></li>
+	<li class="horizontal"><a href="#sibylline_deck">Sibylline Deck</a></li>
+	<li class="horizontal"><a href="#sixfold_reliquary">Sixfold Reliquary</a></li>
+	<li class="horizontal"><a href="#skeleton_key">Skeleton Key</a></li>
+	<li class="horizontal"><a href="#spoon_of_flavour">Spoon of Flavour</a></li>
+	<li class="horizontal"><a href="#stitch">Stitch</a></li>
+	<li class="horizontal"><a href="#sword_of_seeking">Sword of Seeking</a></li>
+	<li class="horizontal"><a href="#terminal_key">Terminal Key</a></li>
+	<li class="horizontal"><a href="#the_end">The End</a></li>
+	<li class="horizontal"><a href="#the_red_hand">The Red Hand</a></li>
+	<li class="horizontal"><a href="#tiara_of_many_passions">Tiara of Many Passions</a></li>
+	<li class="horizontal"><a href="#wand_of_anything">Wand of Anything</a></li>
+	<li class="horizontal"><a href="#wand_of_darkness">Wand of Darkness</a></li>
+	<li class="horizontal"><a href="#wand_of_death">Wand of Death</a></li>
+	<li class="horizontal"><a href="#wand_of_flame">Wand of Flame</a></li>
+	<li class="horizontal"><a href="#wand_of_portalcraft">Wand of Portalcraft</a></li>
+	<li class="horizontal"><a href="#wand_of_rust">Wand of Rust</a></li>
+	<li class="horizontal"><a href="#wand_of_sneezing">Wand of Sneezing</a></li>
+	
+</ul>
+
+
+
+<h3><a id="amulets_of_reunion">Amulets of Reunion</a></h3>
+
+<p><b>Value:</b> 2000gp together</p>
+
+<p><b>Charges:</b> 1d6 (collectively, between both)</p>
+
+<p>A pair of identical pewter amulets. The wearers can always telepathically hear the thoughts of one another. Furthermore, the wearer of one may expend a charge to teleport to the location of the other.</p>
+
+
+
+<h3><a id="armour_of_sir_umbral">Armour of Sir Umbral</a></h3>
+
+<p><b>Value:</b> 8000gp</p>
+
+<p>A suit of void-black full plate armour +1, granting AC 1 [18]. The wearer gains infravision to 60ft and a 5-in-6 chance to hide in shadows.</p>
+
+
+
+<h3><a id="battlestaff_of_the_cube">Battlestaff of the Cube</a></h3>
+
+<p><b>Value:</b> 500gp per charge</p>
+
+<p><b>Charges:</b> 1d8</p>
+
+<p>An unremarkable looking gnarled piece of driftwood. The wielder may expend a charge to summon a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Gelatinous_Cube"><b>Gelatinous Cube</b></a> somewhere within 90ft for one turn. The cube cannot be commanded and will just mindlessly try to absorb nearby organic matter.</p>
+
+
+
+<h3><a id="black_scroll">Black Scroll</a></h3>
+
+<p><b>Value:</b> 200gp per level</p>
+
+<p>A spell scroll completely saturated in ink, unreadable by normal means. <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Read_Magic"><i>Read Magic</i></a> can identify the spell, but only if the caster is blind or has their eyes covered. The scroll may be cast by any spellcaster, arcane or divine, but cannot be reversed.</p>
+
+
+
+<h3><a id="blessed_ring_of_protection">Blessed Ring of Protection</a></h3>
+
+<p><b>Value:</b> 5000gp</p>
+
+<p>A simple ring carved from tortoiseshell. It grants +3 to AC and saves, and if the wearer would die from hit point loss, the ring shatters and they are left alive on 1hp instead.</p>
+
+
+
+<h3><a id="blessed_shadow_candle">Blessed Shadow-Candle</a></h3>
+
+<p><b>Value:</b> 900gp</p>
+
+<p>A grey candle inlaid with gold. If lit, it can be used to cast the 5th level Illusionist spell Shadowcast, including sound. The gold inlay, if extracted from the candle, is worth 200gp.</p>
+
+
+
+<h3><a id="blooming_bough">Blooming Bough</a></h3>
+
+<p><b>Value:</b> 1800gp</p>
+
+<p>What appears to be a delicate plum blossom branch is actually a club +1. Creatures struck by it must save vs spells or be charmed for 1d4 rounds (as <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Charm_Monster"><i>Charm Monster</i></a>). Flowers in the wielder's possession will never wilt.</p>
+
+
+
+<h3><a id="bolt_of_explosion">Bolt of Explosion</a></h3>
+
+<p><b>Value:</b> 300gp</p>
+
+<p>An enchanted +1 crossbow bolt. On hit, it creates an explosion dealing 4d6 damage in a 20ft radius, halved on a successful save vs breath weapons.</p>
+
+
+
+<h3><a id="bolt_of_freezing">Bolt of Freezing</a></h3>
+
+<p><b>Value:</b> 200gp</p>
+
+<p>An enchanted +1 crossbow bolt. On hit, it causes extreme cold in a 20ft radius, inflicting 1d8 damage, freezing any liquid water for one turn, and covering any solid ground in a film of black ice.</p>
+
+
+
+<h3><a id="bolt_of_healing">Bolt of Healing</a></h3>
+
+<p><b>Value:</b> 100gp</p>
+
+<p>An enchanted +1 crossbow bolt. On hit, it heals any creature struck for 3d8hp instead of inflicting damage.</p>
+
+
+
+<h3><a id="bolt_of_revelation">Bolt of Revelation</a></h3>
+
+<p><b>Value:</b> 150gp</p>
+
+<p>An enchanted +1 crossbow bolt. On hit, it creates a 30ft radius bright light that lasts 6 turns. Invisible creatures and illusions in the radius are revealed.</p>
+
+
+
+<h3><a id="bolt_of_teleportation">Bolt of Teleportation</a></h3>
+
+<p><b>Value:</b> 100gp</p>
+
+<p>An enchanted +1 crossbow bolt. On hit, it teleports the creature that fired it to the location struck.</p>
+
+
+
+<h3><a id="brainflayer">Brainflayer</a></h3>
+
+<p><b>Value:</b> 14,000gp</p>
+
+<p>A horrifying three-headed demonic whip that shreds the mind as well as the flesh. Make a separate attack roll for each head.</p>
+
+<ul>
+
+	<li><b>First head</b>: 1d6 damage to both hp and INT.</li>
+	<li><b>Second head</b>: 1d6 damage to both hp and WIS.</li>
+	<li><b>Third head</b>: 1d6 damage to both hp and CHA.</li>
+
+</ul>
+
+<p>Due to its size and weight, humans can only wield it two-handed, and must have at least 13 STR or suffer -2 to attack and damage rolls.</p>
+
+
+
+<h3><a id="carpet_of_levitation">Carpet of Levitation</a></h3>
+
+<p><b>Value:</b> 1500gp</p>
+
+<p>An unbelievably filthy brown carpet woven with a yellow magic sigil. A creature standing on it may mentally direct it to move vertically up or down up to 20ft per round. It can hold up to four creatures and their equipment. Magic-Users studying the sigil may learn the spell <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Levitate"><i>Levitate</i></a> from it as though studying a spellbook.</p>
+
+
+
+<h3><a id="choker_of_denial">Choker of Denial</a></h3>
+
+<p><b>Value:</b> 500gp per charge</p>
+
+<p><b>Charges:</b> 3d4</p>
+
+<p>A simple choker made of black silk. If worn it permanently fuses with the skin forming a tattoo around the neck. Each time the wearer would be magically paralysed, polymorphed, petrified, level drained, magically aged, or subjected to instant death effects (e.g. <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Death_Spell"><i>Death Spell</i></a>), a charge is expended and the effect is prevented. Unfortunately, however, the wearer is cursed to be unable to gain XP from any source. The curse can be ended by expending all charges or using <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Curse_(Curse)_(C)"><i>Remove Curse</i></a>, although the tattoo remains. Unlike most cursed items the curse is easily detectable by anyone trained in magic item identification.</p>
+
+
+
+<h3><a id="compass_key">Compass Key</a></h3>
+
+<p><b>Value:</b> 50gp</p>
+
+<p>A thin iron key. If left on a flat surface, it will slowly turn to point towards the lock it was last inserted into.</p>
+
+
+
+<h3><a id="crest_of_the_falcon">Crest of the Falcon</a></h3>
+
+<p><b>Value:</b> 750gp</p>
+
+<p>This simple crown of woven falcon feathers grants the ability to speak and understand the Secret Tongue of Birds. Symbolically, it marks the wearer's affiliation with the King of Falcons and as such may be interpreted as a symbol of authority and respect or of tyranny and oppression, depending on the individual bird in question.</p>
+
+
+
+<h3><a id="cursed_shadow_candle">Cursed Shadow-Candle</a></h3>
+
+<p><b>Value:</b> 0gp</p>
+
+<p>A white candle inlaid with gold. If held, it binds to the holder's hand and lights itself. The candle can burn indefinitely without consuming any wax. If it is ever extinguished, the holder immediately dies. The holder will understand this intuitively. The holder can see through invisibility or illusions within the range of its candlelight. The gold inlay, if extracted from the candle, is worth 200gp.</p>
+
+
+
+<h3><a id="heels_of_fascination">Heels of Fascination</a></h3>
+
+<p><b>Value:</b> 3000gp</p>
+
+<p>A pair of high-heeled shoes carved from solid aquamarine. When worn, they grant +3 CHA but inflict -3 DEX. The wearer may cast Fascinate once per day.</p>
+
+
+
+<h3><a id="holy_oil">Holy Oil</a></h3>
+
+<p><b>Value:</b> 150gp</p>
+
+<p>A flask of blessed oil mixed with incense. It harms undead and demons like holy water. Additionally, it can be ignited to produce holy fire, which deals damage as burning oil and ignores resistance to fire. If used to fuel a lantern, it inflicts a -1 penalty to all rolls for undead or demons in the radius of its light.</p>
+
+
+
+<h3><a id="katana_of_superiority">Katana of Superiority</a></h3>
+
+<p><b>Value:</b> 6000gp</p>
+
+<p>A two-handed sword +1. It gains a cumulative +1 bonus every time the wielder hits an enemy in melee, and every time another creature misses the wielder in melee. The bonus resets to +1 when combat ends.</p>
+
+
+
+<h3><a id="lilac_chalk">Lilac Chalk</a></h3>
+
+<p><b>Value:</b> 200gp per charge</p>
+
+<p><b>Charges:</b> 5</p>
+
+<p>A stick of lilac-dyed chalk created by Moonbeam-Through-Beads-of-Water-Caught-in-Spiderweb. If used to draw a door, window, hole, or other aperture on a surface, it produces a passage through to the other side. Drawing a hole in the ground produces a bottomless pit. After using all charges, it crumbles away into nothing.</p>
+
+
+
+<h3><a id="living_paint">Living Paint</a></h3>
+
+<p><b>Value:</b> 500gp per charge</p>
+
+<p><b>Charges:</b> 4</p>
+
+<p>A pallet of paints created by Moonbeam-Through-Beads-of-Water-Caught-in-Spiderweb. If used to paint an illustration of a nonmagical object no larger than 1ft in any dimension, it becomes real.</p>
+
+
+
+<h3><a id="mace_of_gore">Mace of Gore</a></h3>
+
+<p><b>Value:</b> 400gp</p>
+
+<p>A black iron flanged mace +1. If landing the killing blow on a living creature, blood explodes everywhere, and all creatures within 10ft except the wielder must save vs breath weapons or be blinded for 1d4 rounds.</p>
+
+
+
+<h3><a id="mask_of_the_initiate">Mask of the Initiate</a></h3>
+
+<p><b>Value:</b> 100gp</p>
+
+<p>A simple porcelain mask with an unnerving emotionless countenance. It grants the wearer +2 to saves against emotion (fear, charm, etc.) but inflicts a -2 penalty to reaction rolls.</p>
+
+
+
+<h3><a id="mask_of_the_patriarch">Mask of the Patriarch</a></h3>
+
+<p><b>Value:</b> 1000gp</p>
+
+<p>A finer version of the <a href="mask_of_the_initiate">Mask of the Initiate</a>, inlaid with pearl. It retains the same unnerving emotionless countenance. It grants the wearer +4 to saves against emotion (fear, charm, etc.) but inflicts a -2 penalty to reaction rolls.</p>
+
+
+
+<h3><a id="master_key">Master Key</a></h3>
+
+<p><b>Value:</b> 10,000gp</p>
+
+<p>An unassuming ornate silver key. It can open any door, even those without keyholes, even if magically sealed.</p>
+
+
+
+<h3><a id="mental_key">Mental Key</a></h3>
+
+<p><b>Value:</b> 550gp</p>
+
+<p>A small wooden key. Sticking it into the base of a creature's skull and turning it creates a small aperture. Reaching inside allows the user to see the contents of the creature's thoughts and memories. The creature is paralysed until the key is removed, at which point it crumbles to dust. Using this on an unwilling creature is usually impossible unless they are surprised or incapacitated.</p>
+
+
+
+<h3><a id="necklace_of_ears">Necklace of Ears</a></h3>
+
+<p><b>Value:</b> 0gp</p>
+
+<p>A loop of barbed wire with human ears strung onto it that magically enhances the wearer's sense of hearing. The wearer gains a 5-in-6 chance to listen at doors.</p>
+
+
+
+<h3><a id="necklace_of_noses">Necklace of Noses</a></h3>
+
+<p><b>Value:</b> 0gp</p>
+
+<p>A loop of barbed wire with human noses strung onto it that magically enhances the wearer's sense of smell. The wearer has a 5-in-6 chance to detect creatures within 10ft by smell and can track by scent as a 5th level Ranger.</p>
+
+
+
+<h3><a id="ordinary_key">Ordinary Key</a></h3>
+
+<p><b>Value:</b> 1gp</p>
+
+<p>An ordinary, nonmagical metal key. It has a 1% chance of fitting any lock.</p>
+
+
+
+<h3><a id="periapt_of_preservation">Periapt of Preservation</a></h3>
+
+<p><b>Value:</b> 3000gp</p>
+
+<p>A holy symbol of The Lanternbearer taking the form of a small bronze lantern-shaped pendant containing a tiny everburning flame. If the wearer would be killed by poison or disease, they are instead left on 1hp until cured. If a poison or disease would reduce one of their attribute scores to zero, it is instead left at one.</p>
+
+
+
+<h3><a id="planar_key">Planar Key</a></h3>
+
+<p><b>Value:</b> 3000gp</p>
+
+<p>An ornate brass key that vibrates in the presence of locks. If used to unlock a door, the door becomes a portal to the Elemental Plane of Keys. As soon as the door back is unobserved and not propped open, it will close and lock itself.</p>
+
+
+
+<h3><a id="potion_of_agony">Potion of Agony</a></h3>
+
+<p><b>Value:</b> 150gp</p>
+
+<p><b>Duration:</b> 1d6+6 turns</p>
+
+<p>The drinker is unable to do anything but scream and writhe in pain for the duration. If concealed in food or drink, it has a 30% chance of being detected before ingestion.</p>
+
+
+
+<h3><a id="potion_of_antimagic">Potion of Antimagic</a></h3>
+
+<p><b>Value:</b> 2500gp</p>
+
+<p><b>Duration:</b> 1 turn</p>
+
+<p>All spells or magic effects on the drinker end. The drinker is immune to all spells and magic effects for the duration, and magic items wielded by the drinker function as though non-magical. If concealed in food or drink, it has a 5% chance of being detected before ingestion.</p>
+
+
+
+<h3><a id="potion_of_antivenom">Potion of Antivenom</a></h3>
+
+<p><b>Value:</b> 500gp</p>
+
+<p>Cures all poisons afflicting the drinker. Can revive a creature who died by poison within the last turn.</p>
+
+
+
+<h3><a id="potion_of_greater_healing">Potion of Greater Healing</a></h3>
+
+<p><b>Value:</b> 400gp</p>
+
+<p>Restores 2d6+2 hit points and cures magical paralysis.</p>
+
+
+
+<h3><a id="potion_of_greater_invisiblity">Potion of Greater Invisibility</a></h3>
+
+<p><b>Value:</b> 400gp</p>
+
+<p><b>Duration:</b> 1 turn</p>
+
+<p>The drinker remains invisible for the duration, even if they attack or cast spells. Creatures who are aware of the drinker but cannot see them may attack at a -4 penalty. If concealed in food or drink, it has a 5% chance of being detected before ingestion.</p>
+
+
+
+<h3><a id="potion_of_lesser_healing">Potion of Lesser Healing</a></h3>
+
+<p><b>Value:</b> 100gp</p>
+
+<p>Restores 1d6+1 hit points and cures magical paralysis.</p>
+
+
+
+<h3><a id="potion_of_love">Potion of Love</a></h3>
+
+<p><b>Value:</b> 450gp</p>
+
+<p><b>Duration:</b> 1d6+6 turns</p>
+
+<p>This potion must first be activated by adding a drop of blood. The drinker falls into headlong infatuation with the creature whose blood was added for the duration. They are not necessarily obedient to the creature (e.g. an especially possessive drinker may instead seek to kidnap the creature to have them to themselves). If concealed in food or drink, it has a 20% chance of being detected before ingestion.</p>
+
+
+
+<h3><a id="potion_of_petrification">Potion of Petrification</a></h3>
+
+<p><b>Value:</b> 250gp</p>
+
+<p><b>Duration:</b> 1d6+6 turns</p>
+
+<p>The drinker is petrified for the duration. Once the effect ends they return to normal form. If concealed in food or drink, it has a 50% chance of being detected before ingestion.</p>
+
+
+
+<h3><a id="potion_of_shrinking">Potion of Shrinking</a></h3>
+
+<p><b>Value:</b> 300gp</p>
+
+<p><b>Duration:</b> 1d6+6 turns</p>
+
+<p>The drinker shrinks to approximately the size of a mouse for the duration. If concealed in food or drink, it has a 40% chance of being detected before ingestion.</p>
+
+
+
+<h3><a id="potion_of_slumber">Potion of Slumber</a></h3>
+
+<p><b>Value:</b> 150gp</p>
+
+<p><b>Duration:</b> 1d6+6 turns</p>
+
+<p>The drinker falls into a deep, unbreakable sleep for the duration. If concealed in food or drink, it has a 40% chance of being detected before ingestion.</p>
+
+
+
+<h3><a id="potion_of_truesight">Potion of Truesight</a></h3>
+
+<p><b>Value:</b> 1000gp</p>
+
+<p><b>Duration:</b> 1d6+6 turns</p>
+
+<p>The drinker can see with perfect clarity, revealing secret doors, invisible creatures and objects, and illusions within 90ft. This functions even if the drinker is blind or doesn't even have eyes.</p>
+
+
+
+<h3><a id="purging_stone">Purging Stone</a></h3>
+
+<p><b>Value:</b> 650gp</p>
+
+<p>This enchanted block of pumice can be rubbed against a creature to purge it of any ongoing negative effects. These effects then manifest as a semi-corporeal malevolent spirit. By default it is a 2HD creature with AC 6 [13] that moves at 120ft (40ft) and makes two melee attacks per round dealing 1d6 damage each. It gains additional hit dice and abilities depending on the negative effects purged:</p>
+
+<ul>
+
+	<li>STR loss: +1HD, attacks instead do 1d10 damage each.</li>
+	<li>DEX loss: +1HD, can attack at 20ft range.</li>
+	<li>CON loss: +1HD, +4 to AC.</li>
+	<li>INT loss: +1HD, can cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(MU)"><i>Hold Person</i></a>.</li>
+	<li>WIS loss: +1HD, can cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(MU)"><i>Continual Darkness</i></a>.</li>
+	<li>CHA loss: +1HD, can cast <i>Fear</i>.</li>
+	<li>Max HP loss: +1HD, regenerates 3HP at the start of each round.</li>
+	<li>Magical blindness/deafness: +1HD, +3 bonus to hit, gains truesight.</li>
+	<li>Magical paralysis: +1HD, can fly at 240ft (80ft).</li>
+	<li>Poison: +1HD, on hit save vs paralysis or be paralysed until the spirit is destroyed.</li>
+	<li>Disease: +1HD, all creatures within 30ft have movement speed halved and -2 to hit.</li>
+	<li>Curse: +2HD, on hit save vs death or be blinded until the spirit is destroyed (optionally the referee may instead/also give it an ability specific to the curse).</li>
+	<li>Delusion: +1HD, becomes incorporeal and gains immunity to nonmagical damage.</li>
+	<li>Phobia: +1HD, on hit save vs spells or be silenced until the spirit is destroyed.</li>
+	<li>Minor, temporary magical effect (e.g. <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Charm_Person"><i>Charm Person</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)"><i>Darkness</i></a>): +1HD, on hit lose highest prepared spell.</li>
+	<li>Major, permanent magical effect (e.g. <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Polymorph_Others"><i>Polymorph</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Feeblemind"><i>Feeblemind</i></a>): +4HD, on hit save vs paralysis or be petrified.</li>
+
+</ul>
+
+
+
+<h3><a id="purple_spiral_tea_leaves">Purple Spiral Tea Leaves</a></h3>
+
+<p><b>Value:</b> 2500gp</p>
+
+<p>If brewed and imbibed, this enchanted tea causes the drinker to hallucinate for 8 hours, during which time they can do nothing but wander aimlessly. After this duration, it restores all damage to INT, CHA, and WIS, cures any phobias or delusions, and causes a new random phobia or delusion.</p>
+
+
+
+<h3><a id="red_chalk">Red Chalk</a></h3>
+
+<p><b>Value:</b> 100gp per charge</p>
+
+<p><b>Charges:</b> 5</p>
+
+<p>A stick of red-dyed chalk created by Moonbeam-Through-Beads-of-Water-Caught-in-Spiderweb. If used to draw a door, window, hole, or other aperture on a surface, it becomes a portal to the Moonlight Gallery. After using all charges, it crumbles away into nothing.</p>
+
+
+
+<h3><a id="ring_of_glamour">Ring of Glamour</a></h3>
+
+<p><b>Value:</b> 800gp</p>
+
+<p>A silver ring set with a large gaudy amethyst. When worn, it causes the wearer's eye colour to become purple.</p>
+
+
+
+<h3><a id="robes_of_the_dancer">Robes of the Dancer</a></h3>
+
+<p><b>Value:</b> 100gp alone, but 6000gp as a pair</p>
+
+<p>Two identical beautiful sets of pink robes layered with ruffles and veils. The interior is woven with intricate magic sigils. They grant both wearers +4 to AC and saving throws, provided:</p>
+
+<ul>
+
+	<li>Neither wearer has armour equipped on top (shields are fine).</li>
+	<li>Both wearers are within 10ft of one another.</li>
+	<li>Both wearer have moved at least 10ft in the last round.</li>
+	
+</ul>
+
+<p>Additionally, Acrobats wearing the robes may perform their class skills as though they were two levels higher than they are.</p>
+
+
+
+<h3><a id="rod_of_homecoming">Rod of Homecoming</a></h3>
+
+<p><b>Value:</b> 400gp per charge</p>
+
+<p><b>Charges:</b> 1d4</p>
+
+<p>A bronze rod with "Until we meet again" inscribed on it in Ecclesiastic. As a weapon it is a club +1. The wielder may expend a charge to teleport to the last place they slept. While held, the wielder always knows the direction to their place of birth, provided it is on the same plane of existence. Naturally this is of little use in the Realm of the Dead.</p>
+
+
+
+<h3><a id="scalpel_of_amputation">Scalpel of Amputation</a></h3>
+
+<p><b>Value:</b> 2500gp</p>
+
+<p>A frighteningly sharp surgical scalpel made of solid ruby. It can be used as a dagger +2, and if striking a human-sized or smaller target with a roll of 18-20 on the die, it severs a random limb.</p>
+
+
+
+<h3><a id="screen_of_detection">Screen of Detection</a></h3>
+
+<p><b>Value:</b> 1200gp</p>
+
+<p>A wax paper screen stretched across a metal frame, 4ft to a side. If a creature is on the other side, they appear as a silhouette, with any sources of sickness (such as poisons or diseases) appearing as bright blobs of light.</p>
+
+
+
+<h3><a id="scrubbing_charcoal">Scrubbing Charcoal</a></h3>
+
+<p><b>Value:</b> 150gp per charge</p>
+
+<p><b>Charges:</b> 6</p>
+
+<p>A piece of charcoal created by Moonbeam-Through-Beads-of-Water-Caught-in-Spiderweb. If rubbed against any object no larger than 1ft in any dimension, the object is erased from reality.</p>
+
+
+
+<h3><a id="secret_key">Secret Key</a></h3>
+
+<p><b>Value:</b> 800gp</p>
+
+<p>A brightly coloured stained glass key. If smashed, the nearest secret door or compartment slams open, making a loud sound audible within 60ft. The noise is likely to attract nearby monsters.</p>
+
+
+
+<h3><a id="shitblaster_2000">Shitblaster 2000</a></h3>
+
+<p><b>Value:</b> 50gp</p>
+
+<p>A strange back-mounted apparatus consisting of a glass tank, a length of hose with a nozzle, and a hand pump. Any liquid poured into the tank can be pressurised with the hand pump and shot out of the nozzle to a range of 20ft. Creatures may save vs wands to dodge the stream. While originally created to help clean sewer blockages, it can easily be adapted into, for example, a flamethrower by filling it with lantern oil and lighting the nozzle.</p>
+
+
+
+<h3><a id="sibylline_deck">Sibylline Deck</a></h3>
+
+<p><b>Value:</b> 100gp</p>
+
+<p>A well-worn deck of illustrated oracular cards. Once per day the user may draw a card to vaguely but accurately answer any question (as determined by the referee). If drawn more than once per day it only gives random responses. There are twelve cards:</p>
+
+<table>
+	<tr>
+		<td>1</td>
+		<td>The Guiding Lighthouse</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>The Unexpected Visitor</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>The Kindly Matron</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>The Wise Merchant</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>The Miracle-Worker</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>The Scarred Warrior</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>The Disemboweled Corpse</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>The Shadow in the Mirror</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>The Impregnable Fortress</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>The Hungering Jungle</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>The Rainbow Over the Mountain</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>The Palace of Whispers</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="sixfold_reliquary">Sixfold Reliquary</a></h3>
+
+<p><b>Value:</b> 2400gp</p>
+
+<p>A hexagonal lacquer box with an image of a housefly on the top. Pressing one of the unmarked buttons on its outer faces fills the box with a given substance:</p>
+
+<ul>
+
+	<li>Button 1: Faeces</li>
+	<li>Button 2: Rotting meat</li>
+	<li>Button 3: Rotting vegetable matter</li>
+	<li>Button 4: Rotting fruit</li>
+	<li>Button 5: Dirt</li>
+	<li>Button 6: Nectar-rich flowers</li>
+
+</ul>
+
+<p>It may be used at will, producing an infinite amount of these substances.</p>
+
+
+
+<h3><a id="skeleton_key">Skeleton Key</a></h3>
+
+<p><b>Value:</b> 150gp</p>
+
+<p>A key carved from bone. It can be used to unlock any nonmagical lock, after which it crumbles to dust.</p>
+
+
+
+<h3><a id="spoon_of_flavour">Spoon of Flavour</a></h3>
+
+<p><b>Value:</b> 250gp</p>
+
+<p>This enchanted wooden spoon imparts exceptional flavour to any food stirred with it. Animals will always preferentially eat fresh food prepared with this spoon over anything else, provided it is a type of food it naturally eats. If the food is poisoned, its chance of detection is halved. The spoon may also be used in combat as a club +1.</p>
+
+
+
+<h3><a id="stitch">Stitch</a></h3>
+
+<p><b>Value:</b> 2500gp</p>
+
+<p>A spear +2 styled to look like a giant sewing needle. Against demons, it is instead +4, and casts <a href="#mute"><i>Mute</i></a> on hit. It glows red in the presence of demons.</p>
+
+
+
+<h3><a id="sword_of_seeking">Sword of Seeking</a></h3>
+
+<p><b>Value:</b> 500gp</p>
+
+<p><b>Charges:</b> 1d3</p>
+
+<p>A continually lit sword +1. The wielder may expend a charge to cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Locate_Object_(MU)"><i>Locate Object</i></a>.</p>
+
+
+
+<h3><a id="terminal_key">Terminal Key</a></h3>
+
+<p><b>Value:</b> 400gp</p>
+
+<p>A heavy key made of lead. If used to lock a door, the entire door is permanently erased and replaced with featureless wall. The key then crumbles to dust.</p>
+
+
+
+<h3><a id="the_end">The End</a></h3>
+
+<p><b>Value:</b> 4000gp</p>
+
+<p>A heavy black scythe with "THE END" engraved on its handle in Old Imperial. In combat this acts as a polearm +4. A living creature touching the scythe in any way, whether being struck by its blade or wielding it, even using gloves, must save vs death or die every round of contact.</p>
+
+
+
+<h3><a id="the_red_hand">The Red Hand</a></h3>
+
+<p><b>Value:</b> 1000gp per charge</p>
+
+<p><b>Charges:</b> 2d4</p>
+
+<p>A right-handed glove made of fine red silk. The wearer may touch a creature to cure any supernatural fear or paralysis effects, or may spend one charge to cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Disease_(Cause_Disease)"><i>Cure Disease</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Serious_Wounds_(Cause_Serious_Wounds)"><i>Cure Serious Wounds</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Neutralize_Poison"><i>Neutralise Poison</i></a>, or to restore one attribute score to its starting value.</p>
+
+
+
+<h3><a id="tiara_of_many_passions">Tiara of Many Passions</a></h3>
+
+<p><b>Value:</b> 25,000gp</p>
+
+<p>An unbelievably gaudy aluminium tiara set with brightly coloured precious gems forming a left-to-right rainbow gradient. The wearer always fails saves vs emotion (e.g. charm, fear). Any emotion, mundane or magical, that the wearer experiences is also experienced by every creature in a 60ft radius (no save). The wearer may, at will, invoke any extreme emotion in themselves. Specific mechanical effects are left to the referee's judgement, but the illusionist spell <i>Emotion</i> might serve as a good starting point.</p>
+
+
+
+<h3><a id="wand_of_anything">Wand of Anything</a></h3>
+
+<p><b>Value:</b> 20,000gp</p>
+
+<p><b>Charges:</b> infinite</p>
+
+<p>A shimmering irridescent mithril wand. The wielder may use it to cast <a href="#anything"><i>Anything</i></a> at will. It may be snapped to cast <a href="#anything"><i>Anything</i></a> on the user five times in a row.</p>
+
+
+
+<h3><a id="wand_of_darkness">Wand of Darkness</a></h3>
+
+<p><b>Value:</b> 100gp per charge</p>
+
+<p><b>Charges:</b> 1d20</p>
+
+<p>A polished ebony wand. The user may spend one charge to cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)"><i>Darkness</i></a>, or two charges to cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(MU)"><i>Continual Darkness</i></a>. So long as it has at least one charge left, it may be snapped to cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)"><i>Darkness</i></a> on the user and summon 1d3 <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Shadow">Shadows</a>.</p>
+
+
+
+<h3><a id="wand_of_death">Wand of Death</a></h3>
+
+<p><b>Value:</b> 1000gp per charge</p>
+
+<p><b>Charges:</b> 1d2</p>
+
+<p>A cast iron wand that is always cold to the touch. Causes a living creature to die instantly. Creatures with 4HD or more may save vs wands to resist. So long as it has one charge left, it may be snapped to kill the user instantly (no save).</p>
+
+
+
+<h3><a id="wand_of_detection">Wand of Detection</a></h3>
+
+<p><b>Value:</b> 100gp per charge</p>
+
+<p><b>Charges:</b> 2d8</p>
+
+<p>A smooth porcelain wand. The user may expend one charge to cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Magic_(MU)"><i>Detect Magic</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Evil_(MU)"><i>Detect Evil</i></a> or <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Invisible"><i>Detect Invisible</i></a>. So long as it has at least one charge left, it may be snapped to grant the user true seeing for one round.</p>
+
+
+
+<h3><a id="wand_of_flame">Wand of Flame</a></h3>
+
+<p><b>Value:</b> 100gp per charge</p>
+
+<p><b>Charges:</b> 1d12</p>
+
+<p>A brass wand that is always warm to the touch. An object or creature within 90ft that fails a save vs wands is ignited for 1d6 damage, plus a further 1d6 damage next round if not extinguished. It may also be used to cast <i>Dancing Lights</i>, always taking the form of ghostly disembodied flames. So long as it has at least one charge left, it may be snapped to cast Fireball centred on the user.</p>
+
+
+
+<h3><a id="wand_of_portalcraft">Wand of Portalcraft</a></h3>
+
+<p><b>Value:</b> 100gp per charge</p>
+
+<p><b>Charges:</b> 2d6</p>
+
+<p>A fine walnut wood wand. The user may expend one charge to cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Portal"><i>Hold Portal</i></a>, or two charges to cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Knock"><i>Knock</i></a> or <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Wizard_Lock"><i>Wizard Lock</i></a>. So long as it has at least one charge left, it may be snapped to cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dimension_Door"><i>Dimension Door</i></a> on the user, targeting an inconvenient location within range (referee's choice).</p>
+
+
+
+<h3><a id="wand_of_death">Wand of Rust</a></h3>
+
+<p><b>Value:</b> 150gp per charge</p>
+
+<p><b>Charges:</b> 1d12</p>
+
+<p>A halite wand that always feels slightly damp. Causes a single nonmagical metal object to rapidly oxidise into a useless piece of rust. If used on an item being worn or wielded, its wearer/wielder may save vs wands to resist. So long as it has at least one charge left, it may be snapped to rust all metal in a 30ft radius.</p>
+
+
+
+<h3><a id="wand_of_sneezing">Wand of Sneezing</a></h3>
+
+<p><b>Value:</b> 25gp per charge</p>
+
+<p><b>Charges:</b> 1d20</p>
+
+<p>A green glass wand that always feels slightly slimy. Causes a single creature within 90ft to sneeze (no save), interrupting spellcasting or other actions requiring concentration. So long as it has at least one charge left, it may be snapped to make the user sneeze deafeningly, audible within 200ft.</p>
+
+
+
+</div>
+
+
+
+
+<div>
+
+<h2><a id="bestiary">Bestiary</a></h2>
+
+
+
+<ul class="centred">
+
+	<li class="horizontal"><a href="#andromeda">Andromeda</a></li>
+	<li class="horizontal"><a href="#angel">Angel</a></li>
+	<li class="horizontal"><a href="#archangel">Archangel</a></li>
+	<li class="horizontal"><a href="#ashen_procession">Ashen Procession</a></li>
+	<li class="horizontal"><a href="#blanket_of_misery">Blanket of Misery</a></li>
+	<li class="horizontal"><a href="#boltmaster_zebedee">Boltmaster Zebedee</a></li>
+	<li class="horizontal"><a href="#carrion_demon">Carrion Demon</a></li>
+	<li class="horizontal"><a href="#critic">Critic</a></li>
+	<li class="horizontal"><a href="#daphne">Daphne</a></li>
+	<li class="horizontal"><a href="#fading_spirit">Fading Spirit</a></li>
+	<li class="horizontal"><a href="#giant_bumblebee">Giant Bumblebee</a></li>
+	<li class="horizontal"><a href="#gourmet">Gourmet</a></li>
+	<li class="horizontal"><a href="#her_royal_majesty">Her Royal Majesty Rumpus III, Rat Queen in Exile</a></li>
+	<li class="horizontal"><a href="#husk">Husk</a></li>
+	<li class="horizontal"><a href="#lapis_living_statue">Lapis Living Statue</a></li>
+	<li class="horizontal"><a href="#little_bastard">Little Bastard</a></li>
+	<li class="horizontal"><a href="#maenad">Maenad</a></li>
+	<li class="horizontal"><a href="#mother_delirium">Mother Delirium</a></li>
+	<li class="horizontal"><a href="#mr_marrow">Mr Marrow</a></li>
+	<li class="horizontal"><a href="#mutant_crocodile">Mutant Crocodile</a></li>
+	<li class="horizontal"><a href="#mutant_harpy">Mutant Harpy</a></li>
+	<li class="horizontal"><a href="#mutant_mantis">Mutant Mantis</a></li>
+	<li class="horizontal"><a href="#pile_of_broken_skeletons">Pile of Broken Skeletons</a></li>
+	<li class="horizontal"><a href="#rubik_the_burgundy">Rubik the Burgundy</a></li>
+	<li class="horizontal"><a href="#sir_sticky">Sir Sticky</a></li>
+	<li class="horizontal"><a href="#sister_daffodil">Sister Daffodil</a></li>
+	<li class="horizontal"><a href="#swarm_of_lachryphagous_moths">Swarm of Lachryphagous Moths</a></li>
+	<li class="horizontal"><a href="#sweet_mary_ann">Sweet Mary-Ann</a></li>
+	<li class="horizontal"><a href="#tabitha_the_turquoise">Tabitha the Turquoise</a></li>
+	<li class="horizontal"><a href="#temptress_demon">Temptress Demon</a></li>
+	<li class="horizontal"><a href="#the_disc_that_erases_you">The Disc That Erases You</a></li>
+	<li class="horizontal"><a href="#the_goo_that_makes_you_pregnant">The Goo That Makes You Pregnant</a></li>
+	<li class="horizontal"><a href="#keymonger">The Keymonger</a></li>
+	<li class="horizontal"><a href="#the_radiation_hazard_that_wants_to_be_your_friend">The Radiation Hazard That Wants To Be Your Friend</a></li>
+	<li class="horizontal"><a href="#shadow_blade">The Shadow Blade</a></li>
+	<li class="horizontal"><a href="#the_shape_that_disintegrates_you">The Shape That Disintegrates You</a></li>
+	<li class="horizontal"><a href="#the_sticks_that_set_you_on_fire">The Sticks That Set You On Fire</a></li>
+	<li class="horizontal"><a href="#the_tentacle_balloon_that_absorbs_you">The Tentacle Balloon That Absorbs You</a></li>
+	<li class="horizontal"><a href="#the_thing_that_doesnt_like_it_here_very_much">The Thing That Doesn't Like It Here Very Much</a></li>
+	<li class="horizontal"><a href="#the_twins">The Twins</a></li>
+	<li class="horizontal"><a href="#the_umbrella_that_breaks_magic">The Umbrella That Breaks Magic</a></li>
+	<li class="horizontal"><a href="#vampire_squid">Vampire Squid</a></li>
+	<li class="horizontal"><a href="#water_under_the_bridge">Water-Under-The-Bridge</a></li>
+	<li class="horizontal"><a href="#well_guardian">Well Guardian</a></li>
+	<li class="horizontal"><a href="#zombified_initiate">Zombified Initiate</a></li>
+	<li class="horizontal"><a href="#zombified_patriarch">Zombified Patriarch</a></li>
+	
+</ul>
+
+
+
+<h3><a id="andromeda">Andromeda</a></h3>
+
+<p>An ancient sphinx, bound to her futile duty guarding an already looted tomb.</p>
+
+<p class=dense><b>AC:</b> 0 [19]</p>
+<p class=dense><b>Hit dice:</b> 12 (54hp)</p>
+<p class=dense><b>Attacks:</b> 2 × Claw (3d6) and 1 × Bite (3d6) or 1 × Spell</p>
+<p class=dense><b>THAC0:</b> 10 [+9]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D6 W7 P8 B8 S10</p>
+<p class=dense><b>Morale:</b> 12 (due to Geas)</p>
+<p class=dense><b>Alignment:</b> Lawful</p>
+<p class=dense_end><b>XP:</b> 450</p>
+
+<ul>
+
+	<li><b>Spellcasting</b>: she may cast the following spells at will: <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Read_Languages"><i>Read Languages</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Read_Magic"><i>Read Magic</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Locate_Object_(MU)"><i>Locate Object</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Clairvoyance"><i>Clairvoyance</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dispel_Magic"><i>Dispel Magic</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Curse_(Curse)_(MU)"><i>Remove Curse</i></a>.</li>
+	<li><b>Geas</b>: must kill any who attempt to enter tomb without permission, who lie in her presence, or who incorrectly answer her riddles. Geas can only be broken by <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Geas_(Remove_Geas)"><i>Remove Geas</i></a> or by correctly answering all riddles.</li>
+	<li><b>Sense lie</b>: can detect lies, even if she doesn't speak the language.</li>
+	<li><b>Truesight</b>: can detect magic and see through all illusions and invisiblity.</li>
+	<li><b>Mundane damage resistance</b>: half damage from nonmagical attacks.</li>
+	<li><b>Languages</b>: Old Imperial, Esoteric, Secret Tongue of Cats.</li>
+	
+</ul>
+
+<p>If freed from her geas, she will relocate to the Feline Court.</p>
+
+
+
+<h3><a id="angel">Angel</a></h3>
+
+<p>A lesser divine servant of Propitiation with distinctive golden robes, feathery wings, and a glowing halo.</p>
+
+<p class=dense><b>AC:</b> 5 [14]</p>
+<p class=dense><b>Hit dice:</b> 3 (10hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Ceremonial blunt sword (1d4) or spell</p>
+<p class=dense><b>THAC0:</b> 19 [0]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D11 W12 P14 B16 S15</p>
+<p class=dense><b>Morale:</b> 10</p>
+<p class=dense><b>Alignment:</b> Lawful</p>
+<p class=dense_end><b>XP:</b> 35</p>
+
+<ul>
+
+	<li><b>Spellcasting</b>: they are third level clerics, with <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(C)"><i>Light</i></a> and <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Light_Wounds_(Cause_Light_Wounds)"><i>Cure Light Wounds</i></a> prepared.</li>
+	<li><b>Equipment</b>: gold holy symbol of Propitiation (100gp), chainmail, ceremonial blunt sword (as club), vial of holy water.</li>
+	<li><b>Flight</b>: their wings are nonfunctional, but they can float up to 1ft above the ground.</li>
+	<li><b>Languages</b>: they are only permitted to speak Ecclesiastic, but can understand Common Imperial.</li>
+	<li><b>Truth sense</b>: they can instinctively tell if a lie is spoken in their presence.</li>
+	
+</ul>
+
+<p>Example names: Gabriella, Abigail, Rosalina, Selene, Eleanor, Delilah, Raphael, Icarus, Michelangelo, Malachi, Darius, Eli.</p>
+
+
+
+<h3><a id="archangel">Archangel</a></h3>
+
+<p>A greater divine servant of Propitiation with distinctive golden robes, feathery wings, and a glowing halo.</p>
+
+<p class=dense><b>AC:</b> 4 [15]</p>
+<p class=dense><b>Hit dice:</b> 7 (24hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Blessed ceremonial blunt sword (1d4+2) or spell</p>
+<p class=dense><b>THAC0:</b> 15 [+4]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D9 W10 P12 B14 S12</p>
+<p class=dense><b>Morale:</b> 11</p>
+<p class=dense><b>Alignment:</b> Lawful</p>
+<p class=dense_end><b>XP:</b> 450</p>
+
+<ul>
+
+	<li><b>Spellcasting</b>: they are seventh level clerics with the following spells prepared: <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(C)"><i>Light</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Light_Wounds_(Cause_Light_Wounds)"><i>Cure Light Wounds</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(C)"><i>Hold Person</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Know_Alignment"><i>Know Alignment</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Disease_(Cause_Disease)"><i>Cure Disease</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Curse_(Curse)_(C)"><i>Remove Curse</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Neutralize_Poison"><i>Neutralise Poison</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Raise_Dead_(Finger_of_Death)"><i>Raise Dead</i></a>.</li>
+	<li><b>Equipment</b>: gold holy symbol of Propitiation (100gp), chainmail +1, blessed ceremonial blunted sword (as club +2), vial of holy water.</li>
+	<li><b>Flight</b>: their wings are nonfunctional, but they can float up to 1ft above the ground.</li>
+	<li><b>Languages</b>: they are only permitted to speak Ecclesiastic, but can understand Common Imperial.</li>
+	<li><b>Truth sense</b>: they can instinctively tell if a lie is spoken in their presence.</li>
+	
+</ul>
+
+<p>Example names: Gabriella, Abigail, Rosalina, Selene, Eleanor, Delilah, Raphael, Icarus, Michelangelo, Malachi, Darius, Eli.</p>
+
+
+
+<h3><a id="ashen_procession">Ashen Procession</a></h3>
+
+<p>A cloud of ash suspended in the air, taking the form of a funerary procession comprising six pallbearers led by a singing woman.</p>
+
+<p class=dense><b>AC:</b> No roll required to hit</p>
+<p class=dense><b>Hit dice:</b> 5 (22hp)</p>
+<p class=dense><b>Attacks:</b> None</p>
+<p class=dense><b>Movement:</b> 60ft (20ft)</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 175</p>
+
+<ul>
+
+	<li><b>Mundane damage immunity</b>: nonmagical weapons simply pass through harmlessly.</li>
+	<li><b>Enchanting song</b>: all hearing save vs spells or hypnotically follow procession, including into direct danger.</li> 
+	<li><b>Choking ash</b>: if destroyed or dispelled, cursed ash disperses into the air, save vs breath weapons or choke to death in 1d4 rounds.</li>
+	
+</ul>
+
+<p>It is not sentient and does not respond to being harmed. It moves around the Mourning Halls on a schedule; see <a href="#mourning_halls">Mourning Halls</a>.</p>
+
+
+
+<h3><a id="barbara_the_burgundy">Barbara the Burgundy</a></h3>
+
+<p>A lost soul, wizard, and anthropomorphic donkey-woman <a href="maenad"><b>Maenad</b></a>. In life, she was a senior imperial librarian and <a href="#rubik_the_burgundy"><b>Rubik the Burgundy</b></a>'s wife.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 7 (17hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Unarmed strike (1d2) or Spell</p>
+<p class=dense><b>THAC0:</b> 17 [+2]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D13 W14 P13 B16 S15</p>
+<p class=dense><b>Morale:</b> 5</p>
+<p class=dense><b>Alignment:</b> Lawful</p>
+<p class=dense_end><b>XP:</b> 450</p>
+
+<ul>
+
+	<li><b>Spellcasting</b>: she is a 7th level Magic-User with the following spells prepared: <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Floating_Disc"><i>Floating Disc</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)"><i>Light</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Read_Languages"><i>Read Languages</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(MU)"><i>Continual Light</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Locate_Object_(MU)"><i>Locate Object</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Clairvoyance"><i>Clairvoyance</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dispel_Magic"><i>Dispel Magic</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Wizard_Eye"><i>Wizard Eye</i></a>.</li>
+	<li><b>Languages</b>: Common Imperial, High Imperial, Esoteric.</li>
+	
+</ul>
+
+<p>As all <a href="#maenad"><b>Maenads</b></a> she is quite mad. Even if sobered up, she will be too ashamed to show her face to <a href="#rubik_the_burgundy"><b>Rubik the Burgundy</b></a> unless she is first reunited with her wedding ring, her spellbook, and is returned to human form. If these are accomplished and she is returned to the mortal realm alongside her husband, she will thank the party with 50,000gp and any magic item they wish for (within reason).</p>
+
+
+
+<h3><a id="blanket_of_misery">Blanket of Misery</a></h3>
+
+<p>An invisible drifting blanket that causes misery to all in the vicinity.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 3 (12hp)</p>
+<p class=dense><b>Attacks:</b> None</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 2</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 35</p>
+
+<ul>
+
+	<li><b>Mundane damage immunity</b>: only harmed by silver weapons or magic.</li>
+	<li><b>Aura of depression</b>: all creatures that have been within 20ft for at least one turn suffer -1 to all rolls.</li>
+	<li><b>Nightmares</b>: creatures attempting to sleep in the same room must save vs spells or gain no benefit from rest.</li>
+	
+</ul>
+
+<p>This miserable creature will choose a victim, prioritising those with high WIS, and follow them around delighting in their suffering. It drifts quietly near the ceiling to avoid being detected. It cannot fit through narrow spaces or pass underwater.</p>
+
+
+
+<h3><a id="boltmaster_zebedee">Boltmaster Zebedee</a></h3>
+
+<p>A lost soul with a particular fascination for crossbows and their bolts.</p>
+
+<p class=dense><b>AC:</b> 6 [13]</p>
+<p class=dense><b>Hit dice:</b> 4 (18hp)</p>
+<p class=dense><b>Attacks:</b> 1 × crossbow (1d6) or 1 × scimitar (1d6)</p>
+<p class=dense><b>THAC0:</b> 17 [+2]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 10</p>
+<p class=dense><b>Alignment:</b> Lawful</p>
+<p class=dense_end><b>XP:</b> 75</p>
+
+<ul>
+
+	<li><b>Ranger</b>: he is a 4th level ranger, with the appropriate skills of awareness, foraging, hunting, stealth, and tracking.</li>
+	<li><b>Equipment</b>: studded leather armour, crossbow, scimitar, current stock (below), 550gp in coins.
+	<li><b>Languages</b>: Common Imperial only.</li>
+	
+</ul>
+
+<p>He will attempt to proselytise the use of crossbows to anyone who will listen, expressing a particular disdain for bows and arrows and their wielders. He is a merchant selling the following rotating stock:</p>
+
+<table>
+	<tr>
+		<td>1d4</td>
+		<td><button type="button" onclick='fill_from_table("zebedee_stock", ["1", "2", "3", "4"])'>Roll</button> <span id="zebedee_stock"></span></td>
+	<tr>
+		<td>1</td>
+		<td>120 × crossbow bolts: 5gp for 10<br>
+			10 × silvered crossbow bolts: 5gp<br>
+			1 × <a href="#bolt_of_healing">Bolt of Healing</a>: 100gp<br>
+			1 × <a href="#bolt_of_revelation">Bolt of Revelation</a>: 150gp<br>
+			2 × <a href="#bolt_of_teleportation">Bolt of Teleportation</a>: 100gp</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>120 × crossbow bolts: 5gp for 10<br>
+			10 × silvered crossbow bolts: 5gp<br>
+			1 × <a href="#bolt_of_explosion">Bolt of Explosion</a>: 300gp<br>
+			3 × <a href="#bolt_of_healing">Bolt of Healing</a>: 100gp<br>
+			1 × <a href="#bolt_of_revelation">Bolt of Revelation</a>: 150gp</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>120 × crossbow bolts: 5gp for 10<br>
+			10 × silvered crossbow bolts: 5gp<br>
+			2 × <a href="#bolt_of_explosion">Bolt of Explosion</a>: 300gp<br>
+			2 × <a href="#bolt_of_freezing">Bolt of Freezing</a>: 200gp<br>
+			1 × <a href="#bolt_of_teleportation">Bolt of Teleportation</a>: 100gp</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>120 × crossbow bolts: 5gp for 10<br>
+			10 × silvered crossbow bolts: 5gp<br>
+			1 × <a href="#bolt_of_freezing">Bolt of Freezing</a>: 200gp<br>
+			2 × <a href="#bolt_of_revelation">Bolt of Revelation</a>: 150gp<br>
+			1 × <a href="#bolt_of_teleportation">Bolt of Teleportation</a>: 100gp</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="bon_vivant">Bon Vivant</a></h3>
+
+<p>A priest of the Yearning Maw, visiting the Realm of the Dead to hunt and devour whatever strange new creatures they can find.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 6 (21hp)</p>
+<p class=dense><b>Attacks:</b> 1 × bite (1d6) or comically oversized meat tenderiser (1d6)</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 7</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Spellcasting</b>: they are 6th level clerics with the following spells prepared: <a href="#cannibalistic_frenzy"><i>Cannibalistic Frenzy</i></a> × 2; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(C)"><i>Hold Person</i></a> × 2; <a href="#umbilical_cord"><i>Umbilical Cord</i></a>; <a href="#dominate_undead"><i>Dominate Undead</i></a>.</li>
+	<li><b>Regeneration</b>: regain 3hp at the start of every round.</li>
+	<li><b>Refined palate</b>: can always detect poisoned or enchanted food or drink.</li>
+	<li><b>Equipment</b>: fine clothing, comically oversized meat tenderiser.</li>
+	<li><b>Languages</b>: Common Imperial, Ecclesiastic.</li>
+	<li><b>Names</b>: Miss Gullet, Miss Fodder, Miss Offal, Mrs Mandible, Mrs Tripe, Mrs Sweetbread, Dr Incisor, Mr Enamel, Mr Molar, Mr Paunch, Mr Chitterling, Mr Tongue.</li>
+	
+</ul>
+
+<p>They have the appearance of well-dressed dinner guests, except for their razor sharp steel teeth, 5ft prehensile tongues, and ability to unhinge their jaws.</p>
+
+
+
+<h3><a id="carrion_demon">Carrion Demon</a></h3>
+
+<p>An exceptionally sadistic demon from the Fourth Plane of Torment. It has a centaur-like body plan, with the four legs and tail of a giant lizard, the upper body and arms of a baboon, coiling ram's horns, and a disturbingly human face.</p>
+
+<p class=dense><b>AC:</b> 5 [14]</p>
+<p class=dense><b>Hit dice:</b> 4 (18hp)</p>
+<p class=dense><b>Attacks:</b> 1 × serrated greataxe (1d8) or spell</p>
+<p class=dense><b>THAC0:</b> 19 [0]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 9</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 75</p>
+
+<ul>
+
+	<li><b>Unholy</b>: harmed by holy water as undead.</li>
+	<li><b>Mundane damage resistance</b>: takes half damage from unsilvered nonmagical weapons.</li>
+	<li><b>Spellcasting</b>: can cast <a href="#detect_good"><i>Detect Good</i></a> and <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dispel_Magic"><i>Dispel Magic</i></a> once per day each.</li>
+	<li><b>Maniacal</b>: will always spend a round describing the horrible sadistic torture they have planned for their victims before attacking.</li>
+	<li><b>Languages</b>: Common Imperial, Esoteric.</li>
+	
+</ul>
+
+
+
+<h3><a id="cat_of_the_feline_court">Cat of the Feline Court</a></h3>
+
+<p>An ordinary housecat .</p>
+
+<p class=dense><b>AC:</b> 5 [14]</p>
+<p class=dense><b>Hit dice:</b> 0 (1hp)</p>
+<p class=dense><b>Attacks:</b> 1 × bite (1d2) or 1 × scratch (1d2)</p>
+<p class=dense><b>THAC0:</b> 20 [-1]</p>
+<p class=dense><b>Movement:</b> 150ft (50ft)</p>
+<p class=dense><b>Saves:</b> D14 W15 P16 B17 S18</p>
+<p class=dense><b>Morale:</b> 4</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 5</p>
+
+<ul>
+
+	<li><b>Instinct</b>: never surprised, always wins initiative.</li>
+	<li><b>Languages</b>: Secret Tongue of Cats, High Imperial (extremely poorly), understands Common Imperial but pretends not to.</li>
+	<li><b>Names</b>: Prince Andrei, Princess Maria, Count Rostov, Father Zosima, Governor von Lembke, Bishop Tikhon, Count Vronsky, Princess Dolly, Princess Kitty.</li>
+	
+</ul>
+
+
+
+<h3><a id="critic">Critic</a></h3>
+
+<p>A sentient artwork crafted by Moonbeam-Through-Beads-of-Water-Caught-in-Spiderweb, seeking art that will challenge and inspire them.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 2 (9hp)</p>
+<p class=dense><b>Attacks:</b> 1 × rearrange body or spell</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 7</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Blasé immunity</b>: only affected by weapons or spells used in novel, avant garde ways (e.g. swinging a bow like a sword).</li>
+	<li><b>Rearrange body</b>: save vs spells or have any two body parts swapped (e.g. left arm and right leg, or eyes and mouth).</li>
+	<li><b>Spellcasting</b>: critics can cast <i>Spectral Force</i> at will.</li>
+	<li><b>Languages</b>: High Imperial, Esoteric.</li>
+	<li><b>Names</b>: Bite-The-Hand-That-Feeds, Butter-Wouldn't-Melt, Cart-Before-The-Horse, Head-Over-Heels, Jack-Of-Clubs, Lies-To-Children, Mother-Knows-Best, Smoke-And-Mirrors, Trick-Of-The-Light.</li>
+	
+</ul>
+
+<p>Critics typically have little interest in anything but art or philosophy. They are easily bored and prone to mischief. Every critic has a unique appearance:</p>
+
+<table>
+	<tr>
+		<td></td>
+		<td><button type="button" onclick='fill_from_table("critic_appearance", ["Marble statue of a muscular adonis", "Winged jaguar carved from ebony", "Pointillist painting of a woman with a parasol", "3D starburst made of brightly coloured stained glass", "Human-sized stuffed toy parrot", "Disembodied spotlight that changes colour depending on mood", "Transparent crystal ballet dancer mid-pirouette, constantly rotating", "Cracked porcelain doll wearing stained dress"])'>Roll</button> <span id="critic_appearance"></span></td>
+	<tr>
+		<td>1</td>
+		<td>Marble statue of a muscular adonis</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Winged jaguar carved from ebony</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Pointillist painting of a woman with a parasol</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>3D starburst made of brightly coloured stained glass</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Human-sized stuffed toy parrot</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Disembodied spotlight that changes colour depending on mood</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Transparent crystal ballet dancer mid-pirouette, constantly rotating</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Cracked porcelain doll wearing stained dress</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="daphne">Daphne</a></h3>
+
+<p>A lost soul and travelling florist. She is never seen without her pet <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cat,_Panther"><b>Panther</b></a>, Rosa.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 5 (17hp)</p>
+<p class=dense><b>Attacks:</b> 1 × <a href="#blooming_bough">Blooming Bough</a> (1d4+1) or spell</p>
+<p class=dense><b>THAC0:</b> 16 [+3]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D9 W10 P12 B14 S12</p>
+<p class=dense><b>Morale:</b> 7</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 175</p>
+
+<ul>
+
+	<li><b>Spellcasting</b>: she is a 5th level druid with the following spells prepared: <i>Entangle</i>, <i>Speak with Animals</i>; <i>Obscuring Mist</i>, <i>Warp Wood</i>; <i>Tree Shape</i>; <i>Summon Animals</i>.</li>
+	<li><b>Equipment</b>: <a href="#blooming_bough">Blooming Bough</a>, fine clothing, sprig of mistletoe, current stock (below), 450gp in coins.
+	<li><b>Languages</b>: Common Imperial, Druidic, Secret Tongue of Cats.</li>
+	
+</ul>
+
+<p>Generally friendly, but never completely lets her guard down. She is not obviously a druid and looks more like a well-dressed young minor noblewoman. As a merchant, she buys flowers at full price, will identify plants and animals for 100gp each, and sells the following rotating stock:</p>
+
+<table>
+	<tr>
+		<td>1d4</td>
+		<td><button type="button" onclick='fill_from_table("daphne_stock", ["1", "2", "3", "4"])'>Roll</button> <span id="daphne_stock"></span></td>
+	<tr>
+		<td>1</td>
+		<td>10 × <a href="#daisy_of_the_meadow">Daisy-of-the-Meadow</a>: 2gp<br>
+			10 × <a href="#widows_bellflower">Widow's Bellflower</a>: 15gp<br>
+			4 × <a href="#devils_powderbrush">Devil's Powderbrush</a>: 75gp<br>
+			1 × <a href="#winter_lily">Winter Lily</a>: 250gp</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>10 × <a href="#daisy_of_the_meadow">Daisy-of-the-Meadow</a>: 2gp<br>
+			10 × <a href="#widows_bellflower">Widow's Bellflower</a>: 15gp<br>
+			3 × <a href="#dragon_poppy">Dragon Poppy</a>: 150gp<br>
+			1 × <a href="#meatbloom">Meatbloom</a>: 400gp<br>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>10 × <a href="#daisy_of_the_meadow">Daisy-of-the-Meadow</a>: 2gp<br>
+			10 × <a href="#widows_bellflower">Widow's Bellflower</a>: 15gp<br>
+			2 × <a href="#devils_powderbrush">Devil's Powderbrush</a>: 75gp<br>
+			4 × <a href="#dragon_poppy">Dragon Poppy</a>: 150gp<br>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>10 × <a href="#daisy_of_the_meadow">Daisy-of-the-Meadow</a>: 2gp<br>
+			10 × <a href="#widows_bellflower">Widow's Bellflower</a>: 15gp<br>
+			1 × <a href="#meatbloom">Meatbloom</a>: 400gp<br>
+			3 × <a href="#winter_lily">Winter Lily</a>: 250gp</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="fading_spirit">Fading Spirit</a></h3>
+
+<p>A ghostly memory of a deceased <a href="lost_soul">Lost Soul</a>.</p>
+
+<p class=dense><b>AC:</b> 0 [19]</p>
+<p class=dense><b>Hit dice:</b> 1 (4hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Touch</p>
+<p class=dense><b>THAC0:</b> 19 [0]</p>
+<p class=dense><b>Movement:</b> 60ft (20ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 5</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 13</p>
+
+<ul>
+
+	<li><b>Undead</b>: make no noise until they attack. Immune to effects that affect living creatures (e.g. poison). Immune to mind-affecting or mind-reading spells (e.g. <i>charm</i>, <i>hold</i>, <i>sleep</i>).</li>
+	<li><b>Touch</b>: living creatures touched must save vs death or die.</li>
+	<li><b>Mundane damage immunity</b>: only harmed by silver weapons or magic.</li>
+	<li><b>Incorporeal</b>: they can fade into invisibility at will, but must become visible again before they can interact with anything.</li>
+	<li><b>Languages</b>: Common Imperial only.</li>
+	
+</ul>
+
+<p>Dead-beyond-dead, these poor beings are barely there at all. They are only loosely aware of their surroundings and cannot form new memories.</p>
+
+
+
+<h3><a id="giant_bumblebee">Giant Bumblebee</a></h3>
+
+<p>A very soft and fuzzy bumblebee the size of a large dog.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 2 (9hp)</p>
+<p class=dense><b>Attacks:</b> 1 × sting (1d4 + poison)</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 30ft (10ft) or 120ft (40ft) flying</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 5</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Poison</b>: save vs death or die in one turn.</li>
+	<li><b>Languages</b>: Secret Tongue of Vermin only.</li>
+	
+</ul>
+
+<p>It is generally friendly and nonhostile. If followed it will sooner or later return to its nest [LINK].</p>
+
+
+
+<h3><a id="gourmet">Gourmet</a></h3>
+
+<p>Followers of the Yearning Maw, visiting the Realm of the Dead to hunt and devour whatever strange new creatures they can find.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 2 (9hp)</p>
+<p class=dense><b>Attacks:</b> 1 × bite (1d6) or weapon (1d6)</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 7</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Regeneration</b>: regain 3hp at the start of every round.</li>
+	<li><b>Refined palate</b>: can always detect poisoned or enchanted food or drink.</li>
+	<li><b>Equipment</b>: fine clothing, comically oversized knives and forks.</li>
+	<li><b>Languages</b>: Common Imperial only.</li>
+	<li><b>Names</b>: Miss Gullet, Miss Fodder, Miss Offal, Mrs Mandible, Mrs Tripe, Mrs Sweetbread, Dr Incisor, Mr Enamel, Mr Molar, Mr Paunch, Mr Chitterling, Mr Tongue.</li>
+	
+</ul>
+
+<p>They have the appearance of well-dressed dinner guests, except for their razor sharp steel teeth, 5ft prehensile tongues, and ability to unhinge their jaws.</p>
+
+
+
+<h3><a id="greater_husk">Greater Husk</a></h3>
+
+<p>A particularly foul necromantic creation of the Briar Prince. It is an undead human with a cursed iron spike driven into the base of the skull.</p>
+
+<p class=dense><b>AC:</b> 6 [13]</p>
+<p class=dense><b>Hit dice:</b> 8 (36hp)</p>
+<p class=dense><b>Attacks:</b> 2 × bludgeoning fist (1d8)</p>
+<p class=dense><b>THAC0:</b> 18 [+7]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D8 W9 P10 B10 S12</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 1200</p>
+
+<ul>
+
+	<li><b>Undead</b>: make no noise until they attack. Immune to effects that affect living creatures (e.g. poison). Immune to mind-affecting or mind-reading spells (e.g. <i>charm</i>, <i>hold</i>, <i>sleep</i>).</li>
+	<li><b>Mundane damage resistance</b>: takes half damage from unsilvered nonmagical weapons.</li>
+	<li><b>Regeneration</b>: regenerates 3hp per round.</li>
+	
+</ul>
+
+
+
+<h3><a id="her_royal_majesty">Her Royal Majesty Rumpus III, Rat Queen in Exile</a></h3>
+
+<p>An exceptionally large giant rat wearing a small crown and holding a sceptre. She has six <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Rat,_Normal"><b>Normal Rats</b></a> tied to her tail who vociferously agree with everything she says.</p>
+
+<p class=dense><b>AC:</b> 7 [12]</p>
+<p class=dense><b>Hit dice:</b> 6 (27hp)</p>
+<p class=dense><b>Attacks:</b> 1 × bite (1d8 + disease) and 1 × tail whip (2d4)</p>
+<p class=dense><b>THAC0:</b> 14 [+5]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 6</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 275</p>
+
+<ul>
+
+	<li><b>Disease</b>: save vs death or contract rat fever (bedbound for 1d4 weeks).</li>
+	<li><b>Equipment</b>: crown and sceptre made of shiny pieces of rubbish (worthless).</li>
+	<li><b>Languages</b>: High Imperial, The Secret Tongue of Vermin. The rats tied to her tail speak The Secret Tongue of Vermin only, except one that also speaks Common Imperial.</li>
+	
+</ul>
+
+<p>An exceptionally abrasive and aloof creature, still nursing her wounded pride over being overthrown and exiled by the Council of Vermin. She seeks a return to her rightful place of dominion over all vermin, and in particular the return of the <a href="#sixfold_reliquary">Sixfold Reliquary</a> to her paws. For now she has thrown her lot in with the worshippers of the Yearning Maw despite being a rat of little faith.</p>
+
+
+
+<h3><a id="husk">Husk</a></h3>
+
+<p>A foul necromantic creation of the Briar Prince. It is a zombie, decapitated, with a cursed iron spike driven into the neck and its own flayed skull hung on top.</p>
+
+<p class=dense><b>AC:</b> 11 [8]</p>
+<p class=dense><b>Hit dice:</b> 2 (9hp)</p>
+<p class=dense><b>Attacks:</b> 1 × unarmed strike (1d4) or gaze</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 60ft (20ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Undead</b>: make no noise until they attack. Immune to effects that affect living creatures (e.g. poison). Immune to mind-affecting or mind-reading spells (e.g. <i>charm</i>, <i>hold</i>, <i>sleep</i>).</li>
+	<li><b>Gaze</b>: a single living creature that meets its gaze must save vs paralysis or be paralysed. The husk cannot move or attack while maintaining its gaze. The effect is broken if the husk or its target take damage, or if line of sight is broken.</li>
+	<li><b>Turn resistance</b>: turned as though they were 3HD undead.</li>
+	
+</ul>
+
+
+
+<h3><a id="lapis_living_statue">Lapis Living Statue</a></h3>
+
+<p>A 12ft animated statue of a knight in full plate armour made from solid lapis lazuli.</p>
+
+<p class=dense><b>AC:</b> 3 [16]</p>
+<p class=dense><b>Hit dice:</b> 5 (22hp)</p>
+<p class=dense><b>Attacks:</b> 1 × two-handed mace (2d6)</p>
+<p class=dense><b>THAC0:</b> 15 [+4]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 175</p>
+
+<ul>
+
+	<li><b>Hollow</b>: at half health (11hp) its hollow interior is breached releasing toxic yellow gas, all in the same room save vs death or die.</li>
+	<li><b>Value</b>: worth 5000gp intact, reduced by 100gp per hit point of damage taken.</li>
+	
+</ul>
+
+
+
+<h3><a id="little_bastard">Little Bastard</a></h3>
+
+<p>A thoroughly annoying little git of a demon from the Fifth Plane of Madness.</p>
+
+<p class=dense><b>AC:</b> -2 [21]</p>
+<p class=dense><b>Hit dice:</b> 1 (4hp)</p>
+<p class=dense><b>Attacks:</b> 1 × spell</p>
+<p class=dense><b>THAC0:</b> 19 [0]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 5</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 75</p>
+
+<ul>
+
+	<li><b>Unholy</b>: harmed by holy water as undead.</li>
+	<li><b>Mundane damage immunity</b>: take no damage from unsilvered nonmagical weapons.</li>
+	<li><b>Magic resistance</b>: 50% chance to be unaffected by any spell.</li>
+	<li><b>Spells</b>: can cast <i>Auditory Illusion</i>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Invisibility"><i>Invisibility</i></a>, and <a href="#swap_minds"><i>Swap Minds</i></a> at will.</li>
+	<li><b>Languages</b>: Common Imperial, Esoteric.</li>
+	
+</ul>
+
+
+
+<h3><a id="maenad">Maenad</a></h3>
+
+<p>Lost souls transformed by <a href="#mother_delirium"><b>Mother Delirium</b></a> into whimsical forms. Unless specified, they are <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Normal_Human"><b>Normal Humans</b></a>. They are perpetually drunk or otherwise delirious.</p>
+
+<table>
+	<tr>
+		<td></td>
+		<td><button type="button" onclick='fill_from_table("maenad_form", ["Anthropomorphic dog-person", "Anthropomorphic sheep-person", "Anthropomorphic pig-person", "Anthropomorphic rat-person", "Anthropomorphic fish-person", "Anthropomorphic bird-person", "Anthropomorphic toad-person", "Anthropomorphic horse-person", "Anthropomorphic beetle-person", "<a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Skeleton \"><b>Skeleton</b></a>", "Anthropomorphic slime-person (as <a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Grey_Ooze\"><b>Grey Ooze</b></a>)", "<a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Living_Statue#Iron_Living_Statue \"><b>Iron Living Statue</b></a>"])'>Roll</button> <span id="maenad_form"></span></td>
+	<tr>
+		<td>1</td>
+		<td>Anthropomorphic dog-person</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Anthropomorphic sheep-person</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Anthropomorphic pig-person</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Anthropomorphic rat-person</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Anthropomorphic fish-person</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Anthropomorphic bird-person</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Anthropomorphic toad-person</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Anthropomorphic horse-person</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Anthropomorphic beetle-person</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Anthropomorphic slime-person (as <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Grey_Ooze"><b>Grey Ooze</b></a>)</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Skeleton"><b>Skeleton</b></a></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Living_Statue#Iron_Living_Statue"><b>Iron Living Statue</b></a></td>
+	</tr>
+</table>
+
+
+
+<h3><a id="mother_delirium">Mother Delirium</a></h3>
+
+<p>Demon queen of the Fifth Plane of Madness. She takes the form of a 40ft giant earthworm with the upper body, arms and head of a human. She has abused The Lanternbearer's hospitality to take his domain and twist it to her whims.</p>
+
+<p class=dense><b>AC:</b> 4 [15]</p>
+<p class=dense><b>Hit dice:</b> 15 (67hp)</p>
+<p class=dense><b>Attacks:</b> any two of: 1 × <a href="#brainflayer">Brainflayer</a> (3 × 1d6), 1 × tail (2d10), 1 × spell, 1 × <a href="#wand_of_anything">Wand of Anything</a></p>
+<p class=dense><b>THAC0:</b> 10 [+9]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D6 W7 P8 B8 S10</p>
+<p class=dense><b>Morale:</b> 11</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 1900</p>
+
+<ul>
+
+	<li><b>Unholy</b>: harmed by holy water as undead.</li>
+	<li><b>Mundane damage resistance</b>: takes half damage from unsilvered nonmagical weapons.</li>
+	<li><b>Aura of madness</b>: for every turn spent in the same room, save vs spells or contract a random delusion or phobia.</li>
+	<li><b>Spellcasting</b>: she can cast <i>Phantasmal Killer</i>, <a href="#dance_worms"><i>Dance, Worms!</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Polymorph_Others"><i>Polymorph Others</i></a>, and <i>Chaos</i> once per day each.</li>
+	<li><b>Languages</b>: Common Imperial, Ecclesiastic, Esoteric.</li>
+	
+</ul>
+
+
+
+<h3><a id="mr_marrow">Mr Marrow</a></h3>
+
+<p>A <a href="#gourmet"><b>Gourmet</b></a> and alchemist.</p>
+
+<ul>
+
+	<li><b>Equipment</b>: comically large meat skewer (1d6), 1700gp in coins, alchemical equipment.</li>
+	<li><b>Languages</b>: Common Imperial, Esoteric.</li>
+	
+</ul>
+
+<p>As a merchant, he buys exotic meat at 100gp per HD, identifies potions and other substances for 100gp, and sells the following rotating stock:</p>
+
+<table>
+	<tr>
+		<td>1d4</td>
+		<td><button type="button" onclick='fill_from_table("mr_marrow_stock", ["1", "2", "3", "4"])'>Roll</button> <span id="mr_marrow_stock"></span></td>
+	<tr>
+		<td>1</td>
+		<td>1 × <a href="#potion_of_greater_invisiblity">Potion of Greater Invisibility</a>: 400gp<br>
+			2 × <a href="#potion_of_love">Potion of Love</a>: 450gp<br>
+			1 × <a href="#potion_of_petrification">Potion of Petrification</a>: 250gp<br>
+			1 × <a href="#potion_of_shrinking">Potion of Shrinking</a>: 300gp<br>
+			1 × <a href="#potion_of_slumber">Potion of Slumber</a>: 150gp</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1 × <a href="#potion_of_agony">Potion of Agony</a>: 150gp<br>
+			1 × <a href="#potion_of_antimagic">Potion of Antimagic</a>: 2500gp<br>
+			1 × <a href="#potion_of_petrification">Potion of Petrification</a>: 250gp<br>
+			1 × <a href="#potion_of_shrinking">Potion of Shrinking</a>: 300gp<br>
+			2 × <a href="#potion_of_slumber">Potion of Slumber</a>: 150gp</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>2 × <a href="#potion_of_agony">Potion of Agony</a>: 150gp<br>
+			1 × <a href="#potion_of_antimagic">Potion of Antimagic</a>: 2500gp<br>
+			1 × <a href="#potion_of_greater_invisiblity">Potion of Greater Invisibility</a>: 400gp<br>
+			1 × <a href="#potion_of_love">Potion of Love</a>: 450gp<br>
+			1 × <a href="#potion_of_slumber">Potion of Slumber</a>: 150gp</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>1 × <a href="#potion_of_agony">Potion of Agony</a>: 150gp<br>
+			1 × <a href="#potion_of_greater_invisiblity">Potion of Greater Invisibility</a>: 400gp<br>
+			1 × <a href="#potion_of_love">Potion of Love</a>: 450gp<br>
+			1 × <a href="#potion_of_petrification">Potion of Petrification</a>: 250gp<br>
+			2 × <a href="#potion_of_shrinking">Potion of Shrinking</a>: 300gp</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="mutant_crocodile">Mutant Crocodile</a></h3>
+
+<p>A large grey crocodile, mutated as a result of swimming in the river.</p>
+
+<p class=dense><b>AC:</b> 6 [13]</p>
+<p class=dense><b>Hit dice:</b> 5 (22hp)</p>
+<p class=dense><b>Attacks:</b> 1 × bite (1d10 + saliva) + 1 × tail whip</p>
+<p class=dense><b>THAC0:</b> 15 [+4]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 7</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 175</p>
+
+<ul>
+
+	<li><b>Surprise</b>: 4-in-6 chance due to camouflage.</li>
+	<li><b>Saliva</b>: its saliva is a powerful solvent, capable of washing out any ink, adhesive, dye, etc. Leather armour touched by the saliva is ruined. One pint of solvent can be harvested from its corpse.</li>
+	<li><b>Tail whip</b>: it can crack its long sinuous tail like a whip, making a sudden deafening noise. Spellcasting within 50ft is interrupted, and creatures within 10ft must save vs death or be stunned for one round.</li>
+	<li><b>Languages</b>: Secret Tongue of Serpents only.</li>
+	
+</ul>
+
+
+
+<h3><a id="mutant_egret">Mutant Egret</a></h3>
+
+<p>A hyperintelligent rainbow feathered egret, mutated as a result of eating fish from the river.</p>
+
+<p class=dense><b>AC:</b> 6 [13]</p>
+<p class=dense><b>Hit dice:</b> 2 (9hp)</p>
+<p class=dense><b>Attacks:</b> 1 × bite (1d2)</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 30ft (10ft) or 150ft (50ft) flying</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 4</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Hyperintelligent</b>: capable of complex multi-step plans, constructing unlikely Rube Goldberg contraptions, etc.</li>
+	<li><b>Spellcasting savant</b>: if it has a chance to study any spellbook or arcane scroll, it can learn and later cast any spell therein at will.</li>
+	<li><b>Languages</b>: understands Common Imperial but cannot speak.</li>
+	
+</ul>
+
+<p>It desperately wishes to learn arcane magic, and avariciously seeks spellbooks, arcane scrolls, or magic items. Its long term goal is to subjugate humans to provide endless fish for it.</p>
+
+
+
+<h3><a id="mutant_harpy">Mutant Harpy</a></h3>
+
+<p>A woman, mutated by the river into a monstrous form, with feathers bursting through the skin of her arms to form wings, a supernatural song, and a bizarre obsession with human hearts.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 5 (22hp)</p>
+<p class=dense><b>Attacks:</b> 2 × Claw (1d4 + Regeneration + Extract heart), 1 × Song</p>
+<p class=dense><b>THAC0:</b> 15 [+4]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft), or 240ft (80ft) flying</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 8</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 175</p>
+
+<ul>
+
+	<li><b>Song</b>: all hearing her mournful song must save vs spells every round or be charmed. Charmed subjects defend her, remove armour, and let her tear their hearts out.</li>
+	<li><b>Regeneration</b>: regains 3hp per round. Cannot be killed unless heart is torn out and destroyed by magical damage. Creatures touched by her (including claw attacks) also gain regeneration for one turn. This regeneration is powerful enough to regrow limbs, if in prolonged contact for several hours.</li>
+	<li><b>Extract heart</b>: tears heart out from a charmed, unconscious, or helpless target's chest. Due to her magical regeneration, this is usually nonfatal.</li>
+	<li><b>Keeping hearts</b>: takes hearts to her nest, where they continue beating for a number of rounds equal to subject's CON. If not returned to chest cavity in this time, subject dies.</li>
+	<li><b>Languages</b>: understands Common Imperial but can no longer speak.</li>
+	
+</ul>
+
+<p>She waits from her nest and ambushes those attempting to climb the cliffs when they're most vulnerable. Whether by the effects of the mutation, or by madness, or by the simple passage of time, she has forgotten who she ever was and cannot be meaningfully negotiated with.</p>
+
+
+
+<h3><a id="mutant_jellyfish">Mutant Jellyfish</a></h3>
+
+<p>A colossal green jellyfish, mutated by the influence of the river. It floats upside-down with its long vine-like tentacles reaching up out of the water.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 6 (27hp)</p>
+<p class=dense><b>Attacks:</b> 4 × Tentacle (Paralysis)</p>
+<p class=dense><b>THAC0:</b> 14 [+5]</p>
+<p class=dense><b>Movement:</b> 0ft</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 275</p>
+
+<ul>
+
+	<li><b>Tentacles</b>: look uncannily like vines. Instinctively bend to touch anything within 2ft. 12 tentacles total but only up to 4 reach towards anything at a time.</li>
+	<li><b>Paralysis</b>: save vs death or be paralysed for 2d4 turns. Paralysed creatures usually drop into the water, and after 1 round, enter mutant jellyfish's mouth.</li>
+	<li><b>Digestion</b>: creatures in mouth take 2d6 damage per round. Body is fully digested after 6 turns.</li>
+	<li><b>Damaging</b>: individual tentacles may be severed by slashing weapons, but only damage to body counts against hit points. Regrows all tentacles after 24 hours.</li>
+	
+</ul>
+
+<p>The mutant jellyfish is completely unintelligent, cannot flee, and barely responds to external stimuli.</p>
+
+
+
+<h3><a id="mutant_mantis">Mutant Mantis</a></h3>
+
+<p>A colossal 15ft tall praying mantis with the ability to turn itself invisible, mutated by the influence of the river.</p>
+
+<p class=dense><b>AC:</b> 5 [14]</p>
+<p class=dense><b>Hit dice:</b> 6 (27hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Grab (2d4) or 1 × Bite (death)</p>
+<p class=dense><b>THAC0:</b> 14 [+5]</p>
+<p class=dense><b>Movement:</b> 60ft (20ft)</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 5</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 275</p>
+
+<ul>
+
+	<li><b>Invisiblity</b>: can make itself invisible at will (as <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Invisibility"><i>Invisibility</i></a>).</li>
+	<li><b>Grab</b>: target must save vs paralysis or be grappled in mantis's spined forearms. Once grappled, they take automatic 2d4 damage per round.</li>
+	<li><b>Bite</b>: if this attack hits, it gorily decapitates the target instead of dealing damage. It may only be used against already grabbed targets.</li>
+	<li><b>Languages</b>: Secret Tongue of Vermin only.</li>
+	
+</ul>
+
+<p>Despite its invisibility, it cannot move without revealing its presence by its enormous footprints and brushing against the trees, so it prefers to stay in place and let prey come to it. If its initial ambush fails, it will usually flee.</p>
+
+
+
+<h3><a id="pile_of_broken_skeletons">Pile of Broken Skeletons</a></h3>
+
+<p>A tangled pile of half-animated bones dragging themselves along the ground and clawing at anything in reach. One can almost hear whispered cries for help from their twitching jaws.</p>
+
+<p class=dense><b>AC:</b> 11 [8]</p>
+<p class=dense><b>Hit dice:</b> 1d4 (4/9/13/18+hp) (<a href="https://anydice.com/articles/exploding-dice/">explodes</a>)</p>
+<p class=dense><b>Attacks:</b> 1 × claw (1d2) per HD</p>
+<p class=dense><b>THAC0:</b> 19/18/17/16 [0/+1/+2/+3]</p>
+<p class=dense><b>Movement:</b> 60ft (20ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Undead</b>: make no noise until they attack. Immune to effects that affect living creatures (e.g. poison). Immune to mind-affecting or mind-reading spells (e.g. <i>charm</i>, <i>hold</i>, <i>sleep</i>).</li>
+	<li><b>Grab</b>: if hit by more than one claw attack in the same round, save vs paralysis or be drawn into the pile (automatic 1d6 damage per round).</li>
+	
+</ul>
+
+
+
+<h3><a id="rubik_the_burgundy">Rubik the Burgundy</a></h3>
+
+<p>An imperial librarian and wizard dressed in burgundy robes.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 4 (10hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Unarmed strike (1d2) or Spell</p>
+<p class=dense><b>THAC0:</b> 19 [0]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D13 W14 P13 B16 S15</p>
+<p class=dense><b>Morale:</b> 5</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 175</p>
+
+<ul>
+
+	<li><b>Spellcasting</b>: he is a 4th level Magic-User with the following spells prepared: <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Magic_(MU)"><i>Detect Magic</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Read_Languages"><i>Read Languages</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Invisibility"><i>Invisibility</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Levitate"><i>Levitate</i></a>. In his spellbook, he additionally has the spells <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Read_Magic"><i>Read Magic</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Floating_Disc"><i>Floating Disc</i></a>, and <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Locate_Object_(MU)"><i>Locate Object</i></a>.</li>
+	<li><b>Languages</b>: Common Imperial, Esoteric.</li>
+	
+</ul>
+
+<p>Rubik's wife, <a href="#barbara_the_burgundy"><b>Barbara the Burgundy</b></a>, went missing two years ago. He subsequently made a pilgrimage to an oracle who told him she could be found somewhere in the Well of Clemency. He sneaked in using <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Invisibility"><i>Invisibility</i></a> and <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Levitate"><i>Levitate</i></a> but was unable to find her and was ostracised from the Second Society due to his selfishness.</p>
+
+
+
+<h3><a id="serpent_of_the_first_circle">Serpent of the First Circle</a></h3>
+
+<p>A small snake belonging to the Circle of Serpents. It is either a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Snake#Pit_Viper"><b>Pit Viper</b></a> or a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Snake#Spitting_Cobra"><b>Spitting Cobra</b></a> (50/50 chance). <button type="button" onclick='fill_from_table("serpent_first_circle", ["<a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Snake#Pit_Viper\"><b>Pit Viper</b></a>", "<a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Snake#Spitting_Cobra\"><b>Spitting Cobra</b></a>"])'>Roll</button> <span id="serpent_first_circle"></span></p>
+
+<ul>
+	<li><b>Spellcasting</b>: Serpents of the First Circle are first level druids, with <i>Detect Danger</i> prepared.</li>
+	<li><b>Languages</b>: The Secret Tongue of Serpents, Druidic.</li>
+	<li><b>Names</b>: Simon, Samson, Steven, Sebastian, Sullivan, Seth, Sara, Stephanie, Samantha, Sylvia, Sibyl, Sophia. <button type="button" onclick='fill_from_table("serpent_first_name", ["Simon", "Samson", "Steven", "Sebastian", "Sullivan", "Seth", "Sara", "Stephanie", "Samantha", "Sylvia", "Sibyl", "Sophia"])'>Roll</button> <span id="serpent_first_name"></span></li>
+	
+</ul>
+
+
+
+<h3><a id="serpent_of_the_second_circle">Serpent of the Second Circle</a></h3>
+
+<p>A large snake belonging to the Circle of Serpents. It is either a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Snake#Giant_Rattler"><b>Giant Rattler</b></a> or a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Snake#Rock_Python"><b>Rock Python</b></a> (50/50 chance). <button type="button" onclick='fill_from_table("serpent_second_circle", ["<a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Snake#Giant_Rattler\"><b>Giant Rattler</b></a>", "<a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Snake#Rock_Python\"><b>Rock Python</b></a>"])'>Roll</button> <span id="serpent_second_circle"></span></p>
+
+<ul>
+	<li><b>Spellcasting</b>: Serpents of the Second Circle are fourth level druids, with the following spells prepared: <i>Entangle</i>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals"><i>Speak with Animals</i></a>; <a href="#human_charm"><i>Human Charm</i></a>, <i>Obscuring Mist</i>.</li>
+	<li><b>Languages</b>: The Secret Tongue of Serpents, Druidic.</li>
+	<li><b>Names</b>: Simon, Samson, Steven, Sebastian, Sullivan, Seth, Sara, Stephanie, Samantha, Sylvia, Sibyl, Sophia. <button type="button" onclick='fill_from_table("serpent_second_name", ["Simon", "Samson", "Steven", "Sebastian", "Sullivan", "Seth", "Sara", "Stephanie", "Samantha", "Sylvia", "Sibyl", "Sophia"])'>Roll</button> <span id="serpent_second_name"></span></li>
+	
+</ul>
+
+
+
+<h3><a id="sir_sticky">Sir Sticky</a></h3>
+
+<p>A sentient human-sized giant centipede wearing centipede plate armour and wielding a centipede sword and shield.</p>
+
+<p class=dense><b>AC:</b> 2 [17]</p>
+<p class=dense><b>Hit dice:</b> 2 (9hp)</p>
+<p class=dense><b>Attacks:</b> 1 × sword (1d8)</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 10</p>
+<p class=dense><b>Alignment:</b> Lawful</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Languages</b>: Common Imperial, Secret Tongue of Vermin.</li>
+	
+</ul>
+
+<p>He is on a noble quest for the Council of Vermin to find and destroy the source of the undead flies in the sewers.</p>
+
+
+
+<h3><a id="sister_daffodil">Sister Daffodil</a></h3>
+
+<p>This unfortunate lost soul is a priestess of The Lanternbearer, driven mad by Mother Delirium and horrifically diseased from wandering the sewers.</p>
+
+<p class=dense><b>AC:</b> 5 [14]</p>
+<p class=dense><b>Hit dice:</b> 4 (14hp, but currently on 1hp due to disease)</p>
+<p class=dense><b>Attacks:</b> 1 × <a href="#rod_of_homecoming">Rod of Homecoming</a> (1d4+1) or spell</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D11 W12 P14 B16 S15</p>
+<p class=dense><b>Morale:</b> 5</p>
+<p class=dense><b>Alignment:</b> Lawful</p>
+<p class=dense_end><b>XP:</b> 75</p>
+
+<ul>
+
+	<li><b>Diseased</b>: for every turn spent in the same room, save vs death or contract a <a href="#random_disease">random disease</a>.</li>
+	<li><b>Spellcasting</b>: she is a 4th level cleric with the following spells prepared: <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Light_Wounds_(Cause_Light_Wounds)"><i>Cure Light Wounds</i></a> × 2; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Bless_(Blight)"><i>Bless</i></a>.</li>
+	<li><b>Equipment</b>: chainmail, <a href="#rod_of_homecoming">Rod of Homecoming</a>, <a href="#periapt_of_preservation">Periapt of Preservation</a>.</li>
+	<li><b>Languages</b>: Common Imperial, Ecclesiastic.</li>
+	
+</ul>
+
+<p>Aggressively hospitable. Will always insist upon healing visitors' wounds, making them a cup of tea, etc. Cannot by any means be made to believe that she or anyone she meets is sick ("Don't worry, it's just a cold", etc.)</p>
+
+
+
+<h3><a id="swarm_of_lachryphagous_moths">Swarm of Lachryphagous Moths</a></h3>
+
+<p>A cloud of large grey moths that subsist on the tears of sleeping creatures.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 4 (18hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Pollen or 1 × Drink tears</p>
+<p class=dense><b>Movement:</b> 60ft (20ft) flying</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 4</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 75</p>
+
+<ul>
+
+	<li><b>Pollen</b>: wings are coated in <a href="#widows_bellflower">widow's bellflower</a> pollen. Can shake themselves to produce cloud of pollen (save vs death or fall asleep for 2d8 turns).</li>
+	<li><b>Drink tears</b>: suck fluids from sleeping creature's tear ducts using proboscises. Creature is blinded for 24 hours.</li>
+	<li><b>Damaging</b>: takes at most 1hp damage from weapon attacks. Takes 1d8 damage from nets, fire, buckets of water etc.</li>
+	<li><b>Languages</b>: Secret Tongue of Vermin only.</li>
+	
+</ul>
+
+
+
+<h3><a id="sweet_mary_ann">Sweet Mary-Ann</a></h3>
+
+<p>A lost soul and trader in general goods. She is severely disfigured from late-stage syphilis.</p>
+
+<p class=dense><b>AC:</b> 4 [15]</p>
+<p class=dense><b>Hit dice:</b> 3 (13hp)</p>
+<p class=dense><b>Attacks:</b> 1 × warhammer (1d6)</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 8</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 35</p>
+
+<ul>
+
+	<li><b>Equipment</b>: chainmail, warhammer, shield, 1400gp in coins.</li>
+	<li><b>Languages</b>: Common Imperial only.</li>
+	
+</ul>
+
+<p>As a merchant, she buys treasure at full price, and sells the following rotating stock:</p>
+
+<table>
+	<tr>
+		<td>1d4</td>
+		<td><button type="button" onclick='fill_from_table("mary_ann_stock", ["1", "2", "3", "4"])'>Roll</button> <span id="mary_ann_stock"></span></td>
+	<tr>
+		<td>1</td>
+		<td>All nonmagical <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Adventuring_Gear">adventuring gear</a> at double price<br>
+			1 × <a href="#sibylline_deck">Sibylline Deck</a>: 100gp<br>
+			1 × <a href="#spoon_of_flavour">Spoon of Flavour</a>: 250gp<br>
+			1 × <a href="#purple_spiral_tea_leaves">Purple Spiral Tea leaves</a>: 2500gp</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>All nonmagical <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Adventuring_Gear">adventuring gear</a> at double price<br>
+			1 × <a href="#purging_stone">Purging Stone</a>: 650gp<br>
+			1 × <a href="#spoon_of_flavour">Spoon of Flavour</a>: 250gp<br>
+			1 × <a href="#purple_spiral_tea_leaves">Purple Spiral Tea leaves</a>: 2500gp</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>All nonmagical <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Adventuring_Gear">adventuring gear</a> at double price<br>
+			1 × <a href="#purging_stone">Purging Stone</a>: 650gp<br>
+			1 × <a href="#sibylline_deck">Sibylline Deck</a>: 100gp<br>
+			1 × <a href="#purple_spiral_tea_leaves">Purple Spiral Tea leaves</a>: 2500gp</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>All nonmagical <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Adventuring_Gear">adventuring gear</a> at double price<br>
+			1 × <a href="#purging_stone">Purging Stone</a>: 650gp<br>
+			1 × <a href="#sibylline_deck">Sibylline Deck</a>: 100gp<br>
+			1 × <a href="#spoon_of_flavour">Spoon of Flavour</a>: 250gp</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="tabitha_the_turquoise">Tabitha the Turquoise</a></h3>
+
+<p>A librarian and Magic-User. She is in fact not a Lost Soul, but rather astrally projected to the Realm of the Dead and her mortal body was destroyed stranding her here.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 4 (</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D11 W12 P14 B16 S15</p>
+<p class=dense><b>Morale:</b> 2</p>
+<p class=dense><b>Alignment:</b> Lawful</p>
+<p class=dense_end><b>XP:</b> 75</p>
+
+<ul>
+
+	<li><b>Pacifist</b>: she is a strict pacifist and will never fight.</li>
+	<li><b>Spellcasting</b>: she is a 6th level magic-user with the following spells prepared: .</li>
+	<li><b>Equipment</b>: .</li>
+	<li><b>Languages</b>: Common Imperial, Esoteric.</li>
+	
+</ul>
+
+<p>She is secretly in love with <a href="#sweet_mary_ann"><b>Sweet Mary-Ann</b></a> and often stares at her in a way easily misconstrued as rude. As a merchant, she identifies magic items for 250gp and sells the following rotating stock:</p>
+
+<table>
+	<tr>
+		<td>1d4</td>
+		<td><button type="button" onclick='fill_from_table("tabitha_stock", ["1", "2", "3", "4"])'>Roll</button> <span id="tabitha_stock"></span></td>
+	<tr>
+		<td>1</td>
+		<td>1 × arcane scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Floating_Disc"><i>Floating Disc</i></a>: 200gp<br>
+			1 × arcane scroll of <i>Dancing Lights</i>: 125gp<br>
+			1 × arcane scroll of <i>Spectral Force</i>: 400gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Magic_(C)"><i>Detect Magic</i></a>: 100gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(C)"><i>Continual Light</i></a>: 300gp<br>
+			1 × divine scroll of <i>Invisibility to Animals</i>: 450gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Plants"><i>Speak with Plants</i></a>: 500gp<br>
+			1 × <a href="#book_of_ghosts"><i>Book of Ghosts</i></a>: 3500gp<br>
+			1 × <a href="#sacred_rituals"><i>Sacred Rituals</i></a>: 5000gp<br>
+			1 × <a href="#tome_of_censure"><i>Tome of Censure</i></a>: 2500gp</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1 × arcane scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Portal"><i>Hold Portal</i></a>: 150gp<br>
+			1 × arcane scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Curse_(Curse)_(MU)"><i>Remove Curse</i></a>: 1000gp<br>
+			1 × arcane scroll of <i>Dancing Lights</i>: 125gp<br>
+			1 × arcane scroll of <i>Triggered Illusion</i>: 950gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Know_Alignment"><i>Know Alignment</i></a>: 175gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(C)"><i>Continual Light</i></a>: 300gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Plants"><i>Speak with Plants</i></a>: 500gp<br>
+			1 × divine scroll of <i>Growth of Nature</i>: 750gp<br>
+			1 × <a href="#the_captive_rainbow"><i>The Captive Rainbow</i></a>: 2500gp<br>
+			1 × <a href="#sylvan_blessings"><i>Sylvan Blessings</i></a>: 3000gp<br>
+			1 × <a href="#sacred_rituals"><i>Sacred Rituals</i></a>: 5000gp<br>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1 × arcane scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Portal"><i>Hold Portal</i></a>: 150gp<br>
+			1 × arcane scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Floating_Disc"><i>Floating Disc</i></a>: 200gp<br>
+			1 × arcane scroll of <i>Spectral Force</i>: 400gp<br>
+			1 × arcane scroll of <i>Triggered Illusion</i>: 950gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Magic_(C)"><i>Detect Magic</i></a>: 100gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Know_Alignment"><i>Know Alignment</i></a>: 175gp<br>
+			1 × divine scroll of <i>Invisibility to Animals</i>: 450gp<br>
+			1 × divine scroll of <i>Growth of Nature</i>: 750gp<br>
+			1 × <a href="#book_of_ghosts"><i>Book of Ghosts</i></a>: 3500gp<br>
+			1 × <a href="#sylvan_blessings"><i>Sylvan Blessings</i></a>: 3000gp<br>
+			1 × <a href="#tome_of_censure"><i>Tome of Censure</i></a>: 2500gp</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>1 × arcane scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Floating_Disc"><i>Floating Disc</i></a>: 200gp<br>
+			1 × arcane scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Curse_(Curse)_(MU)"><i>Remove Curse</i></a>: 1000gp<br>
+			1 × arcane scroll of <i>Dancing Lights</i>: 125gp<br>
+			1 × arcane scroll of <i>Spectral Force</i>: 400gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Magic_(C)"><i>Detect Magic</i></a>: 100gp<br>
+			1 × divine scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(C)"><i>Continual Light</i></a>: 300gp<br>
+			1 × divine scroll of <i>Invisibility to Animals</i>: 450gp<br>
+			1 × <a href="#the_captive_rainbow"><i>The Captive Rainbow</i></a>: 2500gp<br>
+			1 × <a href="#sacred_rituals"><i>Sacred Rituals</i></a>: 5000gp</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="temptress_demon">Temptress Demon</a></h3>
+
+<p>A demon from the Fifth Plane of Madness taking the form of a beautiful seductive human. They delight in manipulating people into senseless and destructive acts.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 2 (9hp)</p>
+<p class=dense><b>Attacks:</b> 1 × charm or kiss or spell</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 6</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 25</p>
+
+<ul>
+
+	<li><b>Unholy</b>: harmed by holy water as undead.</li>
+	<li><b>Mundane damage resistance</b>: takes half damage from unsilvered nonmagical weapons.</li>
+	<li><b>Charm</b>: can cast <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Charm_Person"><i>Charm Person</i></a> at will. If the subject passes their save they cannot be charmed for 24 hours.</li>
+	<li><b>Kiss</b>: save vs paralysis or be paralysed for 6 turns.</li>
+	<li><b>Spellcasting</b>: can cast <a href="#detect_good"><i>Detect Good</i></a> once per day.</li>
+	<li><b>Shapeshifting</b>: can change appearance if not observed. Cannot replicate precise individuals, and always has at least one clearly demonic feature (e.g. horns, pointed tail).</li>
+	<li><b>Languages</b>: Common Imperial, Esoteric.</li>
+	
+</ul>
+
+
+
+<h3><a id="the_disc_that_erases_you">The Disc That Erases You</a></h3>
+
+<p>An extraplanar being with the appearance of a giant levitating red blood cell 8ft in diameter.</p>
+
+<p class=dense><b>AC:</b> 6 [13]</p>
+<p class=dense><b>Hit dice:</b> 4 (18hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Grab head</p>
+<p class=dense><b>THAC0:</b> 16 [+3]</p>
+<p class=dense><b>Movement:</b> 60ft (20ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 7</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 125</p>
+
+<ul>
+
+	<li><b>Grab head</b>: attaches firmly and deals an automatic 1d8 damage to INT per round. If a creature is reduced to zero INT, they are left permanently braindead.</li>
+	
+</ul>
+
+<p>When summoned, it will mindlessly try to erase all creatures in the vicinity, in order of intelligence.</p>
+
+
+
+<h3><a id="the_goo_that_makes_you_pregnant">The Goo That Makes You Pregnant</a></h3>
+
+<p>An extraplanar being with the appearance of a levitating blob of violently frothing roiling bruise-coloured matter.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 8 (36hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Touch</p>
+<p class=dense><b>THAC0:</b> 12 [+7]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D8 W9 P10 B10 S12</p>
+<p class=dense><b>Morale:</b> 8</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 650</p>
+
+<ul>
+
+	<li><b>Mundane damage immunity</b>: can only be harmed by magical attacks.</li>
+	<li><b>Touch</b>: any creature touched becomes pregnant (no save, 1-in-6 chance of twins).</li>
+	<li><b>Pregnancy</b>: grows between organs, does not require a uterus. After 1d12 days the creature experiences morning sickness. After a further 1d12 days their abdomen swells out and they suffer -3 to STR, CON, and DEX due to organs being pushed out of place and nutrients being absorbed by the foetus. After another 1d12 days the foetus claws its way out causing 6d6 damage, unless delivered by caesarean.</li>
+	<li><b>Baby</b>: a 1HD humanoid with 1d3 arms, 1d3 legs, and three random mutations. It matures fast and reaches the equivalent of human adulthood in one year.</li>
+	
+</ul>
+
+<p>When summoned, it will try to impregnate every creature it sees. It is intelligent and friendly but cannot communicate in any way comprehensible to humans.</p>
+
+
+
+<h3><a id="keymonger">The Keymonger</a></h3>
+
+<p>An odd and secretive figure obsessed with keys.</p>
+
+<p class=dense><b>AC:</b> 5 [14]</p>
+<p class=dense><b>Hit dice:</b> 2 (9hp)</p>
+<p class=dense><b>Attacks:</b> 1 × very large key (1d6)</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 5</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Equipment</b>: cloak made of interlocking keys (as chainmail), wide brimmed hat with keys hanging from it, very large key (as mace), 325gp in coins.</li>
+	<li><b>Languages</b>: Common Imperial, Esoteric.</li>
+	
+</ul>
+
+<p>They are a merchant, with the following rotating stock:</p>
+
+<table>
+	<tr>
+		<td>1d4</td>
+		<td><button type="button" onclick='fill_from_table("keymonger_stock", ["1", "2", "3", "4"])'>Roll</button> <span id="keymonger_stock"></span></td>
+	<tr>
+		<td>1</td>
+		<td>1000 × <a href="#ordinary_key">Ordinary Key</a>: 1gp<br>
+			8 × <a href="#skeleton_key">Skeleton Key</a>: 150gp<br>
+			2 × <a href="#terminal_key">Terminal Key</a>: 400gp<br>
+			1 × <a href="#mental_key">Mental Key</a>: 550gp<br>
+			1 × <a href="#planar_key">Planar Key</a>: 3000gp</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1000 × <a href="#ordinary_key">Ordinary Key</a>: 1gp<br>
+			10 × <a href="#skeleton_key">Skeleton Key</a>: 150gp<br>
+			2 × <a href="#compass_key">Compass Key</a>: 50gp<br>
+			1 × <a href="#mental_key">Mental Key</a>: 550gp<br>
+			1 × <a href="#planar_key">Planar Key</a>: 3000gp</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1000 × <a href="#ordinary_key">Ordinary Key</a>: 1gp<br>
+			5 × <a href="#skeleton_key">Skeleton Key</a>: 150gp<br>
+			1 × <a href="#compass_key">Compass Key</a>: 50gp<br>
+			2 × <a href="#terminal_key">Terminal Key</a>: 400gp<br>
+			1 × <a href="#planar_key">Planar Key</a>: 3000gp</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>1000 × <a href="#ordinary_key">Ordinary Key</a>: 1gp<br>
+			6 × <a href="#skeleton_key">Skeleton Key</a>: 150gp<br>
+			3 × <a href="#compass_key">Compass Key</a>: 50gp<br>
+			1 × <a href="#terminal_key">Terminal Key</a>: 400gp<br>
+			1 × <a href="#mental_key">Mental Key</a>: 550gp</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="the_radiation_hazard_that_wants_to_be_your_friend">The Radiation Hazard That Wants To Be Your Friend</a></h3>
+
+<p>An extraplanar being with the appearance of a matte black hypersphere.</p>
+
+<p class=dense><b>AC:</b> ???</p>
+<p class=dense><b>Hit dice:</b> ???</p>
+<p class=dense><b>Attacks:</b> None</p>
+<p class=dense><b>Movement:</b> 0ft (0ft)</p>
+<p class=dense><b>Saves:</b> ???</p>
+<p class=dense><b>Morale:</b> 5</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> ???</p>
+
+<ul>
+
+	<li><b>Immunity</b>: the visible portion of this creature is a 3D shadow of its true higher dimensional form, and it cannot be attacked or targeted with spells.</li>
+	<li><b>Radiation</b>: creatures within 40ft take 1 damage to CON per round. Creatures within 20ft instead take 2 damage to CON per round. CON damage is reduced by 1 if blocked by 1ft of stone or 1in of metal.</li>
+	<li><b>Telepathy</b>: it can communicate telepathically with any creature within radiation range. It takes two rounds to "callibrate" to human thought, during which time it can only telepathically project deafening static.</li>
+	
+</ul>
+
+<p>It is extremely curious about everything and loves to talk. It does not know how to stop irradiating you.</p>
+
+
+
+<h3><a id="shadow_blade">The Shadow Blade</a></h3>
+
+<p>An old and tortured soul. Possibly the greatest swordsman in the Realm of the Dead.</p>
+
+<p class=dense><b>AC:</b> 1 [18]</p>
+<p class=dense><b>Hit dice:</b> 9 (40hp)</p>
+<p class=dense><b>Attacks:</b> 1 × <a href="#katana_of_superiority">Katana of Superiority</a> (1d8+1)</p>
+<p class=dense><b>THAC0:</b> 13 [+6]</p>
+<p class=dense><b>Movement:</b> 90ft (30ft)</p>
+<p class=dense><b>Saves:</b> D8 W9 P10 B10 S12</p>
+<p class=dense><b>Morale:</b> 10</p>
+<p class=dense><b>Alignment:</b> Lawful</p>
+<p class=dense_end><b>XP:</b> 900</p>
+
+<ul>
+
+	<li><b>Secret identity</b>: he is in fact Sir Umbral, knight of the City of Dreams.</li>
+	<li><b>Equipment</b>: enormous cloak made of raven feathers, <a href="#armour_of_sir_umbral">Armour of Sir Umbral</a>, <a href="#katana_of_superiority">Katana of Superiority</a>, 900gp in coins, 11,000gp in gems.</li>
+	<li><b>Languages</b>: Common Imperial, Old Imperial.</li>
+	
+</ul>
+
+<p>To fighters, knights, rangers, and paladins who have proven their worth by slaying a 3HD or greater monster, he offers training in the following secret techniques:</p>
+
+<ul>
+
+	<li>Dragonfly Stance: make two attacks per round, so long as you are not wearing any armour or a shield. Training costs 1000gp and takes one week.</li>
+	<li>Kiss of the Centipede: make an attack at +4. If you miss, deal damage to yourself. Training costs 1000gp and takes one week.</li>
+	
+</ul>
+
+<p>To fighters, knights, rangers, and paladins who have proven their worth by defeating him in a one-on-one duel, he offers training in the following secret techniques:</p>
+
+<ul>
+
+	<li>Scorpion Sting: on hit, a living target must save vs death or die. Training costs 3000gp and takes three weeks.</li>
+	<li>Jaws of the Mantis: on hit, decapitate and instantly kill a creature of 2HD or less. The severed head flies off and may hit another target (make a ranged attack roll for 1d6 damage). Training costs 2000gp and takes two weeks.</li>
+	
+</ul>
+
+
+
+<h3><a id="the_shape_that_disintegrates_you">The Shape That Disintegrates You</a></h3>
+
+<p>An extraplanar being with the appearance of a levitating irridescent octahedron.</p>
+
+<p class=dense><b>AC:</b> 1 [18]</p>
+<p class=dense><b>Hit dice:</b> 5 (22hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Laser</p>
+<p class=dense><b>Movement:</b> 0ft (0ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 300</p>
+
+<ul>
+
+	<li><b>Laser</b>: save vs wands or be disintegrated into a pile of dust (instant death). Once used, it requires a round to recharge.</li>
+	
+</ul>
+
+<p>When summoned, it will stay in place and automatically attack anything that moves.</p>
+
+
+
+<h3><a id="the_sticks_that_set_you_on_fire">The Sticks That Set You On Fire</a></h3>
+
+<p>An extraplanar being with the appearance of a large pile of wet tealeaves. 10d10 appear at a time.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 0 (1hp)</p>
+<p class=dense><b>Attacks:</b> 1 × Touch</p>
+<p class=dense><b>THAC0:</b> 20 [-1]</p>
+<p class=dense><b>Movement:</b> 30ft (10ft)</p>
+<p class=dense><b>Saves:</b> D14 W15 P16 B17 S18</p>
+<p class=dense><b>Morale:</b> 9</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 5</p>
+
+<ul>
+
+	<li><b>Touch</b>: sets any creature or organic material on fire for 1d8 damage per round until extinguished, even if it wouldn't normally be flammable.</li>
+	<li><b>Swarm</b>: ten Sticks That Set You On Fire collectively may make one attack.</li>
+	<li><b>Temperature immunity</b>: immune to cold and fire.</li>
+	
+</ul>
+
+<p>When summoned, they will mindlessly try to ignite any nearby organic matter.</p>
+
+
+
+<h3><a id="the_tentacle_balloon_that_absorbs_you">The Tentacle Balloon That Absorbs You</a></h3>
+
+<p>An extraplanar being with the appearance of a levitating <a href="https://commons.wikimedia.org/wiki/File:Portuguese_Man-O-War_(Physalia_physalis).jpg">siphonophore</a>.</p>
+
+<p class=dense><b>AC:</b> 9 [10]</p>
+<p class=dense><b>Hit dice:</b> 7 (31)</p>
+<p class=dense><b>Attacks:</b> 7 × Tentacle (1d3 + Entangle + Absorb)</p>
+<p class=dense><b>THAC0:</b> 12 [+7]</p>
+<p class=dense><b>Movement:</b> 30ft (10ft)</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 9</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 450</p>
+
+<ul>
+
+	<li><b>Entangle</b>: save vs paralysis or be entangled, taking automatic damage every round.</li>
+	<li><b>Absorb</b>: gains 1hp for every point of damage inflicted. This can take it over its hit point maximum.</li>
+	<li><b>Tentacles</b>: tentacles can be targeted individually. They have AC 7 [12] and 3hp. It can regrow one tentacle for every 6hp absorbed.</li>
+	<li><b>Lighter than air</b>: floats upwards at 10ft per round unless weighed down.</li>
+	<li><b>Cold vulnerability</b>: if exposed to ice or cold damage, must save vs death or shrivel up and die.</li>
+	
+</ul>
+
+<p>It is sentient but has no interest in humans except as food.</p>
+
+
+
+<h3><a id="the_thing_that_doesnt_like_it_here_very_much">The Thing That Doesn't Like It Here Very Much</a></h3>
+
+<p>Whatever this is, it is extremely unstable in this plane and instantly explodes into a cloud of lightning when summoned. Creatures within 40ft take 3d6 damage. Creatures within 20ft instead take 6d6 damage. A successful save vs breath weapons halves the damage.</p>
+
+
+
+<h3><a id="the_twins">The Twins</a></h3>
+
+<p>The animated corpses of two identical young men.</p>
+
+<p class=dense><b>AC:</b> 6 [13]</p>
+<p class=dense><b>Hit dice:</b> 4 (18hp)</p>
+<p class=dense><b>Attacks:</b> 1 × touch (1d6 + curse)</p>
+<p class=dense><b>THAC0:</b> 16 [+3]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D7 W8 P9 B10 S11</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 75</p>
+
+<ul>
+
+	<li><b>Undead</b>: make no noise until they attack. Immune to effects that affect living creatures (e.g. poison). Immune to mind-affecting or mind-reading spells (e.g. <i>charm</i>, <i>hold</i>, <i>sleep</i>).</li>
+	<li><b>Curse</b>: save vs death or be cursed. Different curse for each twin.</li>
+	<li><b>Spectral curse</b>: as <i>Wraithform</i> but cannot pass through small holes and cracks or end at will. Risk of starvation/dehydration due to being unable to interact with food/water.</li>
+	<li><b>Slumbering curse</b>: unbreakable dreamless sleep. 1-in-6 chance of infected bed sores every week after first (disease causing death in 2d12 days).</li>
+	
+</ul>
+
+
+
+<h3><a id="the_umbrella_that_breaks_magic">The Umbrella That Breaks Magic</a></h3>
+
+<p>An extraplanar being with the appearance of an invisible 10ft diameter lace parasol that moves by hopping around on its "handle".</p>
+
+<p class=dense><b>AC:</b> 5 [14]</p>
+<p class=dense><b>Hit dice:</b> 5 (22hp)</p>
+<p class=dense><b>Attacks:</b> None</p>
+<p class=dense><b>Movement:</b> 30ft (10ft)</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 6</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 300</p>
+
+<ul>
+
+	<li><b>Invisibility</b>: it is permanently invisible, but easy to locate from the sound of its hopping movement.</li>
+	<li><b>Antimagic</b>: creates a permanent antimagic field in a 30ft radius. Magic cannot be cast and ongoing spells or magic items are suppressed in the area.</li>
+	<li><b>Disenchantment</b>: magic items touched are permanently disenchanted. Creatures touched become permanently unable to cast spells.</li>
+	<li><b>Dread</b>: spellcasters feel an intense instinctive sense of dread and terror in its presence.</li>
+	
+</ul>
+
+<p>It is semi-intelligent and motivated by curiosity. It will instinctively follow light, sound, and movement.</p>
+
+
+
+<h3><a id="vampire_squid">Vampire Squid</a></h3>
+
+<p>A horrible bloodsucking cephalopod.</p>
+
+<p class=dense><b>AC:</b> 7 [12]</p>
+<p class=dense><b>Hit dice:</b> 1 (4hp)</p>
+<p class=dense><b>Attacks:</b> 1 × bite (1d3 + disease) or 1 × spit</p>
+<p class=dense><b>THAC0:</b> 19 [0]</p>
+<p class=dense><b>Movement:</b> 120’ (40’) swimming </p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 6</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 10</p>
+
+<ul>
+
+	<li><b>Bite</b>: on hit, latch on and suck blood dealing automatic damage on subsequent rounds.</li>
+	<li><b>Disease</b>: if bitten, save vs death or contract <a href="#blood-lunacy">blood-lunacy</a>.</li>
+	<li><b>Spit</b>: spits blood at subject's face; save vs wands or be blinded for 1d3 rounds.</li>
+	
+</ul>
+
+
+
+<h3><a id="water_under_the_bridge">Water-Under-The-Bridge</a></h3>
+
+<p>A <a href="critic"><b>Critic</b></a> taking the form of a 7ft tall amphora decorated with licentious scenes. It is easily mistaken for an inanimate object, but if engaged in conversation will happily sell the following rotating stock:</p>
+
+<table>
+	<tr>
+		<td>1d4</td>
+		<td><button type="button" onclick='fill_from_table("water_under_the_bridge_stock", ["1", "2", "3", "4"])'>Roll</button> <span id="water_under_the_bridge_stock"></span></td>
+	<tr>
+		<td>1</td>
+		<td>1 × Ordinary, nonmagical chalk: "A sincere apology"<br>
+			1 × <a href="#red_chalk">Red Chalk</a>: 346 and a half gp<br>
+			1 × <a href="#scrubbing_charcoal">Scrubbing Charcoal</a>: "A bad dream"<br>
+			1 × <a href="#living_paint">Living Paint</a>: "Royal blood"</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1 × Ordinary, nonmagical chalk: "A sincere apology"<br>
+			1 × <a href="#lilac_chalk">Lilac Chalk</a>: "That which negates itself"<br>
+			1 × <a href="#scrubbing_charcoal">Scrubbing Charcoal</a>: "A bad dream"<br>
+			1 × <a href="#living_paint">Living Paint</a>: "Royal blood"</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1 × Ordinary, nonmagical chalk: "A sincere apology"<br>
+			1 × <a href="#lilac_chalk">Lilac Chalk</a>: "That which negates itself"<br>
+			1 × <a href="#red_chalk">Red Chalk</a>: 346 and a half gp<br>
+			1 × <a href="#living_paint">Living Paint</a>: "Royal blood"</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>1 × Ordinary, nonmagical chalk: "A sincere apology"<br>
+			1 × <a href="#lilac_chalk">Lilac Chalk</a>: "That which negates itself"<br>
+			1 × <a href="#red_chalk">Red Chalk</a>: 346 and a half gp<br>
+			1 × <a href="#scrubbing_charcoal">Scrubbing Charcoal</a>: "A bad dream"<br>
+	</tr>
+</table>
+
+<ul>
+
+	<li>"That which negates itself": e.g. a scroll of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dispel_Magic"><i>Dispel Magic</i></a>, or the word "silence".</li>
+	<li>346 and a half gp: requires physically cutting a gold coin in half, will not accept change.</li>
+	<li>"A bad dream": e.g. the spell <i>Dream Quest</i>, or just going to sleep nearby and having a bad dream.</li>
+	<li>"Royal blood": e.g. literal blood from literal royalty, or haemolymph from a queen bee or monarch butterfly.</li>
+	
+</ul>
+
+
+
+<h3><a id="well_guardian">Well Guardian</a></h3>
+
+<p>A grand <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Elemental,_Water">Water Elemental</a> tasked with protecting the wishing well.</p>
+
+<p class=dense><b>AC:</b> 0 [19]</p>
+<p class=dense><b>Hit dice:</b> 12 (54hp)</p>
+<p class=dense><b>Attacks:</b> 1 × blow (2d8 + curse)</p>
+<p class=dense><b>THAC0:</b> 10 [+9]</p>
+<p class=dense><b>Movement:</b> 60ft (20ft) / 180’ (60’) swimming </p>
+<p class=dense><b>Saves:</b> D6 W7 P8 B8 S10</p>
+<p class=dense><b>Morale:</b> 10</p>
+<p class=dense><b>Alignment:</b> Neutral</p>
+<p class=dense_end><b>XP:</b> 1,900</p>
+
+<ul>
+
+	<li><b>Mundane damage immunity</b>: can only be harmed by magical attacks.</li>
+	<li><b>Harm creatures in water</b>: inflict extra 1d8 damage.</li>
+	<li><b>Curse</b>: save vs spells or be cursed (lose one point of STR for every turn spent not immersed in water).</li>
+	
+</ul>
+
+
+
+<h3><a id="zombified_initiate">Zombified Initiate</a></h3>
+
+<p>The restless corpse of an initiate of The Hand Incarnadine.</p>
+
+<p class=dense><b>AC:</b> 11 [8]</p>
+<p class=dense><b>Hit dice:</b> 2 (9hp)</p>
+<p class=dense><b>Attacks:</b> 1 × unarmed strike (1d4) or spell</p>
+<p class=dense><b>THAC0:</b> 18 [+1]</p>
+<p class=dense><b>Movement:</b> 60ft (20ft)</p>
+<p class=dense><b>Saves:</b> D12 W13 P14 B15 S16</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 20</p>
+
+<ul>
+
+	<li><b>Undead</b>: make no noise until they attack. Immune to effects that affect living creatures (e.g. poison). Immune to mind-affecting or mind-reading spells (e.g. <i>charm</i>, <i>hold</i>, <i>sleep</i>).</li>
+	<li><b>Slow</b>: always lose initiative (no roll).</li>
+	<li><b>Equipment</b>: white robes, haematite holy symbol of The Hand Incarnadine (25gp), <a href="#mask_of_the_initiate">Mask of the Initiate</a>.</li>
+	
+</ul>
+
+
+
+<h3><a id="zombified_patriarch">Zombified Patriarch</a></h3>
+
+<p>The restless corpse of the patriarch of The Hand Incarnadine. He still retains some of the spells he had prepared at the time of his death.</p>
+
+<p class=dense><b>AC:</b> 7 [12]</p>
+<p class=dense><b>Hit dice:</b> 5 (22hp)</p>
+<p class=dense><b>Attacks:</b> 1 × draining touch (1d4) or spell</p>
+<p class=dense><b>THAC0:</b> 15 [+4]</p>
+<p class=dense><b>Movement:</b> 120ft (40ft)</p>
+<p class=dense><b>Saves:</b> D10 W11 P12 B13 S14</p>
+<p class=dense><b>Morale:</b> 12</p>
+<p class=dense><b>Alignment:</b> Chaotic</p>
+<p class=dense_end><b>XP:</b> 175</p>
+
+<ul>
+
+	<li><b>Undead</b>: make no noise until they attack. Immune to effects that affect living creatures (e.g. poison). Immune to mind-affecting or mind-reading spells (e.g. <i>charm</i>, <i>hold</i>, <i>sleep</i>).</li>
+	<li><b>Draining touch</b>: deals damage to max HP and heals for damage dealt.</li>
+	<li><b>Mundane damage resistance</b>: takes half damage from unsilvered nonmagical weapons.</li>
+	<li><b>Spells</b>: <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Light_Wounds_(Cause_Light_Wounds)"><i>Cause Light Wounds</i></a>, <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Fear_(Cause_Fear)"><i>Cause Fear</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(C)"><i>Hold Person</i></a>, <a href="#steel_suture"><i>Steel Suture</i></a>; <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Disease_(Cause_Disease)"><i>Cause Disease</i></a> (<a href="#marionette_syndrome">Marionette Syndrome</a>).</li>
+	<li><b>Equipment</b>: ceremonial white robes lined with rubies (2250gp), red beryl holy symbol of The Hand Incarnadine (250gp), <a href="#mask_of_the_patriarch">Mask of the Patriarch</a>, <a href="#the_red_hand">The Red Hand</a>, ring of keys that unlock the secret panel in the altar and all locked doors in the Crypts.</li>
+	<li><b>Languages</b>: Old Imperial, Ecclesiastic.</li>
+	
+</ul>
+
+
+
+</div>
+
+
+
+<div>
+
+<h2><a id="diseases">Diseases and Parasites</a></h2>
+
+
+
+<h3><a id="random_disease">Random Disease</a></h3>
+
+<table>
+	<tr>
+		<td>1d6</td>
+		<td><button type="button" onclick='fill_from_table("disease", ["<a href=\"#airblight\">Airblight</a>", "<a href=\"#blood_lunacy\">Blood-Lunacy</a>", "<a href=\"#marionette_syndrome\">Marionette Syndrome</a>", "<a href=\"#meatrot\">Meatrot</a>", "<a href=\"#saintspores\">Saintspores</a>", "<a href=\"#worm_of_despair\">Worm of Despair</a>"])'>Roll</button> <span id="disease"></span></td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td><a href="#airblight">Airblight</a></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td><a href="#blood_lunacy">Blood-Lunacy</a></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><a href="#marionette_syndrome">Marionette Syndrome</a></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><a href="#meatrot">Meatrot</a></td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td><a href="#saintspores">Saintspores</a></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td><a href="#worm_of_despair">Worm of Despair</a></td>
+	</tr>
+</table>
+
+
+
+<h3><a id="airblight">Airblight</a></h3>
+
+<p>The sufferer hiccups constantly, negating attempts at surprise. After 1d4 days, the sufferer's body becomes comically overinflated. They float on water and are immune to falling damage. After a further 2d4 days, their chest pops like an overinflated party balloon, causing instant death.</p>
+
+
+
+<h3><a id="blood_lunacy">Blood-Lunacy</a></h3>
+
+<p>The sufferer becomes bellicose and irritable. They become immune to fear effects, but cannot voluntarily leave combat and, after combat ends, must continue fighting any creatures present for a further 1d4 rounds. This can be negated by spending one point of CHA each time. They lose 1d3 CHA per day, and upon reaching zero CHA, die screaming, flailing, and frothing from the mouth. Any creature exposed to the sufferer's body fluids must save vs death or also contract blood-lunacy. If cured, only half the CHA lost (rounded down) is recovered.</p>
+
+
+
+<h3><a id="marionette_syndrome">Marionette Syndrome</a></h3>
+
+<p>Once per day at a time chosen by the referee, the sufferer must save vs paralysis or suffer an episode of marionette syndrome. During an episode, their body is jerkily piloted by the disease to attempt to spread the condition to others by scratching or biting them. Every time the sufferer experiences an episode, they suffer one point of DEX damage that persists even if cured, and they take a cumulative -1 penalty to further saves against the disease. If they reach zero DEX they die spasming and contorted. The disease is disturbingly semi-intelligent and will choose to strike at the worst times, for example when around vulnerable or sleeping creatures and simultaneously with other sufferers.</p>
+
+
+
+<h3><a id="meatrot">Meatrot</a></h3>
+
+<p>The sufferer loses one point of CON, which persists even if the disease is cured. A random body part (below) is swollen and blistered and cannot be used. After 1d10 days, the affected body part necroses and falls off.</p>
+
+<table>
+	<tr>
+		<td>1d6</td>
+		<td><button type="button" onclick='fill_from_table("meatrot_limb", ["Left hand", "Right hand", "Left foot", "Right foot", "Tongue", "Eyes"])'>Roll</button> <span id="meatrot_limb"></span></td>
+	<tr>
+	<tr>
+		<td>1</td>
+		<td>Left hand</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Right hand</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Left foot</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Right foot</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Tongue</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Eyes</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="saintspores">Saintspores</a></h3>
+
+<p>The sufferer's entire body glows faintly. After 1d6 days, their entire body instead begins to glow as Continual Light. They become immune to pain and recover 1HP per round. After a further 1d3 days, their entire body abruptly crumbles into glowing dust. Any creature inhaling the dust must save vs death or be infected with saintspores.</p>
+
+
+
+<h3><a id="worm_of_despair">Worm of Despair</a></h3>
+
+<p>The sufferer constantly feels on the verge of tears. On failing any roll, they are incapacitated weeping for one turn. The sufferer dies peacefully in their sleep after 2d6 days, at which point the worm burrows out of their brain and climbs up the nose of a random nearby sleeping creature (if any), infecting them without a save.</p>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="flowers">Flowers</a></h2>
+
+<ul class="centred">
+
+	<li class="horizontal"><a href="#daisy_of_the_meadow">Daisy-of-the-Meadow</a></li>
+	<li class="horizontal"><a href="#devils_powderbrush">Devil's Powderbrush</a></li>
+	<li class="horizontal"><a href="#dragon_poppy">Dragon Poppy</a></li>
+	<li class="horizontal"><a href="#false_lotus">False Lotus</a></li>
+	<li class="horizontal"><a href="#feathergrass">Feathergrass</a></li>
+	<li class="horizontal"><a href="#meatbloom">Meatbloom</a></li>
+	<li class="horizontal"><a href="#widows_bellflower">Widow's Bellflower</a></li>
+	<li class="horizontal"><a href="#winter_lily">Winter Lily</a></li>
+
+</ul>
+
+
+
+
+
+<h3><a id="daisy_of_the_meadow">Daisy-of-the-Meadow</a></h3>
+
+<p><b>Value:</b> 0gp</p>
+
+<p><b>Meaning:</b> addition, combination</p>
+
+<p>A large lopsided white daisy. It has no effects alone, but can be used to combine the effects of other substances.</p>
+
+
+
+<h3><a id="devils_powderbrush">Devil's Powderbrush</a></h3>
+
+<p><b>Value:</b> 50gp</p>
+
+<p><b>Meaning:</b> earth, stone</p>
+
+<p>Ugly squat purple thistles. They grow in areas of high mineral concentrations. The spines are as sharp as broken glass, and the flowers could make good caltrops or perhaps a single-use dagger.</p>
+
+
+
+<h3><a id="dragon_poppy">Dragon Poppy</a></h3>
+
+<p><b>Value:</b> 100gp</p>
+
+<p><b>Meaning:</b> fire</p>
+
+<p>Bright orange poppies. The seeds are highly explosive: a single flower could blow open a lock, and a pile of ten is equivalent to a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Fire_Ball"><i>Fire Ball</i></a> spell.</p>
+
+
+
+<h3><a id="false_lotus">False Lotus</a></h3>
+
+<p><b>Value:</b> 5000gp</p>
+
+<p><b>Meaning:</b> death</p>
+
+<p>Despite the name, it has no resemblance to a lotus, looking more like a pale grey spider lily. It can be used as an extremely effective poison: 1% chance of detection, causes instant death (no save). It is widely considered to be extinct.</p>
+
+
+
+<h3><a id="feathergrass">Feathergrass</a></h3>
+
+<p><b>Value:</b> 0gp</p>
+
+<p><b>Meaning:</b> numbers (e.g. two strands of feathergrass indicates the number two)</p>
+
+<p>Long feathery strands of grass. They have little use besides stuffing mattresses.</p>
+
+
+
+<h3><a id="meatbloom">Meatbloom</a></h3>
+
+<p><b>Value:</b> 300gp</p>
+
+<p><b>Meaning:</b> life, flesh</p>
+
+<p>A foul-smelling large veiny bulbous pink flower. It grows in rotting meat. Ingesting it on its own restores 1d4hp and, if under the effects of a poison or disease, permits a reroll to the save to resist it.</p>
+
+
+
+<h3><a id="widows_bellflower">Widow's Bellflower</a></h3>
+
+<p><b>Value:</b> 10gp</p>
+
+<p><b>Meaning:</b> subtraction, loss</p>
+
+<p>Black droopy foxglove-like bells. It produce copious amounts of soporific pollen: if inhaled, save vs death or fall unconscious for 1d6 turns. If added to a substance, it removes from it the effects of the next substance added.</p>
+
+
+
+<h3><a id="winter_lily">Winter Lily</a></h3>
+
+<p><b>Value:</b> 250gp</p>
+
+<p><b>Meaning:</b> water</p>
+
+<p>A delicate pale blue water lily with black leaves that grows only in pure water. It can be crushed to produce a clear liquid that is an excellent lubricant or solvent.</p>
+
+</div>

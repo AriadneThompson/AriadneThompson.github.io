@@ -1,0 +1,37 @@
+<table>
+	<tr>
+		<td></td>
+		<td><button type="button" onclick='fill_from_table("critic_appearance", ["Marble statue of a muscular adonis", "Winged jaguar carved from ebony", "Pointillist painting of a woman with a parasol", "3D starburst made of brightly coloured stained glass", "Human-sized stuffed toy parrot", "Disembodied spotlight that changes colour depending on mood", "Transparent crystal ballet dancer mid-pirouette, constantly rotating", "Cracked porcelain doll wearing stained dress"])'>Roll</button> <span id="critic_appearance"></span></td>
+	<tr>
+		<td>1</td>
+		<td>Marble statue of a muscular adonis</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Winged jaguar carved from ebony</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Pointillist painting of a woman with a parasol</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>3D starburst made of brightly coloured stained glass</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Human-sized stuffed toy parrot</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Disembodied spotlight that changes colour depending on mood</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Transparent crystal ballet dancer mid-pirouette, constantly rotating</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Cracked porcelain doll wearing stained dress</td>
+	</tr>
+</table>

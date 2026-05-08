@@ -1,0 +1,2573 @@
+<script>
+
+function fill_id(id, filler) {
+	// Puts the given filler string in the HTML tag with the given id.
+	document.getElementById(id).innerHTML = filler;
+}
+
+function roll_on_table(table) {
+	// Chooses a random element from a table (list of strings) and returns it.
+	return table[Math.floor(Math.random() * table.length)];
+}
+
+function fill_from_table(id, table) {
+	// Chooses a random element from a table (list of strings) and puts it in the HTML tag with the given id. 
+	// It first makes the HTML tag blank for 100ms, otherwise if you click multiple times and get the same result it's not obvious that anything has happened. 
+	document.getElementById(id).innerHTML = "";
+	setTimeout(function() {
+		document.getElementById(id).innerHTML = table[Math.floor(Math.random() * table.length)];
+	}, 100);
+	
+}
+
+
+function d(n) {
+	// The result of rolling an n sided die.
+	return Math.floor(Math.random() * n) + 1;
+}
+
+function roll_on_encounter_table(n) {
+	// Returns the result from rolling a d(n) on the random encounter table.
+	// Note we have to redefine the table each time the function is called, otherwise the die rolls would be the same every time.
+	return [(d(6) + d(6)).toString() + " <a href=\"#mawfolk\">Mawfolk</a>", d(4).toString() + " <a href=\"#philosophical_zombie\">Philosophical Zombies</a>", "<a href=\"#cat\">Cat</a>", "<a href=\"#thimble_brothers\">The Thimble Brothers</a>", (d(10) + d(10) + d(10) + d(10) + d(10)).toString() + " <a href=\"#cave_swallow\">Cave Swallows</a>", "<a href=\"#sandy_blancmange\">Sandy Blancmange</a>", "<a href=\"#unctuous_blancmange\">Unctuous Blancmange</a>", "<a href=\"#arcane_blancmange\">Arcane Blancmange</a>", "Unnatural hunger: save vs death or gain hunger as though spending 24 hours without eating."][d(n) - 1]
+}
+
+function random_encounter() {
+	// Roll on random encounter table and fill the result into the encounter table button.
+	
+	if (d(10) === 10) {
+		var encounter = "Double encounter: " + roll_on_encounter_table(4) + " and " + roll_on_encounter_table(8) + " with reaction roll of " + (d(6) + d(6)).toString() + "."
+		
+	} else {
+		var encounter = roll_on_encounter_table(9);
+	}
+	
+	fill_id("random_encounter_result", encounter)
+}
+
+function random_room() {
+	// Returns a random room between #1 and #40.
+	return roll_on_table(["<a href=\"#main_entrance\">1: Main Entrance</a>", "<a href=\"#empty_graveyard\">2: Empty Graveyard</a>", "<a href=\"#thimble_camp\">3: Thimble Camp</a>", "<a href=\"#cave_entrance\">4: Cave Entrance</a>", "<a href=\"#ruined_shrine\">5: Ruined Shrine</a>", "<a href=\"#gruesome_welcome\">6: A Gruesome Welcome</a>", "<a href=\"#mosaic_corridor\">7: Mosaic Corridor</a>", "<a href=\"#balcony_lounge\">8: Balcony Lounge</a>", "<a href=\"#cannibal_cell\">9: Cannibal Cell</a>", "<a href=\"#fishing_grounds\">10: Fishing Grounds</a>", "<a href=\"#rickety_bridge\">11: Rickety Bridge</a>", "<a href=\"#mawfolk_village\">12: Mawfolk Village</a>", "<a href=\"#garts_outer_sanctum\">13: Gartholomew's Outer Sanctum</a>", "<a href=\"#garts_inner_sanctum\">14: Gartholomew's Inner Sanctum</a>", "<a href=\"#far_shore\">15: The Far Shore</a>", "<a href=\"#stepping_stones\">16: Stepping Stones</a>", "<a href=\"#scenic_bench\">17: Scenic Bench</a>", "<a href=\"#chrysophage_nest\">18: Chrysophage Nest</a>", "<a href=\"#strength_sapping_staircase\">19: Strength-Sapping Staircase</a>", "<a href=\"#angel_feast\">20: Angel Feast</a>", "<a href=\"#the_face\">21: The Face</a>", "<a href=\"#the_mouth\">22: The Mouth</a>", "<a href=\"#the_stomach\">23: The Stomach</a>", "<a href=\"#the_guts\">24: The Guts</a>", "<a href=\"#the_drain\">25: The Drain</a>", "<a href=\"#pit_of_despair\">26: Pit of Despair</a>", "<a href=\"#dollys_chamber\">27: Dolly's Chamber</a>", "<a href=\"#antechamber_of_ill_omen\">28: Antechamber of Ill Omen</a>", "<a href=\"#belladonnas_grove\">29: Belladonna's Grove</a>", "<a href=\"#hungry_kitchen\">30: Hungry Kitchen</a>", "<a href=\"#coffin_roulette\">31: Coffin Roulette</a>", "<a href=\"#zombie_philosophy_club\">32: Zombie Philosophy Club</a>", "<a href=\"#above_the_abyss\">33: Above the Abyss</a>", "<a href=\"#marmalades_last_stand\">34: Marmalade's Last Stand</a>", "<a href=\"#volatile_situation\">35: A Volatile Situation</a>", "<a href=\"#bloody_dead_end\">36: A Bloody Dead End</a>", "<a href=\"#cleaners_closet\">37: Cleaner's Closet</a>", "<a href=\"#secret_harbour\">38: Secret Harbour</a>", "<a href=\"#crack_in_the_ceiling\">39: Crack in the Ceiling</a>", "<a href=\"#shrine_of_the_whisper\">40: Shrine of The Unutterable</a>"])
+}
+
+</script>
+
+<h1>Betwixt Her Teeth</h1>
+
+<div>
+
+<p>The cannibal cult of the Yearning Maw was wiped out fifty years ago, but her hunger survived. In the years since, the gluttonous, the decadent, and the spiritually hungry have found themselves drawn to her abandoned temple one by one. A new cult is taking form, its adherants unnaturally transformed, and with the region now in the grip of a merciless famine, violence and desperation loom inevitable.</p>
+
+<p><i>Betwixt Her Teeth</i> is a forty room dungeon centred around a temple to the Yearning Maw, forbidden goddess of cannibalism and decadence, intended for characters around level 2-3.</p>
+
+<h3><a href="#introduction">Introduction</a></h3>
+
+<h3><a href="#map">Map</a></h3>
+
+<h3><a href="#spare_rib">Spare Rib</a></h3>
+
+<h3><a href="#tower_of_misfortune">Tower of Misfortune</a></h3>
+
+<h3><a href="#temple_of_the_yearning_maw">The Temple of the Yearning Maw</a></h3>
+
+<table class="invisible">
+	<tr>
+		<td class="invisible">
+			<a href="#main_entrance">1: Main Entrance</a><br>
+			<a href="#empty_graveyard">2: Empty Graveyard</a><br>
+			<a href="#thimble_camp">3: Thimble Camp</a><br>
+			<a href="#cave_entrance">4: Cave Entrance</a><br>
+			<a href="#ruined_shrine">5: Ruined Shrine</a><br>
+			<a href="#gruesome_welcome">6: A Gruesome Welcome</a><br>
+			<a href="#mosaic_corridor">7: Mosaic Corridor</a><br>
+			<a href="#balcony_lounge">8: Balcony Lounge</a><br>
+			<a href="#cannibal_cell">9: Cannibal Cell</a><br>
+			<a href="#fishing_grounds">10: Fishing Grounds</a><br>
+			<a href="#rickety_bridge">11: Rickety Bridge</a><br>
+			<a href="#mawfolk_village">12: Mawfolk Village</a><br>
+			<a href="#garts_outer_sanctum">13: Gartholomew's Outer Sanctum</a><br>
+			<a href="#garts_inner_sanctum">14: Gartholomew's Inner Sanctum</a>
+		</td>
+		<td class="invisible">
+			<a href="#far_shore">15: The Far Shore</a><br>
+			<a href="#stepping_stones">16: Stepping Stones</a><br>
+			<a href="#scenic_bench">17: Scenic Bench</a><br>
+			<a href="#chrysophage_nest">18: Chrysophage Nest</a><br>
+			<a href="#strength_sapping_staircase">19: Strength-Sapping Staircase</a><br>
+			<a href="#angel_feast">20: Angel Feast</a><br>
+			<a href="#the_face">21: The Face</a><br>
+			<a href="#the_mouth">22: The Mouth</a><br>
+			<a href="#the_stomach">23: The Stomach</a><br>
+			<a href="#the_guts">24: The Guts</a><br>
+			<a href="#the_drain">25: The Drain</a><br>
+			<a href="#pit_of_despair">26: Pit of Despair</a><br>
+			<a href="#dollys_chamber">27: Dolly's Chamber</a><br>
+			<a href="#antechamber_of_ill_omen">28: Antechamber of Ill Omen</a>
+		</td>
+		<td class="invisible">
+			<a href="#belladonnas_grove">29: Belladonna's Grove</a><br>
+			<a href="#hungry_kitchen">30: Hungry Kitchen</a><br>
+			<a href="#coffin_roulette">31: Coffin Roulette</a><br>
+			<a href="#zombie_philosophy_club">32: Zombie Philosophy Club</a><br>
+			<a href="#above_the_abyss">33: Above the Abyss</a><br>
+			<a href="#marmalades_last_stand">34: Marmalade's Last Stand</a><br>
+			<a href="#volatile_situation">35: A Volatile Situation</a><br>
+			<a href="#bloody_dead_end">36: A Bloody Dead End</a><br>
+			<a href="#cleaners_closet">37: Cleaner's Closet</a><br>
+			<a href="#secret_harbour">38: Secret Harbour</a><br>
+			<a href="#crack_in_the_ceiling">39: Crack in the Ceiling</a><br>
+			<a href="#shrine_of_the_whisper">40: Shrine of The Unutterable</a>
+		</td>
+	</tr>
+</table>
+	
+</ul>
+
+<h3><a href="#bestiary">Bestiary</a></h3>
+
+<table class="invisible">
+	<tr>
+		<td class="invisible">
+			<a href="#belladonna">Belladonna</a><br>
+			<a href="#arcane_blancmange">Blancmange, Arcane</a><br>
+			<a href="#sandy_blancmange">Blancmange, Sandy</a><br>
+			<a href="#unctuous_blancmange">Blancmange, Unctuous</a><br>
+			<a href="#boris_the_sophist">Boris the Sophist</a><br>
+			<a href="#cat">Cat</a><br>
+			<a href="#cave_swallow">Cave Swallows</a><br>
+		</td>
+		<td class="invisible">
+			<a href="#chrysophage">Chrysophage</a><br>
+			<a href="#dolly">Dolly</a><br>
+			<a href="#empowered_ghoul">Empowered Ghoul</a><br>
+			<a href="#gartholomew">Gartholomew</a><br>
+			<a href="#giant_tapeworm">Giant Tapeworm</a><br>
+			<a href="#giant_terrestrial_sea_anemone">Giant Terrestrial Sea Anemone</a><br>
+			<a href="#mawfolk">Mawfolk</a><br>
+		</td>
+		<td class="invisible">
+			<a href="#mayflower">Mayflower</a><br>
+			<a href="#philosophical_zombie">Philosophical Zombies</a><br>
+			<a href="#quince">Quince</a><br>
+			<a href="#sister_dorothy">Sister Dorothy</a><br>
+			<a href="#thimble_brothers">The Thimble Brothers</a><br>
+			<a href="#undead_crabs">Undead Crabs</a><br>
+			<a href="#werepangolin">Werepangolin</a>
+		</td>
+	</tr>
+</table>
+
+<h3><a href="#appendices">Appendices</a></h3>
+
+<table class="invisible">
+	<tr>
+		<td class="invisible">
+			<a href="#architecture">Architecture</a><br>
+			<a href="#cannibalism">Cannibalism</a><br>
+			<a href="#clay_curse_tablets">Clay Curse Tablets</a><br>
+			<a href="#eastern_cavern">The Eastern Cavern</a>
+		</td>
+		<td class="invisible">
+			<a href="#history">History</a><br>
+			<a href="#languages">Languages</a><br>
+			<a href="#mawfolk_society">Mawfolk Society</a><br>
+			<a href="#random_encounters">Random Encounters</a>
+		</td>
+		<td class="invisible">
+			<a href="#the_river">The River</a><br>
+			<a href="#starvation">Starvation</a><br>
+			<br>
+			<br>
+		</td>
+	</tr>
+</table>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="introduction">Introduction</a></h2>
+
+<p><strong>Adventure hook</strong>: you are actively starving to death. Get food or money to pay for food or die.</p>
+
+<p><strong>Character creation</strong>: recommended level 2-3. Start at one stage of <a href="#starvation">starvation</a>. Cannot choose rations as starting equipment.</p>
+
+<p><strong>Starting information</strong> easily obtained by asking around town:</p>
+
+<ul>
+
+	<li><strong>Famine</strong>: ongoing for months, everyone is within weeks or days of starving.</li>
+	<li><strong>Tower of Misfortune</strong>: cursed wizard tower to the north (approx. 1 mile/2 turns walk).</li>
+	<li><strong>Dungeon</strong>: temple to an evil god under mesa to the west (know directions to <a href="#main_entrance">Main Entrance</a>; approx 6 miles/12 turns walk), worshippers wiped out by knights fifty years ago, abandoned ever since.</li>
+	<li><strong>Missing villagers</strong>: rancher, Pine, and son, Cob, missing for two weeks. Didn't get along well.</li>
+	<li><strong>Other adventurers</strong>: several travelled to dungeon recently looking for money for food, none returned.</li>
+
+</ul>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="map">Map</a></h2>
+
+<p>Map goes here!</p>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="spare_rib">Spare Rib</a></h2>
+
+<p><strong>Famine</strong>: everyone except Mr. and Mrs. Hearty within days of starving to death.</p>
+
+<p><strong>Remote</strong>: nearest significant settlement is three days' travel to northeast.</p>
+
+<p><strong>Houses</strong>: miserable half-collapsed wooden buildings, fewer than half still inhabited.</p>
+
+<p><strong>Children and infirm</strong>: mostly evacuated or already dead.</p>
+
+<p><strong>Livestock and pets</strong>: all already slaughtered for food.</p>
+
+<p><strong>Water</strong>: well has dried up, but <a href="#sister_dorothy">Sister Dorothy</a> casts <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Create_Water">Create Water</a></i> daily.</p>
+
+
+
+<h3><a id="buxom_sow"></a>The Buxom Sow</h3>
+
+<p><strong>Dilapidated tavern</strong>: no longer operating, nothing to sell.</p>
+
+<p><strong>Sign outside</strong>: disturbing illustration of laughing pig-headed woman.</p>
+
+<p><strong>Corpses</strong>: four corpses lying under sheets, villagers who died of starvation.</p>
+
+<ul>
+	<li><strong>Unburied</strong>: everyone is too physically weak to dig a grave or build a pyre.</li>
+	<li><strong>Cannibalised</strong>: look intact at a glance, but <a href="#rodger">Rodger</a> has secretly removed and eaten the tongues and other soft tissues.</li>
+</ul>
+
+<p><strong>People</strong>: </p>
+
+
+
+<h3><a id="general_store"></a>General Store</h3>
+
+<p><strong>Conspicuously well-constructed</strong>: stone foundations, tiled roof, tasteful decorative accents</p>
+
+<p><strong>Owners</strong>: Mr. and Mrs. Hearty.</p>
+
+<p><strong>Sells</strong> general supplies useful to farmers/ranchers: 5 50ft ropes, various tools, pots and pans, hammers, knives, 3 hatchets, 10 oil flasks, 30 torches, 2 lanterns, wood, cloth, leather, sacks and bags, 3 hunting traps, 1 shortbow and 40 arrows.</p>
+
+<p><strong>Food</strong>: has 50 preserved rations for sale at ten times normal price, price quintuples for every ten sold.</p>
+
+<p><strong>Buys</strong>: jewellery and gems at 80% price, any other valuables at 50% price.</p>
+
+<p><strong>Defense</strong>: Mr. Hearty wears chainmail under clothes, and keeps crossbow and vial of soporific gas (all in 10ft radius save vs death or fall unconscious for one turn) under counter.</p>
+
+<p><strong>Basement</strong>: entrance in back room, hidden under rug, covered by coffee table.</p>
+
+<ul>
+	<li><strong>Locked</strong>: heavy steel door, sealed with <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Wizard_Lock"><i>Wizard Lock</i></a>, password known only by Mr. Hearty ("A job well done").</li>
+	<li><strong>Contents</strong>: 150 preserved rations and 150 pints fresh water in barrels, chest containing 8,000gp in coins.</li>
+</ul>
+
+
+
+<h3><a id="library"></a>Library</h3>
+
+<p><strong>Empty bookshelves</strong>: almost all books have already been sold to pay for food.</p>
+
+<p><strong>Shrine</strong>: <a href="#sister_dorothy">Sister Dorothy</a> has set up a small altar to her god, Black Clew.</p>
+
+
+
+<h3><a id="people"></a>People</h3>
+
+<p><strong>Unless otherwise noted</strong>: everyone uses stats as <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Normal_Human">Normal Human</a> and speaks <a href="#languages">Common Imperial</a> only.</p>
+
+<p><strong><a href="#sister_dorothy">Sister Dorothy</a></strong>:</p>
+
+<ul>
+	<li><strong>Travelling cleric</strong>: here to help alleviate famine.</li>
+	<li><strong><a href="#languages">Languages</a></strong>: Common Imperial and Ecclesiastic.</li>
+	<li><strong>13 days</strong> from starvation.</li>
+	<li><strong>Cannibalism</strong>: would sooner die.</li>
+</ul>
+
+<p><strong><a id="#hearties">Mr. and Mrs. Hearty</a></strong>:</p>
+
+<ul>
+	<li><strong>Operate <a href="#general_store">general store</a></strong>: wealthy and well supplied.</li>
+	<li><strong>Selfish</strong>: outwardly friendly, but will sooner die than share their food or water.</li>
+	<li><strong>75 days</strong> from starvation.</li>
+	<li><strong>Cannibalism</strong>: will commit if within 3 days of starvation.</li>
+</ul>
+
+<p><strong><a id="#sir_poppy">Sir Poppy</a></strong>:</p>
+
+<ul>
+	<li><strong>Former knight</strong>: eloped with her squire, Emilian.</li>
+	<li><strong>3rd level <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Fighter">fighter</a></strong>: 12HP, plate armour, shield, warhammer, shortsword.</li>
+	<li><strong>Will work as retainer</strong> for four rations upfront plus two per day (to share with Emilian).</li>
+	<li><strong>Vendetta against Mrs. Hearty</strong> for insulting Emilian.</li>
+	<li><strong><a href="#languages">Languages</a></strong>: Common and High Imperial.</li>
+	<li><strong>6 days</strong> from starvation.</li>
+	<li><strong>Cannibalism</strong>: would sooner die.</li>
+</ul>
+
+<p><strong><a id="#emilian">Emilian</a></strong>:</p>
+
+<ul>
+	<li><strong>Former squire</strong>: eloped with his knight, Sir Poppy.</li>
+	<li><strong>War injury</strong>: paralysed from waist down.</li>
+	<li><strong><a href="#languages">Languages</a></strong>: Common and High Imperial.</li>
+	<li><strong>5 days</strong> from starvation.</li>
+	<li><strong>Cannibalism</strong>: will commit if within 1 day of starvation.</li>
+</ul>
+
+<p><strong><a id="#rodger">Rodger</a></strong>:</p>
+
+<ul>
+	<li><strong>Tavern owner</strong>: formerly operated <a href="#buxom_sow">The Buxom Sow</a>.</li>
+	<li><strong>Fun to be around</strong>: irreverant gallows humour, salacious gossip.</li>
+	<li><strong>11 days</strong> from starvation.</li>
+	<li><strong>Cannibalism</strong>: already secretly cannibalising corpses in tavern.</li>
+</ul>
+
+<p><strong><a id="#cameron">Cameron</a></strong>:</p>
+
+<ul>
+	<li><strong>Butcher and leatherworker</strong>.</li>
+	<li><strong>Suspicious</strong>: standoffish, secretive, always seen with bloodstained apron and cleaver.</li>
+	<li><strong>Secret</strong>: head over heels in love with <a href="#sister_dorothy">Sister Dorothy</a>.</li>
+	<li><strong>8 days</strong> from starvation.</li>
+	<li><strong>Cannibalism</strong>: would sooner die.</li>
+</ul>
+
+<p><strong><a id="#arnold">Arnold</a></strong>:</p>
+
+<ul>
+	<li><strong>Former rancher</strong>: already slaughtered all livestock for food.</li>
+	<li><strong>Annoying</strong>: constantly talking about food.</li>
+	<li><strong>Will work as torchbearer</strong> for one ration upfront plus one per day.</li>
+	<li><strong>7 days</strong> from starvation.</li>
+	<li><strong>Cannibalism</strong>: will commit if within 1 day of starvation.</li>
+</ul>
+
+<p><strong><a id="#tarn">Tarn</a></strong>:</p>
+
+<ul>
+	<li><strong>Young travelling farmhand</strong>: stranded here by famine.</li>
+	<li><strong>Will play fiddle and tell stories for food</strong>: enthusiastic but not particularly talented.</li>
+	<li><strong>Leaves village</strong> if he can gather three rations and a full waterskin.</li>
+	<li><strong>9 days</strong> from starvation.</li>
+	<li><strong>Cannibalism</strong>: would sooner die.</li>
+</ul>
+</ul>
+
+<p><strong><a id="#mother_crumpet">Mother Crumpet</a></strong>:</p>
+
+<ul>
+	<li><strong>Elderly lady</strong>: weak, delirious, on verge of death.</li>
+	<li><strong>Memories</strong>: visited <a href="#temple_of_the_yearning_maw">Temple of the Yearning Maw</a> as guest sixty years ago, remembers approximate layout, hard to comprehend through delirium.</li>
+	<li><strong>1 day</strong> from starvation.</li>
+	<li><strong>Cannibalism</strong>: will commit with enthusiasm if possible.</li>
+</ul>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="tower_of_misfortune">Tower of Misfortune</a></h2>
+
+<p><strong>Architecture</strong>: three storey black brick wizard's tower with pointed roof.</p>
+
+<p><strong>Interior</strong>: filled floor to ceiling with cursed swords, mirrors, helmets with ominous glowing eyes, etc.</p>
+
+<ul>
+
+	<li><strong>Touching or closely inspecting anything</strong>: receive a <a href="#random_curses">random curse</a>.</li>
+	
+</ul>
+
+<h3><a id="misfortune">Misfortune</a></h3>
+
+<p><strong>10th level <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Magic-User">Magic-User</a></strong> obsessed with curses and cursed items.</p>
+
+<p><strong>Currently trapped in demiplane</strong>: bodily processes suspended, does not need to eat or drink, can only communicate via familiar.</p>
+
+<p><strong>Familiar</strong>: giant anteater named Toast.</p>
+
+<p><strong><a href="#languages">Languages</a></strong>: Common Imperial, Esoteric.</p>
+
+<p><strong>Trading</strong>: can give/receive items by making Toast eat/regurgitate them.</p>
+
+<ul>
+
+	<li><strong>Buys</strong>: any magic items at full price, <a href="#clay_curse_tablets">clay curse tablets</a> for 500gp each.</li>
+	<li><strong>Sells</strong>: cursed scrolls below. Knows they are cursed but not how.</li>
+	<li><strong>Identifies magic items</strong>: 300gp each.</li>
+	<li><strong>Wealth</strong>: has 30,000gp in gold and gems.</li>
+	
+</ul>
+
+<h3><a id="cursed_scrolls">Cursed Scrolls</a></h3>
+
+<table>
+	<tr>
+		<td>50gp</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Magic_(MU)">Detect Magic</a></i>: causes magic to scream instead of glowing (save vs death or be deafened for duration, may attract wandering monsters).</td>
+	</tr>
+	<tr>
+		<td>100gp</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Knock">Knock</a></i>: additionally casts <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Wizard_Lock">Wizard Lock</a></i> on caster's backpack.</td>
+	</tr>
+	<tr>
+		<td>100gp</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Mirror_Image">Mirror Image</a></i>: additionally summons <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Doppelg%C3%A4nger">Doppelgänger</a> of caster.</td>
+	</tr>
+	<tr>
+		<td>200gp</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Curse_(Curse)_(MU)">Remove Curse</a></i>: random nearby creature must save vs spells or receive a <a href="#random_curses">random curse</a>.</td>
+	</tr>
+	<tr>
+		<td>300gp</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Stone_to_Flesh_(Flesh_to_Stone)">Stone to Flesh</a></i>: also turns small bones in inner ear to flesh, causing permanent deafness.</td>
+	</tr>
+</table>
+
+<h3><a id="random_curses">Random Curses</a></h3>
+
+<table>
+	<tr>
+		<td>1d6</td>
+		<td><button type="button" onclick='fill_from_table("random_curse", ["Any gold, silver, or gems touched crumble to dust.", "Anything organic touched turns to lead (including clothing and food!), touching enemy requires successful melee attack and save vs spells.", "Aura of decay, double random encounter chance due to smell, food held rots to nothing over one turn.", "Summons invisible <a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Wraith\">Wraith</a> that follows target around, whispers to them to persuade them to commit stupid self-destructive acts, threatens to attack them (or people around them) when they&#39;re asleep/vulnerable if they refuse.", "Become extremely flammable, easily ignited by torches, bonfires, sparks flying from metal striking metal, etc., 1d8 damage/round while on fire.", "Turn to slime. Cannot use weapons, armour, or tools, but can fit through spaces one inch wide. Dissolve and die if submerged in water."])'>Roll</button> <span id="random_curse"></span></td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Any gold, silver, or gems touched crumble to dust.</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Anything organic touched turns to lead (including clothing and food!), touching enemy requires successful melee attack and save vs spells.</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Aura of decay, double random encounter chance due to smell, food held rots to nothing over one turn.</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Summons invisible <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Wraith">Wraith</a> that follows target around, whispers to them to persuade them to commit stupid self-destructive acts, threatens to attack them (or people around them) when they're asleep/vulnerable if they refuse.</td>
+	</tr>
+		<tr>
+		<td>5</td>
+		<td>Become extremely flammable, easily ignited by torches, bonfires, sparks flying from metal striking metal, etc., 1d8 damage/round while on fire.</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Turn to slime. Cannot use weapons, armour, or tools, but can fit through spaces one inch wide. Dissolve and die if submerged in water.</td>
+	</tr>
+</table>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="temple_of_the_yearning_maw">The Temple of the Yearning Maw</a></h2>
+
+
+
+<h3><a id="main_entrance">1: Main Entrance</a></h3>
+
+<p><strong>Huge stone doors</strong>: slightly ajar, staircase leads 50ft down to <a href="#gruesome_welcome">A Gruesome Welcome</a>.</p>
+
+<ul>
+
+	<li><strong>Engravings</strong>: hellscape of huge rows of teeth and tiny people chewing on piles of dismembered limbs.</li>
+	
+</ul>
+
+<p><strong>Stepping on top step</strong>: staircase turns into slide, anyone on stairs slides to bottom, no damage.</p>
+
+
+
+<h3><a id="empty_graveyard">2: Empty Graveyard</a></h3>
+
+<p><strong>Tombstones</strong>: Sir Squarely, Sir Sweetwater, Sir Surefooted, Sir Serpentsbane, Sir Sanctuary.</p>
+
+<ul>
+
+	<li><strong>Graves</strong>: ground is undisturbed, no bodies actually buried here.</li>
+	
+</ul>
+
+<p><strong>Guardian</strong>: graves guarded by ghost of Sir Squarely (a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Spectre"><b>Spectre</b></a>, speaks <a href="#languages">High Imperial</a> only).</p>
+
+<ul>
+
+	<li><strong>Desecrating graves</strong>: Sir Squarely attacks.</li>
+	<li><strong>Otherwise</strong>: asks for bodies (or at least armour) of fallen companions to be returned and buried, grants otherworldly insights (1000xp) for each body, passes on once all bodies returned.</li>
+	
+</ul>
+
+
+
+<h3><a id="thimble_camp">3: Thimble Camp</a></h3>
+
+<p><strong>Campsite</strong>: two tents, firepit, bedrolls, empty mess tins, laundry hung to dry.</p>
+
+<p><strong><a href="#thimble_brothers">The Thimble Brothers</a></strong> resting here between dusk and dawn, otherwise out dungeoneering.</p>
+
+
+
+<h3><a id="cave_entrance">4: Cave Entrance</a></h3>
+
+<p><strong>Tunnel</strong>: 5ft diameter rough stone, winds 100ft down to <a href="#far_shore">Far Shore</a>.</p>
+
+<p><strong>Footprints</strong>: several bare human footprints coming and going (from <a href="#mawfolk"><b>Mawfolk</b></a>).</p>
+
+
+
+<h3><a id="ruined_shrine">5: Ruined Shrine</a></h3>
+
+<p><strong>Ruins</strong>: crumbling foundations, clay bricks.</p>
+
+<p><strong>Stone altar</strong>: inscribed with symbol of forgotten minor god of butchery and funerary rites.</p>
+
+<ul>
+
+	<li><strong>Sacrificing food on altar</strong>: next melee attack with bladed weapon automatically hits and deals maximum damage, once only.</li>
+	
+</ul>
+
+<p><strong>Hidden floor panel</strong> leads to staircase down to <a href="#zombie_philosophy_club">Zombie Philosophy Club</a>.</p>
+
+<ul>
+
+	<li><strong>Druidic markings</strong> clearly indicate panel, meaningless to non-druids.</li>
+	
+</ul>
+
+
+
+<h3><a id="gruesome_welcome">6: A Gruesome Welcome</a></h3>
+
+<p><strong>12ft statue</strong> dominates room: amorphous blob with woman's upper body emerging from top, hands outstretched.</p>
+
+<ul>
+
+	<li><strong>Plaque in front</strong>: "Our Lady of Digestion" in <a href="#languages">Ecclesiastic</a>.</li>
+	<li><strong>Food placed in hands</strong> rapidly rots away to nothing, resets stair trap from <a href="#main_entrance">Main Entrance</a>.</li>
+	
+</ul>
+
+<p><strong>Mural on northwest wall</strong>: wild boar's rotting flyblown corpse.</p>
+
+<ul>
+	<li><strong>Secret door</strong>: pressing panel in boar's mouth opens secret door on opposite wall leading to <a href="#secret_harbour">Secret Harbour</a>.</li>
+</ul>
+
+<p><strong>Mural on northeast wall</strong>: engorged snake with stag's head and antlers sticking out of its mouth.</p>
+
+<ul>
+	<li><strong>Secret door</strong>: pressing panel in stag's mouth opens secret door on opposite wall leading to <a href="#cleaners_closet">Cleaner's Closet</a>.</li>
+</ul>
+
+<p><strong>Bloody smear</strong> on southwest door: left by <a href="#marmalades_last_stand">Father Marmalade</a>, weeks old.</p>
+
+<!-- 
+<p><strong>Listening carefully</strong>: intermittent thumping noise from west; <a href="#dolly">Dolly</a> pacing back and forth in <a href="#dollys_chamber">Dolly's Chamber</a>.</p>
+-->
+
+
+
+<h3><a id="mosaic_corridor">7: Mosaic Corridor</a></h3>
+
+<p><strong>Disquieting mosaics</strong> along floor of corridor: eyes, muscle sinew, pomegranate seeds, abstract whorls.</p>
+
+<p><strong>Mosaic of toothy maw</strong> between intersections: trapdoor covering pit trap, opens with pressure.</p>
+
+<p><strong>Pit trap</strong>: 20ft deep, contains a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Gelatinous_Cube"><b>Gelatinous Cube</b></a>.</p>
+
+<ul>
+
+	<li><strong>Holding trapdoor open</strong>: Gelatinous Cube will try to climb out.</li>
+	
+</ul>
+
+<p><strong>Inside the cube</strong>:</p>
+
+<ul>
+
+	<li><strong>Loose coins</strong>: 245gp</li>
+	<li><strong>Distinctive knightly full plate armour</strong>: remains of <a href="#empty_graveyard">Sir Squarely</a></li>
+	<li><strong>Tower shield</strong></li>
+	<li><strong>Warhammer</strong></li>
+	<li><strong>Three daggers</strong></li>
+	<li><strong>Lantern</strong>: empty</li>
+	<li><strong>Sealed copper scroll case</strong>: scrolls of <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Levitate">Levitate</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Polymorph_Self">Polymorph Self</a></i>.</li>
+	
+</ul>
+
+<!-- 
+<p><strong>Listening carefully</strong>:</p>
+
+<ul>
+	<li><strong>Running water</strong> from southeast and northeast.</li>
+	<li><strong>Idle conversation</strong> from northeast, if mawfolk are fishing at <a href="#fishing_grounds">Fishing Grounds</a> (3-in-6 chance).</li>
+</ul>
+-->
+
+
+
+<h3><a id="balcony_lounge">8: Balcony Lounge</a></h3>
+
+<p><strong>Balcony</strong>: stone balustrade, overlooking <a href="#the_river">river</a>.</p>
+
+<p><strong>Furniture</strong>: plush armchairs and luxurious chaise longue, ruined by moisture, worthless.</p>
+
+<p><strong>Litter</strong>: chewed animal bones and empty bottles scattered around.</p>
+
+<p><strong>Door to north</strong>: locked, key in <a href="#cleaners_closet">Cleaner's Closet</a>.</p>
+
+<p><strong>Making noise</strong>: <a href="#empowered_ghoul">Empowered Ghoul</a> in <a href="#cannibal_cell">Cannibal Cell</a> begins frantically pounding on door.</p>
+
+
+
+<h3><a id="cannibal_cell">9: Cannibal Cell</a></h3>
+
+<p><strong><a href="#empowered_ghoul">Empowered Ghoul</a></strong> attacks immediately if door is opened.</p>
+
+<p><strong>Cannibalised remains</strong> of one person, torn apart, bones snapped to get at marrow.</p>
+
+<p><strong>Walls splattered</strong> with dried blood, gore, and filth, intense smell of decay.</p>
+
+<p><strong>Enchanted golden wedding bands</strong>: one on corpse, one on <a href="#empowered_ghoul"><b>Empowered Ghoul</b></a>, +4 to saves vs charm or fear if both wearers within 30ft, worth 2500gp together.</p>
+
+
+
+<h3><a id="fishing_grounds">10: Fishing Grounds</a></h3>
+
+<p><strong>1d12 <a href="#mawfolk">Mawfolk</a> here fishing</strong>: 3-in-6 chance, otherwise empty. <button type="button" onclick='fill_from_table("mawfolk_fishing", ["There are currently " + d(12).toString() + " Mawfolk here.", "There are currently no Mawfolk here."])'>Roll</button> <span id="mawfolk_fishing"></span></p>
+
+<p><strong><a href="#quince">Quince</a> lurking offshore</strong>: 2-in-6 chance. <button type="button" onclick='fill_from_table("quince_at_fishing_grounds", ["Quince is currently here.", "Quince is currently elsewhere.", "Quince is currently elsewhere."])'>Roll</button> <span id="quince_at_fishing_grounds"></p>
+
+<p><strong>Dry fish bones</strong> litter ground: snap loudly underfoot.</p>
+
+<p><strong>Gentle bend in river</strong>: can wade up to thigh deep without being swept away.</p>
+
+
+
+<h3><a id="rickety_bridge">11: Rickety Bridge</a></h3>
+
+<p><strong>Unsteady wooden drawbridge</strong> spans river.</p>
+
+<p><strong>Down if <a href="#mawfolk">Mawfolk</a> are fishing in the <a href="#fishing_grounds">Fishing Grounds</a></strong>, otherwise raised towards southeast.</p>
+
+<p><strong><a href="#quince">Quince</a> lurking in water below</strong>: 1-in-6 chance. <button type="button" onclick='fill_from_table("quince_at_bridge", ["Quince is currently here.", "Quince is currently elsewhere.", "Quince is currently elsewhere.", "Quince is currently elsewhere.", "Quince is currently elsewhere.", "Quince is currently elsewhere."])'>Roll</button> <span id="quince_at_bridge"></p>
+
+
+
+<h3><a id="mawfolk_village">12: Mawfolk Village</a></h3>
+
+<p><strong>All <a href="#mawfolk">Mawfolk</a> not currently fishing or hunting are here</strong> eating, socialising, repairing fishing nets, etc.: see <a href="#mawfolk_society">Mawfolk Society</a>.</p>
+
+<p><strong><a href="#mayflower">Mayflower</a></strong>: always here.</p>
+
+<p><strong>Smouldering campfire</strong> with several spits for roasting meat.</p>
+
+<p><strong>Cushions and soft furnishings</strong> in piles: mawfolk sleeping communally.</p>
+
+<p><strong>Bones everywhere</strong>: mostly animal.</p>
+
+<p><strong>Currently here</strong>:</p>
+
+<table>
+	<tr>
+		<td>1d6</td>
+		<td><button type="button" onclick='fill_from_table("mawfolk_village_current", ["<a href=\"#quince\">Quince</a>, knitting.", "<a href=\"#quince\">Quince</a>, receiving back massage from <a href=\"#mayflower\">Mayflower</a>.", "<a href=\"#gartholomew\">Gartholomew</a>, pacing back and forth.", "<a href=\"#gartholomew\">Gartholomew</a>, looking miserable.", "<a href=\"#cat\">Cat</a>, begging for scraps and attention.", "<a href=\"#mayflower\">Mayflower</a>, giving sermon (blessing meat and sharing it)."])'>Roll</button> <span id="mawfolk_village_current"></span></td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td><a href="#quince">Quince</a>, knitting.</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td><a href="#quince">Quince</a>, receiving back massage from <a href="#mayflower">Mayflower</a>.</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><a href="#gartholomew">Gartholomew</a>, pacing back and forth.</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><a href="#gartholomew">Gartholomew</a>, looking miserable.</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td><a href="#cat">Cat</a>, begging for scraps and attention.</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td><a href="#mayflower">Mayflower</a>, giving sermon (blessing meat and sharing it).</td>
+	</tr>
+</table>
+
+<p><strong>Door south</strong> to <a href="#garts_outer_sanctum">Gartholomew's Outer Sanctum</a>: locked, keys in <a href="#cleaners_closet">Cleaner's Closet</a> and <a href="#gartholomew">Gartholomew</a>'s pocket.</p>
+
+<p><strong>Mayflower's stash</strong>: locked stone chest with decorative teeth.</p>
+
+<ul>
+
+	<li><strong>Trapped</strong>: needle coated in flesh eating bacteria, save vs death or die after 24 hours, can be cured with <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Disease_(Cause_Disease)">Cure Disease</a></i> or immediately amputating hand.</li>
+	<li><strong>Loose coins</strong>: 6300gp</li>
+	<li><strong>Rose gold tiara</strong>: set with rose quartz, worth 800gp</li>
+	<li><strong>Divine scroll:</strong> <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Insect_Plague">Insect Plague</a></i></li>
+	<li><strong>Potion of digestion</strong>: can eat and digest anything that fits into your mouth without harm, up to and including metal, stone, poison; worth 500gp</li>
+	<li><strong>Preserved meat</strong>: ten rations</li>
+
+</ul>
+
+
+
+<h3><a id="garts_outer_sanctum">13: Gartholomew's Outer Sanctum</a></h3>
+
+<p><strong><a href="#gartholomew">Gartholomew</a> here</strong> staring at ceiling or writing at desk: 2-in-6 chance, otherwise in <a href="#mawfolk_village">Mawfolk Village</a> or <a href="#garts_inner_sanctum">Gartholomew's Inner Sanctum</a>. <button type="button" onclick='fill_from_table("gart_at_outer_sanctum", ["Gartholomew is here, staring at the ceiling.", "Gartholomew is here, writing at his desk.", "Gartholomew is elsewhere.", "Gartholomew is elsewhere.", "Gartholomew is elsewhere.", "Gartholomew is elsewhere."])'>Roll</button> <span id="gart_at_outer_sanctum"></span></p>
+
+<p><strong>Suit of armour</strong>: distinctive full plate armour of <a href="#empty_graveyard">Sir Sanctuary</a>, polished and displayed decoratively.</p>
+
+<p><strong>Armchairs</strong>: comfortable, only slightly worn, worth 100gp each.</p>
+
+<p><strong>Four-poster bed</strong>: untouched (Gartholomew sleeps in his coffin), worth 1000gp, won't fit through door.</p>
+
+<p><strong>Bookshelves</strong>: highbrow literature, philosophy, science (eye height, barely touched, <a href="#languages">Esoteric and High Imperial</a>), smutty romance novels (less visible, well thumbed, <a href="#languages">High Imperial</a>). Fifty books total worth 25gp each.</p>
+
+<p><strong>Door to <a href="#garts_inner_sanctum">Gartholomew's Inner Sanctum</a></strong>: poorly hidden behind bookshelf, locked and spiked shut from other side (Gartholomew enters through keyhole in gaseous form).</p>
+
+<p><strong>Desk</strong>: teak, well crafted, worth 400gp.</p>
+
+<ul>
+
+	<li><strong>Chair</strong>: doesn't match desk, worth 100gp.</li>
+	<li><strong>Surface</strong>: inkwell, quill, blank papers, enchanted letter opener (dagger +1, reads letters aloud in dramatic voice, worth 1250gp).</li>
+	<li><strong>Top drawer</strong>: letters from various eligible princes and princesses of nearby lands refusing offers of courtship, <a href="#languages">High Imperial</a>.</li>
+	<li><strong>Middle and bottom drawers</strong>: many drafts of Gartholomew's memoirs, all less than half finished, <a href="#languages">High Imperial smattered with Esoteric</a>.</li>
+
+</ul>
+
+
+
+<h3><a id="garts_inner_sanctum">14: Gartholomew's Inner Sanctum</a></h3>
+
+<p><strong>Door to <a href="#garts_outer_sanctum">Gartholomew's Outer Sanctum</a></strong>: locked and spiked shut (Gartholomew enters through keyhole in gaseous form).</p>
+
+<p><strong>Coffin</strong>: grave dirt, thick blanket, stuffed toy elephant, 2-in-6 chance <a href="#gartholomew">Gartholomew</a> here sleeping. <button type="button" onclick='fill_from_table("gart_at_inner_sanctum", ["Gartholomew is here, sleeping.", "Gartholomew is elsewhere.", "Gartholomew is elsewhere."])'>Roll</button> <span id="gart_at_inner_sanctum"></span></p>
+
+<p><strong>Line of salt</strong> along floor holding <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Gelatinous_Cube">Gelatinous Cube</a> in northern half of room.</p>
+
+<p><strong>Valuables stored inside Gelatinous Cube</strong>: appear to be levitating. Gartholomew can retrieve them safely as he's immune to nonmagical damage.</p>
+
+<ul>
+	<li><strong>Iron chest</strong>: 12,500gp in loose coins, 3500gp in gemstones.</li>
+	<li><strong>+2 duelling rapier</strong>: worth 2500gp.</li>
+	<li><strong>Enchanted hand mirror</strong> in shape of open mouth: safe and functional even for vampires, medusas, basilisks, etc., worth 850gp.</li>
+
+</ul>
+
+
+
+<h3><a id="far_shore">15: The Far Shore</a></h3>
+
+<p><strong>Overgrown</strong>: only faint path visible.</p>
+
+<p><strong>Tunnel to northeast</strong>: winds around 100ft up to surface.</p>
+
+<p><strong><a href="#giant_terrestrial_sea_anemone">Giant Terrestrial Sea Anemone</a></strong> on path south, waiting for prey.</p>
+
+
+
+<h3><a id="stepping_stones">16: Stepping Stones</a></h3>
+
+<p><strong>Slimy damp rocks</strong> spanning river, just close enough to jump across.</p>
+
+<p><strong>Waterfall immediately to south</strong>: 15ft, low rumble audible.</p>
+
+<p><strong>Following river north</strong>: impossible, even with water breathing, ceiling too low and current too strong.</p>
+
+
+
+<h3><a id="scenic_bench">17: Scenic Bench</a></h3>
+
+<p><strong>Bench</strong>: ornate, wrought iron.</p>
+
+<p><strong>Lamppost</strong>: lit by <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(MU)">Continual Light</a></i>, pale blue, can be sawn off and carried away with effort.</p>
+
+<p><strong><a href="#chrysophage">Chrysophage</a></strong> here defecating: 1-in-6 chance, otherwise at <a href="#chrysophage_nest">Chrysophage Nest</a>. <button type="button" onclick='fill_from_table("chrysophage_at_bench", ["The chrysophage is here, defecating.", "The chrysophage is at its nest.", "The chrysophage is at its nest.", "The chrysophage is at its nest.", "The chrysophage is at its nest.", "The chrysophage is at its nest."])'>Roll</button> <span id="chrysophage_at_bench"></span></p>
+
+<p><strong>Small lead pellets</strong> covering ground: chrysophage scat.</p>
+
+<p><strong>Cliff to south</strong>: 20ft, overlooks <a href="#fishing_grounds">Fishing Grounds</a>.</p>
+
+
+
+
+<h3><a id="chrysophage_nest">18: Chrysophage Nest</a></h3>
+
+<p><strong><a href="#chrysophage">Chrysophage</a></strong> here: 5-in-6 chance, otherwise at <a href="#scenic_bench">Scenic Bench</a>. <button type="button" onclick='fill_from_table("chrysophage_at_nest", ["The chrysophage is here.", "The chrysophage is here.", "The chrysophage is here.", "The chrysophage is here.", "The chrysophage is here.", "The chrysophage is at the bench."])'>Roll</button> <span id="chrysophage_at_nest"></span></p>
+
+<p><strong>Nest</strong>: hollow filled with sticks, cave moss, shreds of cloth.</p>
+
+
+
+<h3><a id="strength_sapping_staircase">19: Strength-Sapping Staircase</a></h3>
+
+<p><strong>Statue</strong>: grinning toad-woman with emerald eyes (1250gp each).</p>
+
+<p><strong>Every 5ft climbed towards statue</strong>: statue's gaze drain 2 points of STR.</p>
+
+<ul>
+
+	<li><strong>STR drain prevented</strong> if unseen by statue (e.g. invisible, concealed head-to toe, covering or dislodging statue's eyes).</li>
+	<li><strong>Recovering STR</strong>: one point restored per ration of food eaten.</li>
+	<li><strong>Reaching zero STR</strong>: die of a heart attack.</li>
+	
+</ul>
+
+
+
+<h3><a id="angel_feast">20: Angel Feast</a></h3>
+
+<p><strong>Banquet table</strong>: rotten remains of feast.</p>
+
+<p><strong>Mural on north wall</strong>: woman wearing black floral diadem feeding human baby to baryonyx.</p>
+
+<ul>
+
+	<li><strong>Secret panel</strong>: pressing human baby reveals secret compartment containing a scroll of <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Create_Food">Create Food</a></i>.</li>
+	
+</ul>
+
+<p><strong>Tableware</strong>: beaten electrum. Seven sets worth 150gp each.</p>
+
+<p><strong>Angel carcass</strong>: centre of table, half eaten, three servings left.</p>
+
+<ul>
+
+	<li><strong>Eating angel meat</strong>: recover all HP, cure all diseases, poisons, and curses, gain enough XP to advance to next level, lawful clerics and paladins lose all powers until atoned for, roll for divine retribution:</li>
+	
+</ul>
+
+<table>
+	<tr>
+		<td>1d6</td>
+		<td><button type="button" onclick='fill_from_table("divine_curse", ["<strong>Struck by lightning</strong> next time outside (as 7th level <i><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Lightning_Bolt\">Lightning Bolt</a></i>).", "<strong>Turn into a <a href=\"#werepangolin\">Werepangolin</a></strong> between sunset and sunrise every night.", "<strong>Divine quest to kill you</strong> given to rival adventuring party led by cleric two levels higher.", "<strong>Turn into a <a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Medusa\">Medusa</a></strong>: happens over the course of one turn, with petrifying gaze only active once fully transformed.", "<strong>Instiable hunger</strong>: require 10x as much food as normal, penalties for <a href=\"#starvation\">starvation</a> are permanent.", "<strong>Turn into a pillar of salt</strong> in sunlight, save vs paralysis each round to resist."])'>Roll</button> <span id="divine_curse"></span></td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td><strong>Struck by lightning</strong> next time outside (as 7th level <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Lightning_Bolt">Lightning Bolt</a></i>).</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td><strong>Turn into a <a href="#werepangolin">Werepangolin</a></strong> between sunset and sunrise every night.</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><strong>Divine quest to kill you</strong> given to rival adventuring party led by cleric two levels higher.</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><strong>Turn into a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Medusa">Medusa</a></strong>: happens over the course of one turn, with petrifying gaze only active once fully transformed.</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td><strong>Instiable hunger</strong>: require 10x as much food as normal, penalties for <a href="#starvation">starvation</a> are permanent.</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td><strong>Turn into a pillar of salt</strong> in sunlight, save vs paralysis each round to resist.</td>
+	</tr>
+</table>
+
+<ul>
+
+	<li><strong>Removing divine curses</strong>: can be remedied with <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Curse_(Curse)">Remove Curse</a></i>, but NPC clerics will instinctively recognise divine curses and may refuse to help.</li>
+	
+</ul>
+
+
+
+<h3><a id="the_face">21: The Face</a></h3>
+
+<p><strong>Semicircular mezzanine balcony</strong> around edge of room.</p>
+
+<ul>
+	<li><strong>No railings.</strong></li>
+	<li><strong>60ft drop</strong> down to <a href="#pit_of_despair">Pit of Despair</a>.</li>
+</ul>
+
+<p><strong>Enormous carved face</strong> in centre of northern wall.</p>
+
+<ul>
+	<li><strong>Smiling woman</strong>: sharp teeth, hungry gaze.</li>
+	<li><strong>Open mouth</strong> large enough to climb inside (leads to <a href="#the_mouth">The Mouth</a>).</li>
+</ul>
+
+<p><strong>Statues lining walls</strong>: man in progressive stages of dismemberment (from centre westwards) or decomposition (from centre eastwards), worth 100gp each, extremely heavy.</p>
+
+<!-- 
+<p><strong>Listening carefully</strong>:</p>
+
+<ul>
+	<li><strong>Faint clicking noise</strong> from below: swarm of <a href="#undead_crabs">Undead Crabs</a> in <a href="#pit_of_despair">Pit of Despair</a>.</li>
+	<li><strong>Intermittent thumping noise</strong> from west: <a href="#dolly">Dolly</a> pacing back and forth in <a href="#dollys_chamber">Dolly's Chamber</a>.</li>
+</ul>
+-->
+
+
+
+<h3><a id="the_mouth">22: The Mouth</a></h3>
+
+<p><strong>Stone carved to resemble mouth interior</strong>: sharp teeth, uneven floor, unpleasantly damp.</p>
+
+<p><strong>Throat passage leading down</strong>: slippery, 45 degree angle, acrid smell.</p>
+
+<p><strong>Stepping on tongue</strong>: launched into <a href="#the_stomach">The Stomach</a>, save vs wands to avoid.</p>
+
+<p><strong>Scraping back of throat</strong>: acidic vomit launched from <a href="#the_stomach">The Stomach</a></strong>, 3d6 damage, save vs breath weapons for half.</p>
+
+
+
+<h3><a id="the_stomach">23: The Stomach</a></h3>
+
+<p><strong>Pool of acid</strong>: opaque green, reeking, hurts to breathe.</p>
+
+<ul>
+	<li><strong>20ft deep</strong>.</li>
+	<li><strong>Submerged creatures</strong>: 3d6 damage per round.</li>
+	<li><strong>Dissolves anything organic</strong>: corrodes iron and steel; leaves gold, gems, and magic items.</li>
+</ul>
+
+<p><strong>Entrance to <a href="#the_guts">The Guts</a></strong>: north wall, 10ft below surface, 5ft diameter.</p>
+
+
+
+<h3><a id="the_guts">24: The Guts</a></h3>
+
+<p><strong>5ft diameter tunnel</strong>: claustrophobic, damp, single file only.</p>
+
+<ul>
+	<li><strong>Circuitous</strong>: 250ft long in total.</li>
+	<li><strong>Cramped</strong>: polearms get stuck on corners, -2 to hit with weapons larger than shortsword.</li>
+</ul>
+
+<p><strong><a href="#giant_tapeworm">Giant tapeworm</a></strong>: halfway down.</p>
+
+
+
+<h3><a id="the_drain">25: The Drain</a></h3>
+
+<p><strong>Filthy</strong>: smell of rot, black mould streaks on walls.</p>
+
+<p><strong>Neurotoxic mould spores</strong>: after each turn, save vs death or take permanent -1 INT, +2 to save if covering mouth and nose.</p>
+
+<p><strong>Pile of undigested items</strong> against east wall.</p>
+
+<ul>
+	
+	<li><strong>Mace of disarming</strong>: +1; on hit, target must save vs spells or drop anything held.</li> 
+	<li><strong>Flamberge of fireballs</strong>: casts <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Fire_Ball">Fire Ball</a></i> (5th level) on hit, centred on itself.</li>
+	<li><strong>Leaky ring of protection</strong>: acts as +n ring of protection if charged with an nth level spell slot, loses charge every night.</li>
+	<li><strong>Solid gold figurine of bipedal cat</strong>: worth 950gp.</li>
+	<li><strong>Loose coins</strong>: 1850gp.</li>
+	<li><strong>Destroyed equipment</strong>: several sets of armour, swords, axes, polearms, hammers, iron spikes, lanterns, and pairs of glasses, all corroded beyond use.</li>
+	
+</ul>
+
+<p><strong>Iron grate in centre of floor</strong> covers vertical shaft 40ft down, 20ft south to <a href="#pit_of_despair">Pit of Despair</a>.</p>
+
+<p><strong>Southwest passage</strong>: leads to coffin d. in <a href="#coffin_roulette">Coffin Roulette</a>.</p>
+
+
+
+<h3><a id="pit_of_despair">26: Pit of Despair</a></h3>
+
+<p><strong>50 <a href="#undead_crabs">Undead Crabs</a></strong> in small piles, snipping ineffectually at one another.</p>
+
+<p><strong>Murky water</strong>: ankle deep.</p>
+
+<p><strong>Entwined skeletal remains</strong> of priestess and Sir Surefooted, each died stabbing the other then fell from mezzanine balcony of <a href="#the_face">The Face</a> 60ft above.</p>
+
+<ul>
+
+	<li><strong>Distinctive full plate armour</strong> of Sir Surefooted.</li>
+	<li><strong>Longsword</strong>.</li>
+	<li><strong>Curved dagger</strong>.</li>
+	<li><strong>Loose coins</strong>: 155gp.</li>
+	<li><strong>Bloodstone necklace</strong>: worth 500gp.</li>
+	<li><strong>Clay curse tablet</strong>: blindness and deafness.</li>
+	
+</ul>
+
+<p><strong>Tunnel to north</strong>: slippery, damp, ascends at 45 degree angle for 20ft, then 40ft vertical shaft up to <a href="#the_drain">The Drain</a>.</p>
+
+
+
+<h3><a id="dollys_chamber">27: Dolly's Chamber</a></h3>
+
+<p><strong><a href="#dolly">Dolly</a></strong> trapped here, pacing up and down, too large to fit through any doorways.</p>
+
+<p><strong>Shattered remains</strong> of large wooden table and chairs, tableware, bones and equipment of at least three people.</p>
+
+<ul>
+
+	<li><strong>Distinctive full plate armour</strong> of Sir Serpentsbane: twisted pieces scattered all around room.</li>
+	
+</ul>
+
+<p><strong>Arched ceiling</strong>: nauseatingly detailed mural of entrails and viscera.</p>
+
+<p><strong>Door north to <a href="#antechamber_of_ill_omen">Antechamber of Ill Omen</a></strong>: jammed shut due to hinges falling out of place, can be opened with force.</p>
+
+<p><strong>Door south to <a href="#marmalades_last_stand">Marmalade's Last Stand</a></strong>: barred shut from other side.</p>
+
+
+
+<h3><a id="antechamber_of_ill_omen">28: Antechamber of Ill Omen</a></h3>
+
+<p><strong>Acrid smell and steady dripping</strong>: <a href="#sandy_blancmange"><b>Sandy Blancmange</b></a> clinging to ceiling above north door, camouflaged against stone.</p>
+
+<p><strong>Door north to <a href="#belladonnas_grove">Belladonna's Grove</a></strong>: locked, key in <a href="#cleaners_closet">Cleaner's Closet</a>, <a href="#sandy_blancmange"><b>Sandy Blancmange</b></a> on ceiling overhead drops onto anyone in front of door.</p>
+
+<p><strong>Door southeast to <a href="#dollys_chamber">Dolly's Chamber</a></strong>: jammed shut due to hinges falling out of place, can be opened with force.</p>
+
+<p><strong>Statue of grinning dog-woman</strong> in alcove in south wall.</p>
+
+<ul>
+
+	<li><strong>Around statue's neck</strong>: malachite periapt of indigestion; if attempting to bite, swallow whole, drink blood, etc. of wearer, save vs death or be incapacitated retching for a turn, worth 1600gp.</li>
+	<li><strong>Taking the periapt</strong>: head of statue attempts to bite hand, save vs breath weapons or take 1d6 damage and lose that number of fingers, losing entire hand on roll of 5-6. <button type="button" onclick='fill_from_table("ouch_my_hand", ["Take 1 damage and lose a finger.", "Take 2 damage and lose two fingers.", "Take 3 damage and lose three fingers.", "Take 4 damage and lose four fingers.", "Lose entire hand.", "Lose entire hand."])'>Roll</button> <span id="ouch_my_hand"></span></li>
+	
+</ul>
+
+<!-- 
+<p><strong>Listening carefully</strong>: intermittent thumping noise from southeast; <a href="#dolly">Dolly</a> pacing back and forth in <a href="#dollys_chamber">Dolly's Chamber</a>.</p>
+-->
+
+
+
+<h3><a id="belladonnas_grove">29: Belladonna's Grove</a></h3>
+
+<p><strong>Floor</strong>: 5ft deep rich black soil, small patches of moss and mushrooms.</p>
+
+<p><strong>Well lit</strong>: room lit by pink <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(MU)">Continual Light</a></i>.</p>
+
+<p><strong><a href="#belladonna">Belladonna</a></strong> in centre of room, surrounded by magic circle made of powdered chalk.</p>
+
+<ul>
+
+	<li><strong>Magic circle</strong>: completely fake. A Magic-User inspecting the circle for a turn or using <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Magic_(MU)">Detect Magic</a></i> or <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Read_Magic">Read Magic</a></i> identifies it to be nonmagical.</li>
+	
+</ul>
+
+<p><strong>Mural around wall</strong>: pack of hyenas ambushing flock of cranes.</p>
+
+<p><strong>Shelves near entrance</strong>:</p>
+
+<ul>
+
+	<li><strong>Gardening equipment</strong>: pruning shears, trowel, leather gloves.</li>
+	<li><strong>Enchanted watering can</strong>: produces infinite water, worth 3000gp.</li>
+	<li><strong>Scrolls</strong>: sodden, illegible.</li>
+	<li><strong>Clay curse tablet</strong>: plagued by small biting insects, -2 to all rolls.</li>
+	
+</ul>
+
+
+
+<h3><a id="hungry_kitchen">30: Hungry Kitchen</a></h3>
+
+<p><strong>Large stone countertop</strong>: formerly mortuary table, thick grooves worn into surface.</p>
+
+<p><strong>Huge oven</strong> set into western wall: formerly cremation furnace, choked with ash.</p>
+
+<p><strong>Cupboards and drawers</strong> line northern wall.</p>
+
+<ul>
+
+	<li><strong>Knives</strong>: nine viciously sharped butchery/flaying knives scattered around countertops, worth 25gp each.</li>
+	<li><strong>Spices</strong> in cupboards: pots of saffron (150gp), vanilla pods (350gp), and grains of paradise (200gp).</li>
+	<li><strong>Two <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Potion_of_Poison">potions of poison</a></strong> in a locked drawer (key in <a href="#cleaners_closet">Cleaner's Closet</a>).</li>
+	
+</ul>
+
+<p><strong>Unnatural hunger</strong>: on entering, and every turn spent inside, gain hunger as though spending 24 hours without eating.</p>
+
+<ul>
+
+	<li><strong>Dispelling hunger effect</strong>: casting <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Bless_(Blight)">Bless</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Remove_Curse_(Curse)_(C)">Remove Curse</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dispel_Magic">Dispel Magic</a></i>, or <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dispel_Evil">Dispel Evil</a></i> on room removes effect.</li>
+	
+</ul>
+
+<!-- 
+<p><strong>Listening carefully</strong>: intermittent thumping noise from east; <a href="#dolly">Dolly</a> pacing back and forth in <a href="#dollys_chamber">Dolly's Chamber</a>.</p>
+-->
+
+
+
+<h3><a id="coffin_roulette">31: Coffin Roulette</a></h3>
+
+<p><strong>Change in architecture</strong>: angular clay brick walls, flagstone floor covered in inch-thick dirt, heavily weathered.</p>
+
+<p><strong>Illusory wall</strong> to the west </p>
+
+<p><strong>Sealed stone coffins</strong> scattered around room:</p>
+
+<ol class="alphabetical">
+	
+	<li><strong>Filled with eggshells and bird bones</strong> (chicken, turkey, goose, etc.). One turn after being opened, a Skeletal Cockatrice animates inside (as <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cockatrice"><b>Cockatrice</b></a>, but only 2HD).</li>
+	<li><strong>Contains <a href="#arcane_blancmange">Arcane Blancmange</a></strong>.</li>
+	<li><strong>Full of <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Green_Slime">Green Slime</a></strong>. Underneath slime is a skeleton with a labrys of muting (+1, wielder cannot speak, on hit target cannot speak for one turn).</li>
+	<li><strong>Appears empty</strong>: false bottom conceals steep, narrow staircase down and passage northeast to <a href="#the_drain">The Drain</a>.</li>
+	<li><strong>Full of live maggots</strong>: equivalent to thirty rations, if fed at least ten rations pupate into tame <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Insect_Swarm"><b>Swarm of Blowflies</b></a> (can be directed by pointing, disperses after six turns).</li>
+	<li><strong>Full of grave dirt</strong>: <a href="#gartholomew"><b>Gartholomew</b></a> will flee here if his main coffin is blessed or destroyed.</li>
+	<li><strong>Full of copper pieces</strong>: 100,000cp, 1000gp equivalent, unbelievably heavy.</li>
+
+</ol>
+
+
+
+<h3><a id="zombie_philosophy_club">32: Zombie Philosophy Club</a></h3>
+
+<p><strong>Zombies</strong>: all five <a href="#philosophical_zombie"><b>Philosophical Zombies</b></a>, including <a href="#boris_the_sophist"><b>Boris the Sophist</b></a> here discussing philosophy.</p>
+
+<p><strong>Intense smell</strong>: everything reeks of death.</p>
+
+<p><strong>Coffins used as seating</strong>: contain remains of former victims of <a href="#philosophical_zombie"><b>Philosophical Zombies</b></a>.</p>
+
+<ul>
+
+	<li><strong>Three human corpses</strong>: heavily decayed, skulls smashed open and brains eaten.</li>
+	<li><strong>Loose coins</strong>: 300gp.</li>
+	<li><strong><a href="#boris_the_sophist"><b>Boris the Sophist</b></a>'s spellbook</strong>: <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)">Light/Darkness</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Read_Magic">Read Magic</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Sleep">Sleep</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/ESP">ESP</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Phantasmal_Force">Phantasmal Force</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(MU)">Hold Person</a></i>.</li>
+	<li><strong>Tome of forbidden knowledge</strong>: <a href="#languages">Esoteric</a> book, +1 INT and -1 WIS for every chapter read, six chapters total, also grants one 1st level spell slot if read entirely, worth 3200gp.</li>
+	<li><strong>Amulet of beastial communion</strong>: shaped like dragonfly, lets divine casters cast <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals">Speak with Animals</a></i> at will, worth 1750gp.</li>
+	
+</ul>
+
+
+
+<h3><a id="above_the_abyss">33: Above the Abyss</a></h3>
+
+<p><strong>Precipitous cliff edge</strong>: angled towards abyss, never more than 5ft wide, no railings or handholds.</p>
+
+<ul>
+
+	<li><strong>Precarious</strong>: if hit in combat, save vs paralysis or fall.</li>
+	
+</ul>
+
+<p><strong>The abyss</strong>: cliff plummets 140ft into nightmarish churning whirlpool (certain death).</p>
+
+<p><strong>Waterfall</strong>: fills air with dull rumble and water droplets.</p>
+
+<p><strong><a href="#cave_swallow">Cave swallows</a></strong>: 80 total, roosting in walls and ceiling, chirping and squeaking.</p>
+
+<p><strong>Upper ledge</strong>: passes above river, separated from lower ledge by 20ft sheer cliff.</p>
+
+<p><strong>Hidden alcove</strong> under lip of waterfall:</p>
+
+<ul>
+
+	<li><strong>Leather satchel</strong>: waterproof</li>
+	<li><strong>Loose coins</strong>: 450gp</li>
+	<li><strong>Large zircon gem</strong>: cut into five-pointed star, worth 1400gp</li>
+	<li><strong><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Potion_of_Invisibility">Potion of invisibility</a></strong></li>
+	<li><strong>Wand of slime</strong>: turns ten cubic feet of organic material into <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Green_Slime">Green Slime</a>, living targets may save vs wands to resist, 1d6 charges, worth 300gp per charge</li>
+	
+</ul>
+
+
+
+<h3><a id="marmalades_last_stand">34: Marmalade's Last Stand</a></h3>
+
+<p><strong>Corpse of Father Marmalade</strong>: weeks old, mortal wound in side (speared by a <a href="#mawfolk"><b>Mawfolk</b></a>), strangely emaciated (subcutaneous fat sucked out by <a href="#unctuous_blancmange"><b>Unctuous Blancmange</b></a> after death).</p>
+
+<ul>
+	
+	<li><strong>Chainmail armour</strong></li>
+	<li><strong>Heater shield</strong></li>
+	<li><strong>Flail of smiting</strong>: +1, +3 vs undead or demons, worth 2000gp</li>
+	<li><strong>Coin purse</strong>: 115gp</li>
+	<li><strong>Bundle of torches</strong>: pitch sucked off by <a href="#unctuous_blancmange"><b>Unctuous Blancmange</b></a>, useless</li>
+	<li><strong>Notebook</strong>: <a href="#languages">Ecclesiastic</a>, contains many prayers, private musings, list of all <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Vampire">vampire vulnerabilities</a>, general information about <a href="#gartholomew"><b>Gartholomew</b></a>.</li>
+	<li><strong>Garland of garlic</strong>: rotted, useless.</li>
+	<li><strong>Hammer and three wooden stakes</strong></li>
+	<li><strong>Gold and ivory holy symbol</strong> of Propitiation (goddess of law, justice, and obedience), worth 350gp</li>
+	
+</ul>
+
+<p><strong>Touching the holy symbol</strong>: affected by <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Quest_(Remove_Quest)">Quest</a></i>, with goal of killing <a href="#gartholomew"><b>Gartholomew</b></a>.</p>
+
+<ul>
+
+	<li><strong>Refusing the quest</strong>: cursed with haemophilia, double damage from injuries that would cause bleeding, smell irresistible to vampires and other predators.</li>
+	
+</ul>
+
+<p><strong>Mural on north wall</strong>: rabbit being torn in half by two cougars (one half on either side of the double doors).</p>
+
+<p><strong>Plush armchairs</strong>: ruined by moisture, worthless.</p>
+
+<p><strong>End tables</strong>: two jade ashtrays worth 50gp each.</p>
+
+<p><strong>Door north to <a href="#dollys_chamber">Dolly's Chamber</a></strong>: held shut with heavy steel bar.</p>
+
+<ul>
+
+	<li><strong>Freeing <a href="#dolly"><b>Dolly</b></a></strong>: unless prevented, will flee room, wade up river, and terrorise wildlife and mawfolk in <a href="#eastern_cavern">Eastern Cavern</a>.</li>
+
+</ul>
+
+<p><strong>Door east</strong>: spiked shut from this side, chair jammed under doorhandle.</p>
+
+<p><strong>Trail of flammable oil</strong>: left by <a href="#unctuous_blancmange"><b>Unctuous Blancmange</b></a> from Sir Marmalade's corpse south across bridge towards <a href="#volatile_situation">A Volatile Situation</a>.</p>
+
+<p><strong>Bridge</strong>: no railings, slippery with oil.</p>
+
+<!-- 
+<p><strong>Listening carefully</strong>:</p>
+
+<ul>
+
+	<li><strong>Intermittent thumping noise</strong> from north: <a href="#dolly">Dolly</a> pacing back and forth in <a href="#dollys_chamber">Dolly's Chamber</a>.</li>
+	<li><strong>Dull roar</strong> from west: waterfall <a href="#above_the_abyss">Above the Abyss</a>.</li>
+	<li><strong>Chirping and squeaking</strong> from west: <a href="#cave_swallow">Cave Swallows</a> <a href="#above_the_abyss">Above the Abyss</a>.</li>
+
+</ul>
+-->
+
+
+
+<h3><a id="volatile_situation">35: A Volatile Situation</a></h3>
+
+<p><strong>Cluttered</strong>: toppled shelves, piles of crates, barrels.</p>
+
+<p><strong><a href="#unctuous_blancmange">Unctuous Blancmange</a></strong> lounging in northeast corner.</p>
+
+<p><strong>Flammable oil</strong>: covering almost every surface.</p>
+
+<p><strong>Searching the room</strong>:</p>
+
+<ul>
+
+	<li><strong>Faerie-apple wine</strong>: six barrels worth 750gp each.</li>
+	<li><strong>Crate of fine cigars</strong> worth 1200gp.</li>
+	<li><strong>Two crates of preserved meat</strong>: equivalent to thirty rations, tastes like pork.</li>
+	<li><strong>Snakeskin whip</strong>: on hit, save vs paralysis or be incapacitated with pleasure for one turn, worth 600gp.</li>
+	
+</ul>
+
+<p><strong>Fire or explosion</strong>: destroys everything of value.</p>
+
+
+
+<h3><a id="bloody_dead_end">36: A Bloody Dead End</a></h3>
+
+<p><strong>Bloody smear</strong> on door and floor: left by <a href="#marmalades_last_stand">Father Marmalade</a>.</p>
+
+<p><strong>Door</strong>: barricaded from other side, -1 to attempts to force open.</p>
+
+
+
+<h3><a id="cleaners_closet">37: Cleaner's Closet</a></h3>
+
+<p><strong>Stone bench</strong> along west wall.</p>
+
+<p><strong>Bucket, mop, 10ft wooden toothbrush</strong> propped against corner.</p>
+
+<p><strong>Flask of strong lye</strong> on bench: 1d8 damage, or 2d8 damage to acidic creatures, reduces acid damage by 1d8.</p>
+
+<p><strong>Line of pegs</strong> above bench:</p>
+
+<ul>
+
+	<li><strong>Leather apron of acid resistance</strong>: half damage from acid, worth 250gp</li>
+	<li><strong>Ring of keys</strong>: unlocks doors to <a href="#cannibal_cell">Cannibal Cell</a>, Gartholomew's <a href="#garts_inner_sanctum">Inner</a> and <a href="#garts_outer_sanctum">Outer Sanctum</a>, <a href="#belladonnas_grove">Belladonna's Grove</a>, and locked drawer in <a href="#hungry_kitchen">Hungry Kitchen</a>.</li>
+	
+</ul>
+
+
+
+<h3><a id="secret_harbour">38: Secret Harbour</a></h3>
+
+<p><strong>Circular wooden boat</strong> docked in small bay.</p>
+
+<p><strong>North passage</strong> reachable by 15ft ladder.</p>
+
+<p><strong>Winch attached to boat</strong> connected by rope to bollard onshore.</p>
+
+<ul>
+
+	<li><strong>Unwinding the winch</strong>: boat floats downriver (west).</li>
+	<li><strong>Winding the winch</strong>: boat pulled back into bay.</li>
+	<li><strong>Rope</strong>: 120ft long, old and frayed, 2-in-6 chance of snapping for every 20ft unwound.</li>
+	
+</ul>
+
+
+
+<h3><a id="crack_in_the_ceiling">39: Crack in the Ceiling</a></h3>
+
+<p><strong>Crack in ceiling</strong>: 15ft above river surface, 2ft wide.</p>
+
+<p><strong>Narrow</strong>: impossible to navigate with armour or backpack, impossible to turn around midway.</p>
+
+
+
+<h3><a id="shrine_of_the_whisper">40: Shrine of The Unutterable</a></h3>
+
+<p><strong>Dark and silent</strong>: <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Continual_Light_(Continual_Darkness)_(C)">Continual Darkness</a></i> and permanent <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Silence_15%E2%80%99_Radius">Silence</a></i> cast upon room.</p>
+
+<p><strong>Statue of The Unutterable</strong>, obscure minor goddess of secrecy and darkness, depicted as woman in hooded cloak with finger to lips.</p>
+
+<ul>
+
+	<li><strong>Personal secrets engraved into cloak</strong>: "I murdered my younger brother when I was thirteen and made it look like an accident", "I have been unfaithful to my husband with two different men and three different women", etc.</li>
+	<li><strong>Whispering a secret to the statue</strong>: becomes engraved into cloak, automatically identify next secret door seen.</li>
+	
+</ul>
+
+<p><strong>Beaten lead offering bowl</strong> in front of statue:</p>
+
+<ul>
+
+	<li><strong>Loose coins</strong>: 265gp.</li>
+	<li><strong>Pressed false lotus</strong>: extinct flower worth 5000gp.</li>
+	<li><strong>Onyx bracelet</strong>: grants wearer flight while in total darkness, braille engraving inside: "for my daughter-to-be", worth 2250gp.</li>
+	<li><strong>Donating at least 50gp</strong>: automatically succeed next roll to Move Silently.</li>
+	
+</ul>
+
+<p><strong>Defacing statue or stealing from offering bowl</strong>: save vs spells or be spirited away (vanish forever).</p>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="bestiary">Bestiary</a></h2>
+
+
+
+<h3><a id="belladonna">Belladonna</a></h3>
+
+<p><strong>Demonically possessed pomegranate tree</strong>: black bark, purple leaves, blood-red fruit, disturbingly human lips emerging from trunk.</p>
+
+<p class="dense"><strong>AC</strong>: 5 [14]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 8 (36hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 4 × Thorned root (1d6 + Entangle or Forcefeed) or Breathe disease</p>
+
+<p class="dense"><strong>THAC0</strong>: 12 [+7]</p>
+
+<p class="dense"><strong>Movement</strong>: 0ft (rooted in place)</p>
+
+<p class="dense"><strong>Saves</strong>: D8, W9, P10, B10, S12</p>
+
+<p class="dense"><strong>Morale</strong>: 10 (cannot flee but may surrender)</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Chaotic</p>
+
+<p class="dense"><strong>Thorned root</strong>: 8hp each, can be disabled individually.</p>
+
+<p class="dense"><strong>Entangle</strong>: save vs paralysis or be entangled and unable to act, save again each round.</p>
+
+<p class="dense"><strong>Forcefeed</strong>: forcefeed an entangled creature pomegranate, requires use of a separate root from the one entangling them.</p>
+
+<p class="dense"><strong>Breathe disease</strong>: 30ft cone, save vs death or be covered in horrific blisters.</p>
+
+<p class="dense"><strong>Horrific blisters</strong>:</p>
+
+<ul>
+
+	<li><strong>Painful</strong>: -2 to all rolls.</li>
+	<li><strong>Pressed by armour</strong>: 1 damage per turn while wearing armour.</li>
+	<li><strong>Cannot heal</strong>: no benefit from resting or magical healing.</li>
+	<li><strong>Curing</strong>: can only be cured by <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Disease_(Cause_Disease)">Cure Disease</a></i>.</li>
+	
+</ul>
+
+<p class="dense"><strong><a href="#languages">Languages</a></strong>: Common Imperial, Esoteric.</p>
+
+<p class="dense"><strong>Aura of unease</strong>: palpably evil to everyone in sight.</p>
+
+<p class="dense"><strong>Demonic</strong>: damaged by holy water as undead.</p>
+
+<p class="dense"><strong>Eating pomegranate</strong>: even a single seed, save vs spells or be charmed (as <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Charm_Monster">Charm Monster</a></i>).</p>
+
+<ul>
+
+	<li><strong>Charmed creatures</strong>: telepathic link to Belladonna, can be commanded from afar.</li>
+	
+</ul>
+
+<p class="dense"><strong>Eating leaves or bark</strong>: poisonous, save vs death.</p>
+
+<p class="dense"><strong>Wants</strong>: an army of charmed slaves and worshippers.</p>
+
+<p class="dense"><strong>Fears</strong>: clerics.</p>
+
+<p class="dense"><strong>When encountered</strong>: pretends to be helplessly trapped in magic circle, begs to be freed, offers magic pomegranates in return.</p>
+
+<ul>
+
+	<li><strong>Pomegranate offer</strong>: claims they are delicious and empower magical abilities.</li>
+	<li><strong>If disbelieved</strong>: claims they will charm anyone eating them towards party, encourages party to feed them to others.</li>
+	<li><strong>If fed to another creature</strong>: will telepathically command eater to obey party as though charmed by them, until enough targets have been charmed to overpower party by force.</li>
+	<li><strong>If refused</strong>: attacks.</li>
+	
+</ul>
+
+<p class="dense"><strong>In combat</strong>:</p>
+
+<ul>
+
+	<li><strong>Attempts to entangle</strong> with roots, then demands they surrender and eat pomegranates.</li>
+	<li><strong>If refused</strong>: breathes disease and continues attacking with roots.</li>
+	<li><strong>Always leaves one creature alive</strong>: forcefeeds them pomegranate, then sets them loose to feed others.</li>
+	
+</ul>
+
+<p class="dense"><strong>On death</strong>: turns to foul black ooze, leaves behind black solid diamond calcified heart worth 10,000gp.</p>
+
+
+
+<h3><a id="arcane_blancmange">Blancmange, Arcane</a></h3>
+
+<p><strong>Unstable mass of magical energy</strong>, pale blue, glowing, electrifying presence.</p>
+
+<p class="dense"><strong>AC</strong>: 9 [10]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 4 (18hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Touch of chaos or 1 × Eat spell</p>
+
+<p class="dense"><strong>THAC0</strong>: 16 [+3]</p>
+
+<p class="dense"><strong>Movement</strong>: 90ft (30ft), teleports</p>
+
+<p class="dense"><strong>Saves</strong>: D12, W13, P14, B15, S16</p>
+
+<p class="dense"><strong>Morale</strong>: 8</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Neutral</p>
+
+<p class="dense"><strong>Size</strong>: grizzly bear.</p>
+
+<p class="dense"><strong>Magic immunity</strong>: immune to spell effects or magical damage, magical weapons treated as nonmagical for attack and damage.</p>
+
+<p class="dense_end"><strong>Touch of chaos</strong>: target affected by random spell.</p>
+
+<table>
+	<tr>
+		<td>1d8</td>
+		<td><button type="button" onclick='fill_from_table("touch_of_chaos", ["<i><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)\">Light</a></i> (blinding)", "<i><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Sleep\">Sleep</a></i> (single creature)", "<i><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Invisibility\">Invisibility</a></i>", "<i><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Dimension_Door\">Dimension Door</a></i> (to " + random_room() + ")", "<i><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Charm_Person\">Charm Person</a></i>", "<i><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(MU)\">Hold Person</a></i>", "<i><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Polymorph_Others\">Polymorph Others</a></i> (into an Arcane Blancmange)", "<i><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php/Stone_to_Flesh_(Flesh_to_Stone)\">Flesh to Stone</a></i>"])'>Roll</button> <span id="touch_of_chaos"></span></td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)">Light</a></i> (blinding)</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Sleep">Sleep</a></i> (single creature)</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Invisibility">Invisibility</a></i></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dimension_Door">Dimension Door</a></i> (to room #1d40)</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Charm_Person">Charm Person</a></i></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(MU)">Hold Person</a></i></td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Polymorph_Others">Polymorph Others</a></i> (into an Arcane Blancmange)</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Stone_to_Flesh_(Flesh_to_Stone)">Flesh to Stone</a></i></td>
+	</tr>
+</table>
+
+<p class="dense"><strong>Eat spell</strong>: save vs spells or lose highest prepared spell and take 1d6 damage, arcane blancmange heals for damage dealt, double damage if interrupting a spell while being cast.</p>
+
+<p class="dense"><strong>On death</strong>: enchants killing weapon, +1 and casts random spell (as Touch of chaos) on hit.</p>
+
+<p class="dense"><strong>In combat</strong>: targets anyone with prepared spells or carrying magic items, ignores anyone else.</p>
+
+
+
+<h3><a id="sandy_blancmange">Blancmange, Sandy</a></h3>
+
+<p><strong>Giant blob of acidic slime</strong>, covered in thick layer of sand and dust, yellow-orange-brown streaks.</p>
+
+<p class="dense"><strong>AC</strong>: 9 [10]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 4 (18hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Touch (1d8) or 1 × Drop from ceiling (1d8 per 10ft fallen)</p>
+
+<p class="dense"><strong>THAC0</strong>: 16 [+3]</p>
+
+<p class="dense"><strong>Movement</strong>: 60ft (20ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D12, W13, P14, B15, S16</p>
+
+<p class="dense"><strong>Morale</strong>: 8</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Neutral</p>
+
+<p class="dense"><strong>Size</strong>: grizzly bear.</p>
+
+<p class="dense"><strong>Corrosive</strong>:</p>
+
+<ul>
+
+	<li><strong>Striking with nonmagical weapon</strong>: weapon destroyed.</li>
+	<li><strong>Being touched</strong>: nonmagical armour destroyed.</li>
+	
+</ul>
+
+<p class="dense"><strong>Surprise</strong>: 4-in-6, due to camouflage against sandstone walls and ceiling.</p>
+
+<p class="dense"><strong>In combat</strong>: mindlessly tries to absorb nearest source of organic material, discouraged by metal armour.</p>
+
+
+
+<h3><a id="unctuous_blancmange">Blancmange, Unctuous</a></h3>
+
+<p><strong>Giant blob of oil and fat</strong>, dark brown, cloudy.</p>
+
+<p class="dense"><strong>AC</strong>: 9 [10]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 4 (18hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Liposuction (1d6) or 1 × Drop from ceiling (1d6 per 10ft fallen)</p>
+
+<p class="dense"><strong>THAC0</strong>: 16 [+3]</p>
+
+<p class="dense"><strong>Movement</strong>: 60ft (20ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D12, W13, P14, B15, S16</p>
+
+<p class="dense"><strong>Morale</strong>: 8</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Neutral</p>
+
+<p class="dense"><strong>Size</strong>: grizzly bear.</p>
+
+<p class="dense"><strong>Liposuction</strong>: sucks out subcutaneous fat, deals damage to both HP and STR, heals half of damage dealt.</p>
+
+<ul>
+
+	<li><strong>Recovering STR</strong>: one point recovered per ration eaten.</li>
+	<li><strong>Reaching zero STR</strong>: too weak to move or act.</li>
+	
+</ul>
+
+<p class="dense"><strong>Extremely flammable</strong>: explodes if ignited, as <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Fire_Ball">Fire Ball</a></i>, caster level equal to hit dice.</p>
+
+<p class="dense"><strong>Leaky</strong>: leaves trail of slippery flammable oil behind when moving.</p>
+
+<p class="dense"><strong>In combat</strong>: preferentially seeks out lantern oil or unlit torches, even in backpacks. Otherwise liposuctions fattest creature nearby, discouraged by metal armour.</p>
+
+
+
+<h3><a id="boris_the_sophist">Boris the Sophist</a></h3>
+
+<p><strong>Undead wizard</strong>: bald, long red beard, thoughtful paternal demeanour.</p>
+
+<p class="dense"><strong>AC</strong>: 9 [10]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 5 (5th level <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Magic-User">Magic-User</a>, 12hp)</p>
+
+<p class="dense"><strong>Attacks and abilities</strong>: as <a href="#philosophical_zombie">Philosophical Zombies</a>, or Spell</p>
+
+<p class="dense"><strong>THAC0</strong>: 19 [0]</p>
+
+<p class="dense"><strong>Movement</strong>: 90ft (30ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D13, W14, P13, B16, S15</p>
+
+<p class="dense"><strong>Morale</strong>: 12 (7 if enemy has holy symbol or holy water)</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Lawful</p>
+
+<p class="dense"><strong>Spells prepared</strong>: <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)">Darkness</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Sleep">Sleep</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/ESP">ESP</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Phantasmal_Force">Phantasmal Force</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(MU)">Hold Person</a></i></p>
+
+<p class="dense"><strong><a href="#languages">Languages</a></strong>: Common Imperial, Esoteric.</p>
+
+<p class="dense"><strong>When encountered</strong>: uses <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/ESP">ESP</a></i> preemptively where possible, discusses philosophy as <a href="#philosophical_zombie"><b>Philosophical Zombies</b></a>.</p>
+
+<p class="dense"><strong>In combat</strong>: uses <i>Sleep</i> first (it's more ethical to kill people painlessly in their sleep), then <i>Hold Person</i> on anyone still awake. Uses <i>Darkness</i> to cover retreat if necessary. Usually reserves <i>Phantasmal Force</i> for physically demonstrating thought experiments.</p>
+
+
+
+<h3><a id="cat">Cat</a></h3>
+
+<p><strong>Domestic cat</strong>: short grey fur, affectionate but selfish.</p>
+
+<p class="dense"><strong>AC</strong>: 9 [10]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 0 (1hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Scratch (1d2) or 1 × Bite (1d2)</p>
+
+<p class="dense"><strong>THAC0</strong>: 20 [-1]</p>
+
+<p class="dense"><strong>Movement</strong>: 150ft (50ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D14, W15, P16, B17, S18</p>
+
+<p class="dense"><strong>Morale</strong>: 2</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Chaotic</p>
+
+<p class="dense"><strong>Name</strong>: called "Utility Monster" by <a href="#philosophical_zombie"><b>Philosophical Zombies</b></a>, called "Sweetbread" by <a href="#mawfolk"><b>Mawfolk</b></a>, doesn't answer to either name.</p>
+
+<p class="dense"><strong>Wary</strong>: never surprised, always wins initiative.</p>
+
+<p class="dense"><strong>Using <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals">Speak with Animals</a></i></strong>: openly explains how much he wants to eat party, completely disinterested in anything party or anyone else wants.</p>
+
+<p class="dense"><strong>Butchering</strong>: two rations of meat.</p>
+
+<p class="dense"><strong>When encountered</strong>: purrs, nuzzles, begs for food, tries to guide party towards <a href="#philosophical_zombie">Philosophical Zombies</a> (hoping to get scraps when their brains are eaten).</p>
+
+<p class="dense"><strong>In combat</strong>: flees, never fights unless cornered.</p>
+
+
+
+<h3><a id="cave_swallow">Cave Swallows</a></h3>
+
+<p class="dense"><strong>AC</strong>: 6 [13]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 0 (1hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Swarm (Overwhelm)</p>
+
+<p class="dense"><strong>THAC0</strong>: 20 [-1]</p>
+
+<p class="dense"><strong>Movement</strong>: 150ft (50ft), flying</p>
+
+<p class="dense"><strong>Saves</strong>: D14, W15, P16, B17, S18</p>
+
+<p class="dense"><strong>Morale</strong>: 6</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Neutral</p>
+
+<p class="dense"><strong>Size</strong>: pigeon.</p>
+
+<p class="dense"><strong>Swarm</strong>: ten cave swallows collectively can make one attack.</p>
+
+<p class="dense"><strong>Overwhelm</strong>: save vs wands or drop anything held in hands, 3-in-6 chance dropped lantern will shatter or dropped torch will go out.</p>
+
+<p class="dense"><strong>Easily scared</strong>: make a morale roll for the entire flock every time a cave swallow dies.</p>
+
+<p class="dense"><strong>Using <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals">Speak with Animals</a></i></strong>: hyperactive, panicky, scatterbrained.</p>
+
+<p class="dense"><strong>Butchering</strong>: one ration of meat per four cave swallows.</p>
+
+<p class="dense"><strong>When encountered</strong>: easily panicked, swarm around anyone nearby if disturbed by sudden noise or movement (combat, using hammer and pitons) or bright light (brighter than torch).</p>
+
+
+
+<h3><a id="chrysophage">Chrysophage</a></h3>
+
+<p><strong>Enchanted giant beetle</strong>: irridescent green, row of stegosaurus-like spines down back, huge wet eyes.</p>
+
+<p class="dense"><strong>AC</strong>: 3 [16]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 3 (13hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Bite (1d4) or Dazzling lights</p>
+
+<p class="dense"><strong>THAC0</strong>: 17 [+2]</p>
+
+<p class="dense"><strong>Movement</strong>: 120ft (40ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D12, W13, P14, B15, S16</p>
+
+<p class="dense"><strong>Morale</strong>: 2</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Neutral</p>
+
+<p class="dense"><strong>Size</strong>: large dog.</p>
+	
+<p class="dense"><strong>Dazzling lights</strong>: spines light up in multicolour rapid strobing pattern, all within 30ft save vs spells or be blinded for 1d4 turns, can only be used once per day.</p>
+
+<p class="dense"><strong>Charming appearance</strong>: on sight, save vs spells or be charmed.</p>
+
+<ul>
+
+	<li><strong>Charmed creatures</strong>: feed chrysophage any gold carried, defend the chrysophage, gently pat its head, then leave if it is not in danger.</li>
+	<li><strong>Charm ends</strong>: after one turn out of sight of chrysophage, or if chrysophage dies.</li>
+	
+</ul>
+
+<p class="dense"><strong>Butchering</strong>:</p>
+
+<ul>
+
+	<li><strong>Gizzard stones</strong>: stomach filled with gemstones from eaten jewelery, worth 1400gp.</li>
+	<li><strong>Meat</strong>: ten rations of edible meat, tastes metallic.</li>
+	
+</ul>
+
+<p class="dense"><strong>Using <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals">Speak with Animals</a></i></strong>: snivels and pleads pathetically for mercy (even if party is not at all hostile).</p>
+
+<p class="dense"><strong>In combat</strong>: uses Dazzling Lights and flees into undergrowth, never fights unless cornered.</p>
+
+
+
+<h3><a id="dolly">Dolly</a></h3>
+
+<p><strong>Undead baryonyx</strong>: awe-inspiringly huge, teeth like a thousand fishhooks, pallid desiccated flesh.</p>
+
+<p class="dense"><strong>AC</strong>: 5 [14]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 12 (54hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × bite (4d6) or 1 × swing tail (2d6)</p>
+
+<p class="dense"><strong>THAC0</strong>: 10 [+9]</p>
+
+<p class="dense"><strong>Movement</strong>: 90ft (30ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D6, W7, P8, B8, S10</p>
+
+<p class="dense"><strong>Morale</strong>: 8</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Neutral</p>
+
+<p class="dense"><strong>Size</strong>: bus.</p>
+
+<p class="dense"><strong>Swing tail</strong>: hits all creatures in 15ft square.</p>
+
+<p class="dense"><strong>Collar</strong>: reads "Dolly", only visible close up.</p>
+
+<p class="dense"><strong>Mortal wound</strong>: enchanted glaive embedded deep in back of neck.</p>
+
+<ul>
+
+	<li><strong>"Godkiller"</strong>: +2, on hit can expend charge to force target to save vs death or die, 1d6 charges, worth 3000gp.</li>
+	
+</ul>
+
+<p class="dense"><strong>Commanding by name</strong>: save vs paralysis or hesitate one round.</p>
+
+<ul>
+
+	<li><strong>If wearing black floral diadem</strong>: instead obeys as retainer.</li>
+	
+</ul>
+
+<p class="dense"><strong>Wants</strong>: freedom, prey, excitement.</p>
+
+<p class="dense"><strong>Fears</strong>: fire (larger than torch).</p>
+
+<p class="dense"><strong>Using <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals">Speak with Animals</a></i></strong>: speaks like an excited puppy, begs to see her mother (high priestess wearing black floral diadem).</p>
+
+<p class="dense"><strong>When encountered</strong>: curious but slow, easily distracted, explores with mouth.</p>
+
+<p class="dense"><strong>In combat</strong>: always bites unless surrounded, then swings tail.</p>
+
+
+
+<h3><a id="empowered_ghoul">Empowered Ghoul</a></h3>
+
+<p><strong>No longer human</strong>: predator animal stance, teeth dripping gore, mad eyes, screaming.</p>
+
+<p class="dense"><strong>AC</strong>: 6 [13]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 5 (22hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 2 × Claw (1d6 + Paralysis) and 1 × Bite (1d6 + Paralysis), or 1 × Devour helpless victim</p>
+
+<p class="dense"><strong>THAC0</strong>: 15 [+4]</p>
+
+<p class="dense"><strong>Movement</strong>: 120ft (40ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D10, W11, P12, B13, S14</p>
+
+<p class="dense"><strong>Morale</strong>: 12</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Chaotic</p>
+
+<p class="dense"><strong>Paralysis</strong>: 2d4 turns, save vs paralysis to resist.</p>
+
+<p class="dense"><strong>Devour helpless victim</strong>: graphically tears apart and consumes a paralysed, unconscious, or dead creature. All witnessing save vs paralysis or be traumatised.</p>
+
+<p class="dense"><strong>Traumatised witnesses</strong>:</p>
+
+<ul>
+
+	<li><strong>Flee in terror</strong>: 2d4 turns.</li>
+	<li><strong>Plagued by nightmares</strong>: 2d6 WIS damage, only recovered once empowered ghoul is killed.</li>
+	<li><strong>Reaching zero WIS</strong>: gibbering wreck, unable to act except fleeing or cowering.</li>
+	
+</ul>
+
+<p class="dense"><strong>In combat</strong>: focuses all attacks on one creature at a time, weakest looking first, immediately devours when possible.</p>
+
+
+
+<h3><a id="gartholomew">Gartholomew</a></h3>
+
+<p><strong>Vampire</strong>, foppish, insecure, slightly pathetic.</p>
+
+<p class="dense"><strong>AC</strong>: 2 [17]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 7 (31hp)</p>
+
+<p class="dense"><strong>Attacks and abilities</strong>: as <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Vampire"><b>Vampire</b></a></p>
+
+<p class="dense"><strong>THAC0</strong>: 13 [+6]</p>
+
+<p class="dense"><strong>Movement</strong>: 120ft (40ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D8, W9, P10, B10, S12</p>
+
+<p class="dense"><strong>Morale</strong>: 6</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Chaotic</p>
+
+<p class="dense"><strong>Summon beasts</strong>:</p>
+
+<ul>
+
+	<li><strong>Instead of rats/giant rats</strong>: can summon 1d10 × 10 <a href="#undead_crabs"><b>Undead Crabs</b></a>.</li>
+	<li><strong>Instead of bats/giant bats</strong>: can summon 1d10 × 10 <a href="#cave_swallow"><b>Cave Swallows</b></a>.</li>
+	<li><strong>Instead of wolves/dire wolves</strong>: can summon <a href="#quince"><b>Quince</b></a> (she is not happy about this).</li>
+	
+</ul>
+
+<p class="dense"><strong><a href="#languages">Languages</a></strong>: High Imperial, Esoteric, some very basic Common Imperial.</p>
+
+<p class="dense"><strong>Wants</strong>: to live like a cliché Gothic vampire, to be liked.</p>
+
+<p class="dense"><strong>Fears</strong>: holy symbols, garlic, mirrors, running water, sunlight, humiliation.</p>
+
+<p class="dense"><strong>When encountered</strong>:</p>
+
+<ul>
+
+	<li><strong>If carrying holy symbols, garlic, etc.</strong>: immediately hostile.</li>
+	<li><strong>Otherwise</strong>: tries very hard to seem sexy, confident, intelligent.</li>
+	<li><strong>Requests</strong>: party to persuade <a href="#mayflower"><b>Mayflower</b></a> to like him (impossible).</li>
+	<li><strong>Offers in return</strong>: a night of passion with yours truly (or treasure if they insist).</li>
+	
+</ul>
+
+<p class="dense"><strong>In combat</strong>:</p>
+
+<ul>
+
+	<li><strong>Cause infighting</strong>: first uses charming gaze, then summons beasts.</li>
+	<li><strong>Temporary retreat</strong>: next, transforms into gaseous cloud to allow infighting and fetch duelling rapier from <a href="#garts_inner_sanctum">Gartholomew's Inner Sanctum</a>.</li>
+	<li><strong>Return</strong>: attacks with duelling rapier, targets party leader (if there is one).</li>
+	<li><strong>Finishes with energy drain</strong>: where possible (more dramatic).</li>
+	<li><strong>Fleeing</strong>: transforms into gaseous cloud and retreats to <a href="#garts_inner_sanctum">Gartholomew's Inner Sanctum</a>, or <a href="#coffin_roulette">Coffin Roulette</a> if coffin has been destroyed.</li>
+	
+</ul>
+	
+
+
+<h3><a id="giant_tapeworm">Giant Tapeworm</a></h3>
+
+<p class="dense"><strong>AC</strong>: 7 [12]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 3 (13hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Absorbing bite (1d6) or 1 × Constrict</p>
+
+<p class="dense"><strong>THAC0</strong>: 17 [+2]</p>
+
+<p class="dense"><strong>Movement</strong>: 60ft (20ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D12, W13, P14, B15, S16</p>
+
+<p class="dense"><strong>Morale</strong>: 8</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Neutral</p>
+
+<p class="dense"><strong>Size</strong>: 50ft long, 1ft wide ribbon.</p>
+
+<p class="dense"><strong>Absorbing bite</strong>: deals damage to both HP and CON.</p>
+
+<ul>
+
+	<li><strong>Recovering CON damage</strong>: 24 hours rest.</li>
+	<li><strong>Reaching zero CON</strong>: die of blood loss.</li>
+	
+</ul>
+
+<p class="dense"><strong>Constrict</strong>: save vs paralysis or be entangled and unable to act, save again each round.</p>
+
+<ul>
+
+	<li><strong>Attacking while a creature is constricted</strong>: damage shared between tapeworm and constricted victim.</li>
+	
+</ul>
+
+<p class="dense"><strong>Using <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals">Speak with Animals</a></i></strong>: has never seen another living creature and doesn't know how to conceive of party as conscious beings capable of communication, has profound existential crisis.</p>
+
+<p class="dense"><strong>Butchering</strong>: ten rations of extremely bland phlegm-y meat.</p>
+
+<p class="dense"><strong>In combat</strong>: will constrict a victim, then absorb until dead.</p>
+
+<p class="dense"><strong>Fleeing</strong>: if possible, will relocate to <a href="#the_drain">The Drain</a>, in tunnel under iron grate.</p>
+
+
+
+<h3><a id="giant_terrestrial_sea_anemone">Giant Terrestrial Sea Anemone</a></h3>
+
+<p class="dense"><strong>AC</strong>: 7 [12]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 4 (18hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 3 × Tentacles (1d3 + Paralysing mucous) or 1 × Consume helpless victim</p>
+
+<p class="dense"><strong>THAC0</strong>: 16 [+3]</p>
+
+<p class="dense"><strong>Movement</strong>: 0ft (sessile)</p>
+
+<p class="dense"><strong>Saves</strong>: D10, W11, P12, B13, S14</p>
+
+<p class="dense"><strong>Morale</strong>: 7</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Neutral</p>
+
+<p class="dense"><strong>Size</strong>: small tree.</p>
+
+<p class="dense"><strong>Paralysing mucous</strong>: save vs paralysis or be paralysed for 1d6 turns.</p>
+
+<p class="dense"><strong>Consume helpless victim</strong>: one paralysed, unconscious, or dead creature pulled into mouth and eaten, 2d6 damage per round, body fully digested in six turns.</p>
+
+<p class="dense"><strong>Surprise</strong>: 3-in-6 due to blending in with surrounding giant terrestrial coral.</p>
+
+<p class="dense"><strong>Retreat</strong>: if failing morale roll, retracts tentacles into body, AC becomes 3 [16].</p>
+
+<p class="dense"><strong>Using <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals">Speak with Animals</a></i></strong>: politely asks to be fed <a href="#cave_swallow">Cave Swallows</a>, its favourite food, offers safe passage in return.</p>
+
+
+
+<h3><a id="mawfolk">Mawfolk</a></h3>
+
+<p><strong>Transformed worshippers of the Yearning Maw</strong>: wide pelican-like mouths, shark-like teeth, distended stomachs.</p>
+
+<p class="dense"><strong>AC</strong>: 8 [11]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 1 (4hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Bite (1d6) or 1 × Harpoon (1d6) or 1 × Fishing net (Entangle) or 1 × Blowgun (Irritant)</p>
+
+<p class="dense"><strong>THAC0</strong>: 19 [0]</p>
+
+<p class="dense"><strong>Movement</strong>: 90ft (30ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D12, W13, P14, B15, S16</p>
+
+<p class="dense"><strong>Morale</strong>: 7</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Chaotic</p>
+
+<p class="dense"><strong>Fishing net</strong>: save vs paralysis or be entangled and unable to act, save again each round.</p>
+
+<p class="dense"><strong>Blowgun</strong>: darts coated in <a href="#quince">Quince</a>'s irritant.</p>
+
+<ul>
+
+	<li><strong>Irritant</strong>: agonising burning pain (-4 to all rolls) unless wound is submerged in water, lasts 1d4 turns.</li>
+	
+</ul>
+
+<p class="dense"><strong>Blessing of the Yearning Maw</strong>: +4 to saves vs anything ingested.</p>
+
+<p class="dense"><strong><a href="#languages">Languages</a></strong>: Common Imperial only.</p>
+
+<p class="dense"><strong>Want</strong>: food, community.</p>
+
+<p class="dense"><strong>Fear</strong>: strangers.</p>
+
+<p class="dense"><strong>When encountered</strong>: may attack if hungry and have strength in numbers, otherwise usually flee or invite party back to village to speak with <a href="#mayflower">Mayflower</a>.</p>
+
+<p class="dense"><strong>In combat</strong>: start with thrown harpoons, nets, or blowgun darts, then close in with teeth.</p>
+
+
+
+<h3><a id="mayflower">Mayflower</a></h3>
+
+<p><strong>High Priestess of the Yearning Maw</strong>: flesh-pink robes over chainmail, black floral diadem, imposing presence.</p>
+
+<p class="dense"><strong>AC</strong>: 5 [14]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 5 (5th level <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cleric">Cleric</a>, 17hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Bite (1d6) or 1 × Ceremonial trident (1d6 + Flesh eating bacteria) or Spell</p>
+
+<p class="dense"><strong>THAC0</strong>: 17 [+2]</p>
+
+<p class="dense"><strong>Movement</strong>: 90ft (30ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D9, W10, P12, B14, S12</p>
+
+<p class="dense"><strong>Morale</strong>: 9</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Chaotic</p>
+
+<p class="dense"><strong>Blessing of the Yearning Maw</strong>: +4 to saves vs anything ingested.</p>
+
+<p class="dense"><strong>Flesh eating bacteria</strong>:</p>
+
+<ul>
+
+	<li><strong>Sepsis</strong>: save vs death or die after 24 hours.</li>
+	<li><strong>Curing</strong>: can be cured with <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Disease_(Cause_Disease)">Cure Disease</a></i> or immediately amputating affected limb.</li>
+	
+</ul>
+
+<p class="dense"><strong>Prepared spells</strong>: 2 × <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Light_Wounds_(Cause_Light_Wounds)">Cure Light Wounds</a></i>, 2 × <i>Cannibalistic Frenzy</i>.</p>
+
+<p class="dense"><strong><i>Cannibalistic Frenzy</i></strong>: +2 to damage, -3 to AC, attempt to eat nearest creature, lasts one turn, unwilling targets may save vs spells to resist.</p>
+
+<p class="dense"><strong>Black floral diadem</strong>: unaware of effect on <a href="#dolly">Dolly</a>.</p>
+
+<p class="dense"><strong><a href="#languages">Languages</a></strong>: Common Imperial, Ecclesiastic.</p>
+
+<p class="dense"><strong>Wants</strong>: <a href="#gartholomew">Gartholomew</a> dead or driven away, the entire temple complex under her control, more worshippers.</p>
+
+<p class="dense"><strong>Fears</strong>: abandonment.</p>
+
+<p class="dense"><strong>When encountered</strong>: if party is not an immediate threat, offers them treasure to further her goals (kill <a href="#gartholomew">Gartholomew</a>, clear out temple complex).</p>
+
+<p class="dense"><strong>In combat</strong>: uses <i>Cannibalistic Frenzy</i> both to disable priority enemies and to buff Mawfolk, cures allies' wounds where possible, only uses trident as last resort.</p>
+
+
+
+<h3><a id="philosophical_zombie">Philosophical Zombies</a></h3>
+
+<p><strong>Former adventurers</strong>: returned from dead, hunger for brain-flesh, struggling to retain humanity.</p>
+
+<p class="dense"><strong>AC</strong>: 9 [10]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 2 (9hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 2 × Numbing touch (1d4) and 1 × Bite (1d4)</p>
+
+<p class="dense"><strong>THAC0</strong>: 18 [+1]</p>
+
+<p class="dense"><strong>Movement</strong>: 90ft (30ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D12, W13, P14, B15, S16</p>
+
+<p class="dense"><strong>Morale</strong>: 12 (7 if enemy has holy symbol or holy water)</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Lawful</p>
+
+<p class="dense"><strong>Numbing touch</strong>: deals damage to both HP and WIS.</p>
+
+<ul>
+
+	<li><strong>Recovering WIS</strong>: fully recovered after 24 hours rest.</li>
+	<li><strong>Reaching zero WIS</strong>: unconscious for 24 hours.</li>
+	
+</ul>
+
+<p class="dense"><strong>Atheist</strong>: if turned, simply tut and roll eyes (unless destroyed outright).</p>
+
+<p class="dense"><strong>Reanimation</strong>: after death, reanimate to full hit points after one turn, so long as even a single fragment of bone remains.</p>
+
+<p class="dense"><strong>Preventing reanimation</strong>:</p>
+
+<ul>
+
+	<li><strong>Holy water</strong> doused on corpse.</li>
+	<li><strong><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Bless_(Blight)">Bless</a></i></strong> cast on corpse.</li>
+	<li><strong>Sunlight</strong> on corpse.</li>
+	<li><strong>Holy destruction</strong> by Turn Undead or <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dispel_Evil">Dispel Evil</a></i>.</li>
+	
+</ul>
+
+<p class="dense"><strong>Names</strong>: Tanya, Sonya, Beatrice, Reynold. Led by <a href="#boris_the_sophist">Boris</a>.</p>
+
+<p class="dense"><strong><a href="#languages">Languages</a></strong>: Common Imperial only.</p>
+
+<p class="dense"><strong>Want</strong>: to discuss philosophy, to eat human brain-flesh.</p>
+
+<p class="dense"><strong>Fear</strong>: losing themselves, becoming mindless undead.</p>
+
+<p class="dense"><strong>When encountered</strong>: engage in philosophical debate on ethics of dungeoneering, attempt to convince party it is morally necessary for them to be killed and have their brains eaten.</p>
+
+<p class="dense"><strong>Discussing philosophy</strong> with other monsters:</p>
+
+<ul>
+
+	<li><strong>With <a href="#belladonna">Belladonna</a></strong>: after torturously long ethical debate, convinced to feed others pomegranates.</li>
+	<li><strong>With <a href="#gartholomew">Gartholomew</a></strong>: completely embarrass and humiliate him.</li>
+	<li><strong>With <a href="#mayflower">Mayflower</a></strong>: nothing in common, disagree on fundamentals, goes nowhere.</li>
+	<li><strong>With <a href="#mawfolk">Mawfolk</a></strong>: variable, can convince about a quarter to abandon cult given at least an hour of discussion.</li>
+	<li><strong>With <a href="#quince">Quince</a></strong>: surprisingly much in common, get along extremely well.</li>
+	
+</ul>
+
+<p class="dense"><strong>In combat</strong>: gang up on weakest prey, will not pursue fleeing enemies so long as they have at least one corpse to eat, will not use bite unless desperate (it would be unbecoming).</p>
+
+
+
+<h3><a id="quince">Quince</a></h3>
+
+<p><strong>Giant starfish</strong>: covered in menacing black keratinous spikes.</p>
+
+<p class="dense"><strong>AC</strong>: 5 [14]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 5 (22hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 5 × Arm (1d4 + Irritant) or 1 × Evert stomach</p>
+
+<p class="dense"><strong>THAC0</strong>: 15 [+4]</p>
+
+<p class="dense"><strong>Movement</strong>: 120ft (40ft) in water, 30ft (10ft) on land</p>
+
+<p class="dense"><strong>Saves</strong>: D10, W11, P12, B13, S14</p>
+
+<p class="dense"><strong>Morale</strong>: 9</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Neutral</p>
+
+<p class="dense"><strong>Size</strong>: child's paddling pool.</p>
+
+<p class="dense"><strong>Arms</strong>: no more than two attacks per creature due to angle.</p>
+
+<p class="dense"><strong>Irritant</strong>: agonising burning pain (-4 to all rolls) unless wound is submerged in water, lasts 1d4 turns.</p>
+
+<p class="dense"><strong>Evert stomach</strong>: save vs breath weapons or be swallowed whole.</p>
+
+<ul>
+
+	<li><strong>Swallowed creatures</strong>: 1d8 damage per round, can attack at -4, body fully digested after six turns.</li>
+	
+</ul>
+
+<p class="dense"><strong>Butchering</strong>: twenty rations of meat, tastes like peppery shrimp.</p>
+
+<p class="dense"><strong>Intelligent</strong>: sentient but mute, excellent at knitting and loves children.</p>
+
+<p class="dense"><strong>Wants</strong>: mawfolk to be safe, will lay down life for them.</p>
+
+<p class="dense"><strong>Fears</strong>: anything larger than her.</p>
+
+<p class="dense"><strong>When encountered</strong>: will not attack unless extremely hungry or mawfolk are in danger.</p>
+
+<p class="dense"><strong>In combat</strong>: everts stomach to disable priority target (e.g. spellcaster), then gets into central position to hit as many enemies as possible with arms.</p>
+
+
+
+<h3><a id="sister_dorothy">Sister Dorothy</a></h3>
+
+<p><strong>Priestess of The Black Clew</strong>, god of love, tragedy, and mistakes.</p>
+
+<p class="dense"><strong>AC</strong>: 9 [10]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 6 (6th level <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cleric">Cleric</a>, 21hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Ceremonial staff (1d4) or Spell</p>
+
+<p class="dense"><strong>THAC0</strong>: 17 [+2]</p>
+
+<p class="dense"><strong>Movement</strong>: 120ft (40ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D9, W10, P12, B14, S12</p>
+
+<p class="dense"><strong>Morale</strong>: 8</p>
+
+<p class="dense_end"><strong>Alignment</strong>: lawful</p>
+
+<p class="dense"><strong>Prepared spells</strong>: <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Light_Wounds_(Cause_Light_Wounds)">Cure Light Wounds</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Purify_Food_and_Water">Purify Food and Water</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Bless_(Blight)">Bless</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals">Speak with Animals</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Cure_Disease_(Cause_Disease)">Cure Disease</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Create_Water">Create Water</a></i>.</p>
+
+<p class="dense"><strong>Second time encountered</strong>: will fall headlong in love with a random party member.</p>
+
+<ul>
+
+	<li><strong>Offers to accompany party</strong>: not a retainer, does not follow orders, does not ask for a share of treasure, only there for her lover.</li>
+	<li><strong>Clueless</strong>: has never been in a dungeon, will make every possible stupid mistake unless prevented, persistently tries to befriend monsters.</li>
+	<li><strong>Tragic death</strong>: will do everything in her power to contrive a scenario where she has to die tragically in the name of protecting her lover.</li>
+	<li><strong>If lover dies</strong>: weeps and wails, tears at hair, pleads to every possible god to take her instead, enters a state of catatonic depression for two weeks.</li>
+	
+</ul>
+
+<p class="dense"><strong>Spellcasting services</strong>: casts clerical spells for 200gp per spell level (free of charge for lover). Spends proceeds on food to share with villagers.</p>
+
+<p class="dense"><strong><a href="#languages">Languages</a></strong>: Common Imperial, Ecclesiastic.</p>
+
+
+
+<h3><a id="thimble_brothers">The Thimble Brothers</a></h3>
+
+<p><strong>Rival adventuring party</strong>: here for treasure, will not negotiate with monsters.</p>
+
+<p class="dense"><strong>Movement</strong>: 90ft (30ft)</p>
+
+<p class="dense"><strong>Morale</strong>: 7</p>
+
+<p class="dense"><strong><a href="#languages">Languages</a></strong>: Common Imperial only.</p>
+
+<p class="dense"><strong>Wants</strong>: wealth, respect.</p>
+
+<p class="dense"><strong>Fears</strong>: monsters.</p>
+
+<p><strong>Billy Thimble</strong>: eldest brother, cheeky, arrogant, party leader.</p>
+
+<ul>
+
+	<li><strong>4th level <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Fighter">Fighter</a></strong>: 17hp.</li>
+	<li><strong>AC</strong>: 4 [15]</li>
+	<li><strong>Attacks</strong>: 1 × Handaxe (1d6) or 1 × Javelin (1d4)</li>
+	<li><strong>THAC0</strong>: 17 [+2]</li>
+	<li><strong>Equipment</strong>: handaxe, javelins × 3, chainmail, shield, 12gp, hammer and twelve iron spikes, six rations.</li>
+	<li><strong>Saves</strong>: D10, W11, P12, B13, S14</li>
+	<li><strong>Alignment</strong>: Neutral</li>
+	
+</ul>
+
+<p class="dense"><strong>Tilly Thimble</strong>: second brother, stoic, honest but transactional.</p>
+
+<ul>
+
+	<li><strong>3rd level <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Fighter">Fighter</a></strong>: 14hp.</li>
+	<li><strong>AC</strong>: 6 [13]</li>
+	<li><strong>Attacks</strong>: 1 × Battleaxe (1d8) or 1 × Shortbow (1d6)</li>
+	<li><strong>THAC0</strong>: 19 [0]</li>
+	<li><strong>Equipment</strong>: battleaxe, shortbow, arrows × 20, studded leather armour, 5gp, 10ft pole, 30ft rope with grappling hook.</li>
+	<li><strong>Saves</strong>: D12, W13, P14, B15, S16</li>
+	<li><strong>Alignment</strong>: Lawful</li>
+	
+</ul>
+
+<p class="dense"><strong>Jack Thimble</strong>: third brother, perpetual scowl, missing left arm, soul of a poet.</p>
+
+<ul>
+
+	<li><strong>3rd level <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Thief">Thief</a></strong>: 7hp.</li>
+	<li><strong>AC</strong>: 7 [12]</li>
+	<li><strong>Attacks</strong>: 1 × Dagger (1d4)</li>
+	<li><strong>THAC0</strong>: 19 [0]</li>
+	<li><strong>Equipment</strong>: daggers × 3, leather armour, 9gp, thieves' tools, crowbar.</li>
+	<li><strong>Saves</strong>: D13, W14, P13, B16, S15</li>
+	<li><strong>Alignment</strong>: Neutral</li>
+	
+</ul>
+
+<p class="dense"><strong>Lawrence Thimble</strong>: youngest brother, extremely scared, looks like he's about to cry.</p>
+
+<ul>
+
+	<li><strong>2nd level <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Magic-User">magic-user</a></strong>: 5HP.</li>
+	<li><strong>AC</strong>: 9 [10]</li>
+	<li><strong>Attacks</strong>: 1 × Staff (1d4) or Spell</li>
+	<li><strong>THAC0</strong>: 19 [0]</li>
+	<li><strong>Prepared spells</strong>: <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)">Light</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Ventriloquism">Ventriloquism</a></i>.</li>
+	<li><strong>Equipment</strong>: staff, oversized pale blue robes and hat, lantern, flask of oil, spellbook (<i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)">Light/Darkness</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Ventriloquism">Ventriloquism</a></i>, <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Magic_(MU)">Detect Magic</a></i>).</li>
+	<li><strong>Saves</strong>: D13, W14, P13, B16, S15</li>
+	<li><strong>Alignment</strong>: Lawful</li>
+	
+</ul>
+
+
+
+<h3><a id="undead_crabs">Undead Crabs</a></h3>
+
+<p class="dense"><strong>AC</strong>: 3 [16]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 0 (1hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 1 × Swarm (1d3 + Drag down)</p>
+
+<p class="dense"><strong>THAC0</strong>: 20 [-1]</p>
+
+<p class="dense"><strong>Movement</strong>: 30ft (10ft)</p>
+
+<p class="dense"><strong>Saves</strong>: D14, W15, P16, B17, S18</p>
+
+<p class="dense"><strong>Morale</strong>: 9</p>
+
+<p class="dense_end"><strong>Alignment</strong>: Chaotic</p>
+
+<p class="dense"><strong>Size</strong>: dinner plate.</p>
+
+<p class="dense"><strong>Swarm</strong>: ten crabs collectively can make one attack.</p>
+
+<p class="dense"><strong>Drag down</strong>: save vs breath weapons or pulled to the floor, cannot act, take automatic 1d6 damage per round.</p>
+
+<p class="dense"><strong>Turning</strong>: four crabs equivalent to 1HD of undead.</p>
+
+<p class="dense"><strong>Filled with spite</strong>: if not already swarming a creature, will fight one another to the death over a single scrap of food or shiny object.</p>
+
+<p class="dense"><strong>Using <i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Speak_with_Animals">Speak with Animals</a></i></strong>: jeer and call party names, try to goad them into attacking.</p>
+
+
+
+<h3><a id="werepangolin">Werepangolin</a></h3>
+
+<p class="dense"><strong>AC</strong>: 4 [17]</p>
+
+<p class="dense"><strong>Hit dice</strong>: 6 (27hp)</p>
+
+<p class="dense"><strong>Attacks</strong>: 2 × Claw (1d8) and 1 × Bite (1d8)</p>
+
+<p class="dense"><strong>THAC0</strong>: 14 [+5]</p>
+
+<p class="dense"><strong>Movement</strong>: 120ft (40ft), 30ft (10ft) burrowing</p>
+
+<p class="dense"><strong>Saves</strong>: D10, W11, P12, B13, S14</p>
+
+<p class="dense"><strong>Morale</strong>: 10</p>
+
+<p class="dense"><strong>Alignment</strong>: Chaotic</p>
+
+<p class="dense"><strong>Size</strong>: rhinoceros.</p>
+
+<p class="dense"><strong>Abilities and weaknesses</strong>: see <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Lycanthrope">Lycanthrope</a>.</p>
+
+<p class="dense"><strong>Rampage</strong>: tries to kill and eat anything in sight.</p>
+
+</div>
+
+
+
+<div>
+
+<h2><a id="appendices">Appendices</a></h2>
+
+
+
+<h3><a id="architecture">Architecture</a></h3>
+
+<p><strong>Polished sandstone</strong>: yellow-orange-brown, visible streaks and strata.</p>
+
+<p><strong>Organic style</strong>: rounded walls and corners.</p>
+
+<p><strong>Ceilings</strong>:</p>
+
+<ul>
+
+	<li><strong>Corridors</strong>: 10ft high.</li>
+	<li><strong>Rooms less than 30ft across</strong>: 20ft high.</li>
+	<li><strong>Rooms 30ft or more across</strong>: 30ft high.</li>
+	
+</ul>
+
+<p><strong>Doors</strong>: stone banded with bronze, always open in direction of larger room, blancmanges can squeeze through gap between door and frame in one turn.</p>
+
+
+
+<h3><a id="cannibalism">Cannibalism</a></h3>
+
+<p><strong>Butchering a person</strong>: yields twelve rations of edible meat.</p>
+
+<p><strong>Lawful clerics and paladins</strong> knowingly committing cannibalism: lose all powers until atoned for.</p>
+
+<p><strong>After death</strong>: anyone who has committed cannibalism and not atoned rises again as a <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Ghoul">Ghoul</a> 1d6 days after death.</p>
+
+
+
+<h3><a id="clay_curse_tablets">Clay Curse Tablets</a></h3>
+
+<p><strong>Square clay tablets</strong> inscribed with ominous sigils.</p>
+
+<p><strong>To use</strong>: shatter against ground, black smoke emerges from shards, nearest creature inhaling smoke must save vs spells or be afflicted by curse.</p>
+
+<p><strong>Throwing into melee</strong>: affects a random target.</p>
+
+
+
+<h3><a id="eastern_cavern">The Eastern Cavern</a></h3>
+
+<p><strong>Thick subterranean foliage</strong>: giant terrestrial coral, giant lichens, patches of bioluinescent cave moss.</p>
+
+<p><strong>Fauna</strong>: alive with small insects, amphibians, lizards, etc., constant buzzing, chirruping, squeaking, rustling, skittering noises.</p>
+
+
+
+<h3><a id="history">History</a></h3>
+
+<p><strong>500 years ago</strong>: shrine constructed to minor god of butchery and funerary rites, comprising <a href="#ruined_shrine">Ruined Shrine</a>, <a href="#zombie_philosophy_club">Zombie Philosophy Club</a>, <a href="#coffin_roulette">Coffin Roulette</a>, and <a href="#hungry_kitchen">Hungry Kitchen</a> (a mortuary at the time).</p>
+
+<p><strong>200 years ago</strong>: worshippers of the Yearning Maw invade, slaughter, and eat worshippers. Rest of the temple complex constructed over the following thirty years.</p>
+
+<p><strong>90 years ago</strong>: <a href="#spare_rib">Spare Rib</a> is founded nearby.</p>
+
+<p><strong>50 years ago</strong>: in response to disappearances of cattle, and even people, a band of knights arrive and lay waste to the temple. They sustain <a href="#empty_graveyard">heavy losses</a> but all cultists are successfully slain or driven off.</p>
+
+<p><strong>20 years ago</strong>: under divine guidance from the Yearning Maw, <a href="#mayflower">Mayflower</a> finds the abandoned temple and becomes the new high priestess. More cultists arrive over the following years and find themselves transformed into <a href="#mawfolk">Mawfolk</a>.</p>
+
+<p><strong>2 years ago</strong>: <a href="#gartholomew">Gartholomew</a> prays to the Yearning Maw in desperation when cornered by Father Marmalade, a vampire hunter. She intervenes to save him, but forces him join the congregation of Mawfolk in return.</p>
+
+<p><strong>9 months ago</strong>: a prolonged drought leads to an ongoing severe regional famine.</p>
+
+<p><strong>3 weeks ago</strong>: Father Marmalade tracks <a href="#gartholomew">Gartholomew</a> to the temple, but is mortally wounded by Mawfolk and <a href="#marmalades_last_stand">perishes</a>.</p>
+
+
+
+<h3><a id="languages">Languages</h3>
+
+<p><strong>Suggestions only</strong>: substitute these with whatever is closest in your setting.</p>
+
+<ul>
+
+	<li><strong>Common Imperial</strong>: common language used by general population, spoken by almost everyone.</li>
+	<li><strong>High Imperial</strong>: formal language used by aristocracy and knights, and the servants or squires who serve them, many aristocrats take pride in not needing to learn Common Imperial.</li>
+	<li><strong>Esoteric</strong>: complicated language used for magical and highly technical texts, mostly written rather than spoken.</li>
+	<li><strong>Ecclesiastic</strong>: semi-secret language developed by priesthood to protect divine mysteries from laity, commonly used for religious texts and prayers.</li>
+	
+</ul>
+
+
+
+<h3><a id="mawfolk_society">Mawfolk Society</a></h3>
+
+<p><strong>Notable personalities</strong>:</p>
+
+<ul>
+
+	<li><strong><a href="#mayflower">Mayflower</a></strong>: high priestess.</li>
+	<li><strong><a href="#gartholomew">Gartholomew</a></strong>: vampire, barely tolerated visitor.</li>
+	<li><strong><a href="#quince">Quince</a></strong>: friendly giant starfish, extremely protective over mawfolk.</li>
+	<li><strong>Castor</strong>: Gartholomew's charmed thrall for spying on mawfolk, extremely obvious, everyone knows exactly what he is.</li>
+	<li><strong>Knocker</strong>: dreams of running away to become a knight errant, but (correctly) worried about being judged for his appearance.</li>
+	<li><strong>Delilah</strong>: secretly has a crush on <a href="#quince">Quince</a></strong>.</li>
+	<li><strong>Pine</strong>: recently ran away from [SPARE RIB], not yet transformed into a mawfolk, excitedly tries to convert others.</li>
+	
+</ul>
+
+
+
+<h3><a id="random_encounters">Random Encounters</a></h3>
+
+<table>
+	<tr>
+		<td>1d10</td>
+		<td><button type="button" onclick='random_encounter()'>Roll</button> <span id="random_encounter_result"></span></td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2d6 <a href="#mawfolk">Mawfolk</a></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1d4 <a href="#philosophical_zombie">Philosophical Zombies</a></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><a href="#cat">Cat</a></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><a href="#thimble_brothers">The Thimble Brothers</a></td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>5d10 <a href="#cave_swallow">Cave Swallows</a></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td><a href="#sandy_blancmange">Sandy Blancmange</a></td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td><a href="#unctuous_blancmange">Unctuous Blancmange</a></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td><a href="#arcane_blancmange">Arcane Blancmange</a></td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Unnatural hunger: save vs death or gain hunger as though spending 24 hours without eating.</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Double encounter: roll 1d4 and 1d8 on this table, make reaction roll for their attitude to one another.</td>
+	</tr>
+</table>
+
+
+
+<h3><a id="the_river">The River</a></h3>
+
+<p><strong>Flow</strong>: from northeast (<a href="#stepping_stones">Stepping Stones</a>) to southwest (<a href="#above_the_abyss">Above the Abyss</a>).</p>
+
+<p><strong>Falling in</strong>: cold, deep, and fast, serious risk of drowning regardless of swimming ability, impossible to swim against current.</p>
+
+<ul>
+
+	<li><strong>Chance of drowning</strong>: unencumbered: 2-in-6; light encumbrance: 3-in-6; medium encumbrance: 4-in-6; heavy encumbrance: 5-in-6.</li>
+	
+</ul>
+
+<p><strong>Drinking</strong>: safe to drink, no risk of disease.</p>
+
+<p><strong>Fauna</strong>: teeming with strange transparent crustaceans and small bony fish. 
+
+<p><strong>Fishing</strong>: the fish stock is already overexploited by the mawfolk and on the verge of collapse.</p>
+
+<ul>
+
+	<li><strong>Overfishing</strong>: if fishing even more, catch 1d12 rations of fish per day for 1d6 days, and then the stock collapses.</li>
+	<li><strong>Stock collapse</strong>: can only catch 1d2 rations of fish per day. Mawfolk will run out of food and resort to extreme measures (e.g. attacking <a href="#spare_rib">Spare Rib</a>) after one day.</li>
+	
+</ul>
+
+
+
+<h3><a id="starvation">Starvation</h3>
+
+<p><strong>For each day without food, choose one</strong> to represent where remaining energy is least focused. Effects are cumulative. Cannot choose duplicates.</p>
+
+<ul>
+
+	<li><strong>Slow</strong>: Movement speed halved.</li>
+	<li><strong>Weak</strong>: -2 to attack and damage, spellcasters prepare spells as though one level lower.</li>
+	<li><strong>Tired</strong>: penalty to all non-combat rolls; -5 to d20 rolls, -2 to n-in-6 rolls, -25% to d100 rolls.</li>
+	<li><strong>Irritable</strong>: roll 2d4 instead of 2d6 for reaction rolls.</li>
+	<li><strong>Dead</strong></li>
+
+</ul>
+
+</div>
+
+
+
+<div>
+
+<p>Did you run this dungeon? <a href="contact_me.html">Let me know</a> how it went!</p>
+
+</div>

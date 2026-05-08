@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+<html lang="en-UK">
+
+<head>
+
+	<title>Random Starting Equipment</title>
+
+	<meta charset="UTF-8">
+
+	<link rel="shortcut icon" href="favicon.svg">
+	<link rel="stylesheet" type="text/css" href="dark.css" title="Dark">
+	<link rel="alternate stylesheet" type="text/css" href="light.css" title="Light">
+
+	<script type="text/javascript" src="switch_css.js"></script>
+
+</head>
+
+
+
+<body onload="set_style_from_cookie()">
+
+	<script>
+	
+	function roll_on_table(id, table) {
+		document.getElementById(id).innerHTML = table[Math.floor(Math.random() * table.length)];
+	}
+	
+	function roll_useful_items() {
+		var table = ["50ft rope", "30ft rope + grappling hook", "10ft iron chain* + padlock*", "20ft rope ladder", "5ft long pincers", "Net*", "Flask of acid (damage as burning oil)", "Flask of oil", "Packet of rat poison [Type I ingested poison]", "Vial of spider venom [Type I bloodstream poison]", "Smoke bomb (15ft radius, one turn duration)", "Stink bomb (10ft radius, targets must save or spend 1d4 rounds retching)", "Hammer + twelve iron spikes", "Crowbar", "Hand-sized steel mirror", "10ft wooden pole", "Beartrap (1d8 damage)", "Shovel", "Box of chalk*", "Ink* + quill* + ten sheets of paper*"];
+		
+		document.getElementById("useful").innerHTML = table[Math.floor(Math.random() * table.length)] + " and " + table[Math.floor(Math.random() * table.length)];
+	}
+	
+	</script>
+	
+	
+	
+	<h1>Random Starting Equipment</h1>
+	
+	<div>
+	
+	<p>This is a set of tables to generate random starting equipment for player characters in the <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> tabletop roll playing game, inspired by the quick equipment tables in <a href="https://necroticgnome.com/products/carcass-crawler-issue-2">Carcass Crawler Issue 2</a>. Weapons, armour, and equipment marked with an asterisk are from the expanded equipment lists in <a href="https://necroticgnome.com/products/carcass-crawler-issue-3">Carcass Crawler Issue 3</a>. Several new items have identical properties to existing items, in which case they are marked with the corresponding item in square brackets.</p>
+	
+	</div>
+	
+	<div>
+	
+	<h2>Basic Equipment</h2>
+	
+	<p>All characters receive the following equipment, in addition to specific equipment from their class (below).</p>
+	
+	<ul>
+		<li>1d6 rations <button type="button" onclick='roll_on_table("rations", ["one ration", "two rations", "three rations", "four rations", "five rations", "six rations"])'>Roll</button> <span id="rations"></span></li>
+		<li>1d20gp <button type="button" onclick='roll_on_table("gold", ["1gp", "2gp", "3gp", "4gp", "5gp", "6gp", "7gp", "8gp", "9gp", "10gp", "11gp", "12gp", "13gp", "14gp", "15gp", "16gp", "17gp", "18gp", "19gp", "20gp"])'>Roll</button> <span id="gold"></span></li>
+		<li>Bedroll*</li>
+		<li>Tinderbox</li>
+		<li>Waterskin</li>
+		<li><a href="#useful_items">Useful Items</a>: 1d20 twice <button type="button" onclick='roll_useful_items()'>Roll</button> <span id="useful"></span></li>
+	</ul>
+	
+	</div>
+	
+	
+	
+	<div>
+	
+	<h2><a id="class">Class</a></h2>
+	
+	<p>Any class: <button type="button" onclick='roll_on_table("random_class", ["Acrobat", "Assassin", "Barbarian", "Barbarian", "Bard", "Cleric", "Cleric", "Druid", "Fighter", "Fighter", "Fighter", "Illusionist", "Knight", "Magic-User", "Magic-User", "Paladin", "Ranger", "Ranger", "Thief", "Thief"])'>Roll</button> <span id="random_class"></span></p>
+	
+	<p>Spellcasting classes only: <button type="button" onclick='roll_on_table("spellcaster", ["Bard", "Cleric", "Cleric", "Druid", "Illusionist", "Magic-User", "Magic-User"])'>Roll</button> <span id="spellcaster"></span></p>
+	
+	<p>Martial classes only: <button type="button" onclick='roll_on_table("martial", ["Acrobat", "Assassin", "Barbarian", "Barbarian", "Fighter", "Fighter", "Fighter", "Knight", "Paladin", "Ranger", "Ranger", "Thief", "Thief"])'>Roll</button> <span id="martial"></span></p>
+	
+	<table>
+			<td>1</td>
+			<td>Acrobat</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Assassin</td>
+		</tr>
+		<tr>
+			<td>3-4</td>
+			<td>Barbarian</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Bard</td>
+		</tr>
+		<tr>
+			<td>6-7</td>
+			<td>Cleric</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Druid</td>
+		</tr>
+		<tr>
+			<td>9-11</td>
+			<td>Fighter</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>Illusionist</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>Knight</td>
+		</tr>
+		<tr>
+			<td>14-15</td>
+			<td>Magic-User</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>Paladin</td>
+		</tr>
+		<tr>
+			<td>17-18</td>
+			<td>Ranger</td>
+		</tr>
+		<tr>
+			<td>19-20</td>
+			<td>Thief</td>
+		</tr>
+	</table>
+	
+	</div>
+	
+	
+	
+	<div>
+	
+	<h2>Equipment by Class</h2>
+	
+	<p><b>Acrobat</b></p>
+	
+	<ul>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d6+5 <button type="button" onclick='roll_on_table("acrobat_melee", ["Sickle [shortsword]", "Scythe [polearm]", "Glaive [polearm]", "Pike [polearm]", "Spear", "Staff"])'>Roll</button> <span id="acrobat_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d5+3 <button type="button" onclick='roll_on_table("acrobat_ranged", ["Boomerang [dagger, -2 in melee, returns on miss]", "Blowgun* + 10 poison darts (save or be stunned for 1d6 rounds)", "Shortbow + 20 arrows", "Longbow + 20 arrows", "Three throwing knives [dagger, -2 in melee]"])'>Roll</button> <span id="acrobat_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d2+1 <button type="button" onclick='roll_on_table("acrobat_armour", ["Padded armour*", "Leather armour"])'>Roll</button> <span id="acrobat_armour"></span></li>
+		<li><a href="#light_source">Light source</a>: 1d10 <button type="button" onclick='roll_on_table("acrobat_light", ["Lantern (full)", "Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches"])'>Roll</button> <span id="acrobat_light"></span></li>
+	</ul>
+	
+	<p><b>Assassin</b></p>
+	
+	<ul>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d6+36 <button type="button" onclick='roll_on_table("assassin_melee", ["Rapier [sword]", "Shortsword", "Dagger", "Silver dagger", "Blackjack*", "Garotte*"])'>Roll</button> <span id="assassin_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d5+4 <button type="button" onclick='roll_on_table("assassin_ranged", ["Blowgun* + 10 poison darts (save or be stunned for 1d6 rounds)", "Shortbow + 20 arrows", "Longbow + 20 arrows", "Three throwing knives [dagger, -2 in melee]", "Crossbow + 20 bolts"])'>Roll</button> <span id="assassin_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d3+1 <button type="button" onclick='roll_on_table("assassin_armour", ["Padded armour*", "Leather armour", "Studded leather armour*"])'>Roll</button> <span id="assassin_armour"></span></li>
+		<li><a href="#shield">Shield</a>: 1d8 <button type="button" onclick='roll_on_table("assassin_shield", ["Nothing", "Nothing", "Nothing", "Nothing", "Nothing", "Nothing", "Nothing", "Roundshield"])'>Roll</button> <span id="assassin_shield"></span></li>
+		<li><a href="#light_source">Light source</a>: 1d10 <button type="button" onclick='roll_on_table("assassin_light", ["Lantern (full)", "Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches"])'>Roll</button> <span id="assassin_light"></span></li>
+	</ul>
+	
+	<p><b>Barbarian</b></p>
+	
+	<ul>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d20+7 <button type="button" onclick='roll_on_table("barbarian_melee", ["Glaive [polearm]", "Pike [polearm]", "Spear", "Staff", "Club", "Warhammer", "Mace", "Hand axe", "Battle axe", "Labrys [battle axe]", "Mattock [battleaxe]", "Brass knuckles [club]", "Greatclub [staff]", "Spiked greatclub [battle axe]", "Falchion [sword]", "Serrated greatknife [bastard sword*]", "Curved greatsword [two-handed sword]", "Flail [mace]", "Maul [battle axe, blunt]", "Zweihander [two-handed sword]"])'>Roll</button> <span id="barbarian_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d6+5 <button type="button" onclick='roll_on_table("barbarian_ranged", ["Shortbow + 20 arrows", "Longbow + 20 arrows", "Three throwing knives [dagger, -2 in melee]", "Crossbow + 20 bolts", "Three javelins", "Throwing axe [hand axe, -2 in melee]"])'>Roll</button> <span id="barbarian_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d6 <button type="button" onclick='roll_on_table("barbarian_armour", ["Furs*", "Padded armour*", "Leather armour", "Studded leather armour*", "Chainmail", "Scale mail [chainmail]"])'>Roll</button> <span id="barbarian_armour"></span></li>
+		<li><a href="#shield">Shield</a>: 1d6+4 <button type="button" onclick='roll_on_table("barbarian_shield", ["Nothing", "Nothing", "Nothing", "Roundshield", "Oval shield", "Kite shield"])'>Roll</button> <span id="barbarian_shield"></span></li>
+		<li><a href="#light_source">Light source</a>: 1d6+4 <button type="button" onclick='roll_on_table("barbarian_light", ["One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches"])'>Roll</button> <span id="barbarian_light"></span></li>
+	</ul>
+	
+	<p><b>Bard</b></p>
+	
+	<ul>
+		<li><a href="#musical_instrument">Musical instrument</a>: 1d20 <button type="button" onclick='roll_on_table("bard_instrument", ["Accordion", "Bagpipes", "Castanets", "Drum", "Flute", "Fiddle", "Glockenspiel", "Guitar", "Handbells", "Horn", "Hurdy-gurdy", "Lute", "Lyre", "Ocarina", "Panpipes", "Tambourine", "Trumpet", "Ukelele", "Violin", "Whistle"])'>Roll</button> <span id="bard_instrument"></span></li>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d6+33 <button type="button" onclick='roll_on_table("bard_melee", ["Longsword [sword]", "Cutlass [sword]", "Scimitar [shortsword]", "Rapier [sword]", "Shortsword", "Dagger"])'>Roll</button> <span id="bard_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d4+5 <button type="button" onclick='roll_on_table("bard_ranged", ["Shortbow + 20 arrows", "Longbow + 20 arrows", "Three throwing knives [dagger, -2 in melee]", "Crossbow + 20 bolts"])'>Roll</button> <span id="bard_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d4+1 <button type="button" onclick='roll_on_table("bard_armour", ["Padded armour*", "Leather armour", "Studded leather armour*", "Chainmail"])'>Roll</button> <span id="bard_armour"></span></li>
+		<li><a href="#light_source">Light source</a>: 1d10 <button type="button" onclick='roll_on_table("bard_light", ["Lantern (full)", "Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches"])'>Roll</button> <span id="bard_light"></span></li>
+	</ul>
+	
+	<p><b>Cleric</b></p>
+	
+	<ul>
+		<li><a href="#holy_symbol">Holy symbol</a>: 1d10 <button type="button" onclick='roll_on_table("cleric_symbol", ["Holy symbol (wooden)*", "Holy symbol (silver)", "Holy symbol (silver)", "Holy symbol (silver)", "Holy symbol (wooden)* + flask of holy water", "Holy symbol (wooden)* + flask of holy water", "Holy symbol (wooden)* + flask of holy water", "Holy symbol (silver) + flask of holy water", "Holy symbol (silver) + flask of holy water", "Holy symbol (gold)*"])'>Roll</button> <span id="cleric_symbol"></span></li>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d4+10 <button type="button" onclick='roll_on_table("cleric_melee", ["Staff", "Club", "Warhammer", "Mace"])'>Roll</button> <span id="cleric_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d3 <button type="button" onclick='roll_on_table("cleric_ranged", ["Nothing", "Bolas*", "Sling + 20 stones"])'>Roll</button> <span id="cleric_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d8+1 <button type="button" onclick='roll_on_table("cleric_armour", ["Padded armour*", "Leather armour", "Studded leather armour*", "Chainmail", "Scale mail [chainmail]", "Banded mail*", "Laminar mail [banded mail*]", "Breastplate [banded mail*]"])'>Roll</button> <span id="cleric_armour"></span></li>
+		<li><a href="#shield">Shield</a>: 1d12 <button type="button" onclick='roll_on_table("cleric_shield", ["Nothing", "Nothing", "Nothing", "Nothing", "Nothing", "Nothing", "Nothing", "Roundshield", "Oval shield", "Kite shield", "Heater shield", "Tower shield"])'>Roll</button> <span id="cleric_shield"></span></li>
+		<li><a href="#light_source">Light source</a>: 1d10+1 <button type="button" onclick='roll_on_table("cleric_light", ["Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches", "Scroll of <i>Light</i>"])'>Roll</button> <span id="cleric_light"></span></li>
+	</ul>
+	
+	<p><b>Druid</b></p>
+	
+	<ul>
+		<li>Sprig of mistletoe</li>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d3+9 <button type="button" onclick='roll_on_table("druid_melee", ["Spear", "Staff", "Club"])'>Roll</button> <span id="druid_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d6+1 <button type="button" onclick='roll_on_table("druid_ranged", ["Bolas*", "Sling + 20 stones", "Boomerang [dagger, -2 in melee, returns on miss]", "Blowgun* + 10 poison darts (save or be stunned for 1d6 rounds)", "Shortbow + 20 arrows", "Longbow + 20 arrows"])'>Roll</button> <span id="druid_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d3 <button type="button" onclick='roll_on_table("druid_armour", ["Furs*", "Padded armour*", "Leather armour"])'>Roll</button> <span id="druid_armour"></span></li>
+		<li><a href="#shield">Shield</a>: 1d6+3 <button type="button" onclick='roll_on_table("druid_shield", ["Nothing", "Nothing", "Nothing", "Nothing", "Roundshield", "Oval shield"])'>Roll</button> <span id="druid_shield"></li>
+		<li><a href="#light_source">Light source</a>: 1d6+4 <button type="button" onclick='roll_on_table("druid_light", ["One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches"])'>Roll</button> <span id="druid_light"></span></li>
+	</ul>
+	
+	<p><b>Fighter</b></p>
+	
+	<ul>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d40 <button type="button" onclick='roll_on_table("fighter_melee", ["Katana [two-handed sword]", "Whip*", "Chain whip [whip*]", "Nunchaku [club]", "Trident [spear]", "Sickle [shortsword]", "Scythe [polearm]", "Glaive [polearm]", "Pike [polearm]", "Spear", "Staff", "Club", "Warhammer", "Mace", "Hand axe", "Battle axe", "Labrys [battle axe]", "Mattock [battleaxe]", "Brass knuckles [club]", "Greatclub [staff]", "Spiked greatclub [battle axe]", "Falchion [sword]", "Serrated greatknife [bastard sword*]", "Curved greatsword [two-handed sword]", "Flail [mace]", "Maul [battle axe, blunt]", "Zweihander [two-handed sword]", "Flamberge [sword]", "Bastard sword*", "Halberd [polearm]", "Morningstar [mace]", "Broken sword [dagger, melee only]", "Lance", "Longsword [sword]", "Cutlass [sword]", "Scimitar [shortsword]", "Rapier [sword]", "Shortsword", "Dagger", "Silver dagger"])'>Roll</button> <span id="fighter_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d10+1 <button type="button" onclick='roll_on_table("fighter_ranged", ["Bolas*", "Sling + 20 stones", "Boomerang [dagger, -2 in melee, returns on miss]", "Blowgun* + 10 poison darts (save or be stunned for 1d6 rounds)", "Shortbow + 20 arrows", "Longbow + 20 arrows", "Three throwing knives [dagger, -2 in melee]", "Crossbow + 20 bolts", "Three javelins", "Throwing axe [hand axe, -2 in melee]"])'>Roll</button> <span id="fighter_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d10 <button type="button" onclick='roll_on_table("fighter_armour", ["Furs*", "Padded armour*", "Leather armour", "Studded leather armour*", "Chainmail", "Scale mail [chainmail]", "Banded mail*", "Laminar mail [banded mail*]", "Breastplate [banded mail*]", "Plate mail"])'>Roll</button> <span id="fighter_armour"></span></li>
+		<li><a href="#shield">Shield</a>: 1d8+4 <button type="button" onclick='roll_on_table("fighter_shield", ["Nothing", "Nothing", "Nothing", "Roundshield", "Oval shield", "Kite shield", "Heater shield", "Tower shield"])'>Roll</button> <span id="fighter_shield"></li>
+		<li><a href="#light_source">Light source</a>: 1d10 <button type="button" onclick='roll_on_table("fighter_light", ["Lantern (full)", "Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches"])'>Roll</button> <span id="fighter_light"></span></li>
+	</ul>
+	
+	<p><b>Illusionist</b></p>
+	
+	<ul>
+		<li>Spellbook</li>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d2+38 <button type="button" onclick='roll_on_table("illusionist_melee", ["Dagger", "Silver dagger"])'>Roll</button> <span id="illusionist_melee"></span></li>
+		<li><a href="#light_source">Light source</a>: 1d10+1 <button type="button" onclick='roll_on_table("illusionist_light", ["Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches", "Scroll of <i>Light</i>"])'>Roll</button> <span id="illusionist_light"></span></li>
+	</ul>
+	
+	<p><b>Knight</b></p>
+	
+	<ul>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d10+24 <button type="button" onclick='roll_on_table("knight_melee", ["Flail [mace]", "Maul [battle axe, blunt]", "Zweihander [two-handed sword]", "Flamberge [sword]", "Bastard sword*", "Halberd [polearm]", "Morningstar [mace]", "Broken sword [dagger, melee only]", "Lance", "Longsword [sword]"])'>Roll</button> <span id="knight_melee"></span></li>
+		<li><a href="#armour">Armour</a>: 1d6+4 <button type="button" onclick='roll_on_table("knight_armour", ["Chainmail", "Scale mail [chainmail]", "Banded mail*", "Laminar mail [banded mail*]", "Breastplate [banded mail*]", "Plate mail"])'>Roll</button> <span id="knight_armour"></span></li>
+		<li><a href="#shield">Shield</a>: 1d6+6 <button type="button" onclick='roll_on_table("knight_shield", ["Nothing", "Roundshield", "Oval shield", "Kite shield", "Heater shield", "Tower shield"])'>Roll</button> <span id="knight_shield"></li>
+		<li><a href="#light_source">Light source</a>: 1d4 <button type="button" onclick='roll_on_table("knight_light", ["Lantern (full)", "Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*"])'>Roll</button> <span id="knight_light"></span></li>
+	</ul>
+	
+	<p><b>Magic-User</b></p>
+	
+	<ul>
+		<li>Spellbook</li>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d2+38 <button type="button" onclick='roll_on_table("magic_user_melee", ["Dagger", "Silver dagger"])'>Roll</button> <span id="magic_user_melee"></span></li>
+		<li><a href="#light_source">Light source</a>: 1d10+1 <button type="button" onclick='roll_on_table("magic_user_light", ["Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches", "Scroll of <i>Light</i>"])'>Roll</button> <span id="magic_user_light"></span></li>
+	</ul>
+	
+	<p><b>Paladin</b></p>
+	
+	<ul>
+		<li><a href="#holy_symbol">Holy symbol</a>: 1d8 <button type="button" onclick='roll_on_table("paladin_symbol", ["Holy symbol (wooden)*", "Holy symbol (silver)", "Holy symbol (silver)", "Holy symbol (silver)", "Holy symbol (wooden)* + flask of holy water", "Holy symbol (wooden)* + flask of holy water", "Holy symbol (wooden)* + flask of holy water", "Holy symbol (silver) + flask of holy water"])'>Roll</button> <span id="paladin_symbol"></span></li>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d10+24 <button type="button" onclick='roll_on_table("paladin_melee", ["Flail [mace]", "Maul [battle axe, blunt]", "Zweihander [two-handed sword]", "Flamberge [sword]", "Bastard sword*", "Halberd [polearm]", "Morningstar [mace]", "Broken sword [dagger, melee only]", "Lance", "Longsword [sword]"])'>Roll</button> <span id="paladin_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d6+5 <button type="button" onclick='roll_on_table("paladin_ranged", ["Shortbow + 20 arrows", "Longbow + 20 arrows", "Three throwing knives [dagger, -2 in melee]", "Crossbow + 20 bolts", "Three javelins", "Throwing axe [hand axe, -2 in melee]"])'>Roll</button> <span id="paladin_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d6+4 <button type="button" onclick='roll_on_table("paladin_armour", ["Chainmail", "Scale mail [chainmail]", "Banded mail*", "Laminar mail [banded mail*]", "Breastplate [banded mail*]", "Plate mail"])'>Roll</button> <span id="paladin_armour"></span></li>
+		<li><a href="#shield">Shield</a>: 1d8+4 <button type="button" onclick='roll_on_table("paladin_shield", ["Nothing", "Nothing", "Nothing", "Roundshield", "Oval shield", "Kite shield", "Heater shield", "Tower shield"])'>Roll</button> <span id="paladin_shield"></li>
+		<li><a href="#light_source">Light source</a>: 1d10 <button type="button" onclick='roll_on_table("paladin_light", ["Lantern (full)", "Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches"])'>Roll</button> <span id="paladin_light"></span></li>
+	</ul>
+	
+	<p><b>Ranger</b></p>
+	
+	<ul>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d12 <button type="button" onclick='roll_on_table("ranger_melee", ["Katana [two-handed sword]", "Whip*", "Chain whip [whip*]", "Nunchaku [club]", "Trident [spear]", "Sickle [shortsword]", "Scythe [polearm]", "Glaive [polearm]", "Pike [polearm]", "Spear", "Staff", "Club"])'>Roll</button> <span id="ranger_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d10+1 <button type="button" onclick='roll_on_table("ranger_ranged", ["Bolas*", "Sling + 20 stones", "Boomerang [dagger, -2 in melee, returns on miss]", "Blowgun* + 10 poison darts (save or be stunned for 1d6 rounds)", "Shortbow + 20 arrows", "Longbow + 20 arrows", "Three throwing knives [dagger, -2 in melee]", "Crossbow + 20 bolts", "Three javelins", "Throwing axe [hand axe, -2 in melee]"])'>Roll</button> <span id="ranger_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d6 <button type="button" onclick='roll_on_table("ranger_armour", ["Furs*", "Padded armour*", "Leather armour", "Studded leather armour*", "Chainmail", "Scale mail [chainmail]"])'>Roll</button> <span id="ranger_armour"></span></li>
+		<li><a href="#shield">Shield</a>: 1d4+6 <button type="button" onclick='roll_on_table("ranger_shield", ["Nothing", "Roundshield", "Oval shield", "Kite shield"])'>Roll</button> <span id="ranger_shield"></li>
+		<li><a href="#light_source">Light source</a>: 1d10 <button type="button" onclick='roll_on_table("ranger_light", ["Lantern (full)", "Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches"])'>Roll</button> <span id="ranger_light"></span></li>
+	</ul>
+	
+	<p><b>Thief</b></p>
+	
+	<ul>
+		<li>Thieves' Tools</li>
+		<li><a href="#melee_weapon">Melee weapon</a>: 1d6+36 <button type="button" onclick='roll_on_table("thief_melee", ["Rapier [sword]", "Shortsword", "Dagger", "Silver dagger", "Blackjack*", "Garotte*"])'>Roll</button> <span id="thief_melee"></span></li>
+		<li><a href="#ranged_weapon">Ranged weapon</a>: 1d4+5 <button type="button" onclick='roll_on_table("thief_ranged", ["Shortbow + 20 arrows", "Longbow + 20 arrows", "Three throwing knives [dagger, -2 in melee]", "Crossbow + 20 bolts"])'>Roll</button> <span id="thief_ranged"></span></li>
+		<li><a href="#armour">Armour</a>: 1d2+1 <button type="button" onclick='roll_on_table("thief_armour", ["Padded armour*", "Leather armour"])'>Roll</button> <span id="thief_armour"></span></li>
+		<li><a href="#light_source">Light source</a>: 1d10 <button type="button" onclick='roll_on_table("thief_light", ["Lantern (full)", "Lantern (half full)", "Bullseye lantern* (full)", "Ten candles*", "One torch (half used)", "One torch", "Two torches", "Three torches", "Four torches", "Six torches"])'>Roll</button> <span id="thief_light"></span></li>
+	</ul>
+	
+	</div>
+	
+	
+	
+	<div>
+	
+	<h2><a id="melee_weapon">Melee Weapon</a></h2>
+	
+	<table>
+		<tr>
+			<td>1</td>
+			<td>Katana [two-handed sword]</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Whip*</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Chain whip [whip*]</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Nunchaku [club]</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Trident [spear]</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Sickle [shortsword]</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Scythe [polearm]</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Glaive [polearm]</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Pike [polearm]</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Spear</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>Staff</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>Club</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>Warhammer</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>Mace</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>Hand axe</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>Battle axe</td>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td>Labrys [battle axe]</td>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td>Mattock [battleaxe]</td>
+		</tr>
+		<tr>
+			<td>19</td>
+			<td>Brass knuckles [club]</td>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td>Greatclub [staff]</td>
+		</tr>
+		<tr>
+			<td>21</td>
+			<td>Spiked greatclub [battle axe]</td>
+		</tr>
+		<tr>
+			<td>22</td>
+			<td>Falchion [sword]</td>
+		</tr>
+		<tr>
+			<td>23</td>
+			<td>Serrated greatknife [bastard sword*]</td>
+		</tr>
+		<tr>
+			<td>24</td>
+			<td>Curved greatsword [two-handed sword]</td>
+		</tr>
+		<tr>
+			<td>25</td>
+			<td>Flail [mace]</td>
+		</tr>
+		<tr>
+			<td>26</td>
+			<td>Maul [battle axe, blunt]</td>
+		</tr>
+		<tr>
+			<td>27</td>
+			<td>Zweihander [two-handed sword]</td>
+		</tr>
+		<tr>
+			<td>28</td>
+			<td>Flamberge [sword]</td>
+		</tr>
+		<tr>
+			<td>29</td>
+			<td>Bastard sword*</td>
+		</tr>
+		<tr>
+			<td>30</td>
+			<td>Halberd [polearm]</td>
+		</tr>
+		<tr>
+			<td>31</td>
+			<td>Morningstar [mace]</td>
+		</tr>
+		<tr>
+			<td>32</td>
+			<td>Broken sword [dagger, melee only]</td>
+		</tr>
+		<tr>
+			<td>33</td>
+			<td>Lance</td>
+		</tr>
+		<tr>
+			<td>34</td>
+			<td>Longsword [sword]</td>
+		</tr>
+		<tr>
+			<td>35</td>
+			<td>Cutlass [sword]</td>
+		</tr>
+		<tr>
+			<td>36</td>
+			<td>Scimitar [shortsword]</td>
+		</tr>
+		<tr>
+			<td>37</td>
+			<td>Rapier [sword]</td>
+		</tr>
+		<tr>
+			<td>38</td>
+			<td>Shortsword</td>
+		</tr>
+		<tr>
+			<td>39</td>
+			<td>Dagger</td>
+		</tr>
+		<tr>
+			<td>40</td>
+			<td>Silver dagger</td>
+		</tr>
+		<tr>
+			<td>41</td>
+			<td>Blackjack*</td>
+		</tr>
+		<tr>
+			<td>42</td>
+			<td>Garotte*</td>
+		</tr>
+	</table>
+	
+	</div>
+	
+	
+	
+	<div>
+	
+	<h2><a id="ranged_weapon">Ranged Weapon</a></h2>
+	
+	<table>
+		<tr>
+			<td>1</td>
+			<td>Nothing</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Bolas*</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sling + 20 stones</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Boomerang [dagger, -2 in melee, returns on miss]</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Blowgun* + 10 poison darts (save or be stunned for 1d6 rounds)</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Shortbow + 20 arrows</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Longbow + 20 arrows</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Three throwing knives [dagger, -2 in melee]</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Crossbow + 20 bolts</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Three javelins</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>Throwing axe [hand axe, -2 in melee]</td>
+		</tr>
+	</table>
+	
+	</div>
+	
+	
+	
+	<div>
+	
+	<h2><a id="armour">Armour</a></h2>
+	
+	<table>
+		<tr>
+			<td>1</td>
+			<td>Furs*</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Padded armour*</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Leather armour</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Studded leather armour*</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Chainmail</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Scale mail [chainmail]</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Banded mail*</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Laminar mail [banded mail*]</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Breastplate [banded mail*]</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Plate mail</td>
+		</tr>
+	</table>
+	
+	</div>
+	
+	
+	
+	<div> 
+	
+	<h2><a id="shield">Shield</a></h2>
+	
+	<p>Only roll for a shield if the character has received a one-handed melee weapon. All shields are mechanically identical.</p>
+	
+	<table>
+		<tr>
+			<td>1-7</td>
+			<td>Nothing</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Roundshield</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Oval shield</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Kite shield</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>Heater shield</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>Tower shield</td>
+		</tr>
+	</table>
+	
+	</div>
+	
+	
+	
+	<div>
+	
+	<h2><a id="light_source">Light Source</a></h2>
+	
+	<table>
+		<tr>
+			<td>1</td>
+			<td>Lantern (full)</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Lantern (half full)</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Bullseye lantern* (full)</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Ten candles*</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>One torch (half used)</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>One torch</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Two torches</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Three torches</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Four torches</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Six torches</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>Scroll of <i>Light</i></td>
+		</tr>
+	</table>
+	
+	</div>
+	
+	
+	
+	<div>
+	
+	<h2><a id="holy_symbol">Holy Symbol</a></h2>
+	
+	<table>
+		<tr>
+			<td>1</td>
+			<td>Holy symbol (wooden)*</td>
+		</tr>
+		<tr>
+			<td>2-4</td>
+			<td>Holy symbol (silver)</td>
+		</tr>
+		<tr>
+			<td>5-7</td>
+			<td>Holy symbol (wooden)* + flask of holy water</td>
+		</tr>
+		<tr>
+			<td>8-9</td>
+			<td>Holy symbol (silver) + flask of holy water</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Holy symbol (gold)*</td>
+		</tr>
+	</table>
+	
+	</div>
+	
+	
+	
+	<div>
+	
+	<h2><a id="musical_instrument">Musical Instrument</a></h2>
+	
+	<table>
+		<tr>
+			<td>1</td>
+			<td>Accordion</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Bagpipes</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Castanets</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Drum</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Flute</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Fiddle</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Glockenspiel</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Guitar</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Handbells</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Horn</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>Hurdy-gurdy</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>Lute</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>Lyre</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>Ocarina</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>Panpipes</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>Tambourine</td>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td>Trumpet</td>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td>Ukelele</td>
+		</tr>
+		<tr>
+			<td>19</td>
+			<td>Violin</td>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td>Whistle</td>
+		</tr>
+	</table>
+	
+	</div>
+	
+	
+	
+	<div>
+	
+	<h2><a id="useful_items">Useful Items</a></h2>
+	
+	<table>
+		<tr>
+			<td>1</td>
+			<td>50ft rope</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>30ft rope + grappling hook</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>10ft iron chain* + padlock*</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>20ft rope ladder</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>5ft long pincers</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Net*</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Flask of acid (damage as burning oil)</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Flask of oil</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Packet of rat poison [Type I ingested poison]</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Vial of spider venom [Type I bloodstream poison]</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>Smoke bomb (15ft radius, one turn duration)</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>Stink bomb (10ft radius, targets must save or spend 1d4 rounds retching)</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>Hammer + twelve iron spikes</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>Crowbar</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>Hand-sized steel mirror</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>10ft wooden pole</td>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td>Beartrap (1d8 damage)</td>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td>Shovel</td>
+		</tr>
+		<tr>
+			<td>19</td>
+			<td>Box of chalk*</td>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td>Ink* + quill* + ten sheets of paper*</td>
+		</tr>
+	</table>
+	
+	</div>
+
+	<div>
+
+	<h3><a href="ttrpgs.html">Return to TTRPGs</a></h3>
+
+	<ul class="centred">
+
+		<li class="horizontal"><a href="javascript:switch_style('Dark')">Dark theme</a></li>
+		<li class="horizontal"><a href="javascript:switch_style('Light')">Light theme</a></li>
+
+	</ul>
+
+	</div>
+
+</body>
+
+</html>

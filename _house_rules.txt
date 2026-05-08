@@ -1,0 +1,289 @@
+<h1>House Rules</h1>
+
+
+
+<div>
+
+<p>This is a list of house rules for the <a href="https://necroticgnome.com/pages/about-old-school-essentials">Old School Essentials</a> game I run. It's mainly here for me and my players to reference, but you might find some you'd like to borrow for your home game!</p>
+
+</div>
+
+
+
+<div>
+
+<h2>Classes</h2>
+
+<p><strong>Permitted classes</strong>: no demihumans, all other classes allowed. (<i>Demihumans don't exist in my setting, plus most of them are just variants of the base human classes, and I'm not a fan of how infravision makes darkness less of a hazard</i>).</p>
+
+<p><strong>Thieves</strong>: use the d6 Thief Skills alternate rules from <a href="https://necroticgnome.com/products/carcass-crawler-issue-1">Carcass Crawler Issue 1</a>.</p>
+
+<ul>
+
+	<li><strong>Read Languages</strong>: replaced with Detect Construction Tricks. (<i>This skill is otherwise only available to demihumans, and feels more thematically appropriate</i>).</li>
+	
+</ul>
+
+<p><strong>Acrobats and Assassins</strong>: use d6 skills similar to Thieves.</p>
+
+<ul>
+
+	<li><strong>Skill points</strong>: start with three points, gain one point per level except levels 5, 10, 14.</li>
+	<li><strong>Falling (Acrobats)</strong>: is not rolled as a skill.</li>
+	<li><strong>Tightrope walking (Acrobats)</strong>: replaced with Gymnastics, a general skill for anything involving balance or contortion, e.g. crossing slippery surfaces or fitting through tight spaces. (<i>This skill is otherwise bizarrely specific and useless</i>).</li>
+	
+</ul>
+
+<p><strong>Bards</strong>: use the Illusionist spell list instead of the Druid spell list, and use a spellbook instead of a sprig of mistletoe. (<i>Feels more thematically appropriate</i>).</p>
+
+<p><strong>Illusionists, Magic-Users, and Bards</strong>: use the Advanced Spellbook Rules.</p>
+
+</div>
+
+
+
+<div>
+
+<h2>Combat</h2>
+
+<p><strong>Optional rules</strong> from the Combat chapter in the Player's Tome:</p>
+
+<ul>
+
+	<li><strong>Ascending Armour Class</strong></li>
+	<li><strong>Variable Weapon Damage</strong></li>
+	<li><strong>Attacking with Two Weapons</strong></li>
+	<li><strong>Charging into Melee</strong></li>
+	<li><strong>Parrying</strong></li>
+	<li><strong>Subduing</strong></li>
+	<li><strong>Morale</strong></li>
+	
+</ul>
+
+<p><strong>Slow weapons</strong>: ignore the "Slow" quality. (<i>It makes combat a lot more annoying by adding another phase every round, makes two-handed weapons much less viable, and doesn't really add anything interesting to make up for it</i>).</p>
+
+<p><strong>Bonuses and penalties</strong>: +2 or -2 to attack and damage if in an especially advantageous or disadvantageous position, e.g. flanking, high ground, surprise, invisible. (<i>Borrowed from <a href="https://whitehackrpg.wordpress.com/">Whitehack</a></i>).</p>
+
+</div>
+
+
+
+<div>
+
+<h2>HP and damage</h2>
+
+<p><strong>On zero HP</strong>: unconscious until you either gain or lose HP. (<i>This doesn't come up often, but it's nice to have something between being up and fighting and dying outright</i>).</p>
+
+<p><strong>Damage reduction</strong> (e.g. monsters that take half damage): round down, but always deal minimum one damage on a successful attack.</p>
+
+<p><strong>Falling damage</strong>: use the alternate table from <i>Veins of the Earth</i>:</p>
+
+<table>
+	<tr>
+		<td>10ft</td>
+		<td>1d6</td>
+	</tr>
+	<tr>
+		<td>20ft</td>
+		<td>1d6 × 1d4</td>
+	</tr>
+	<tr>
+		<td>30ft</td>
+		<td>1d6 × 1d6</td>
+	</tr>
+	<tr>
+		<td>40ft</td>
+		<td>1d6 × 1d8</td>
+	</tr>
+	<tr>
+		<td>50ft</td>
+		<td>1d6 × 1d10</td>
+	</tr>
+	<tr>
+		<td>60ft</td>
+		<td>1d6 × 1d12</td>
+	</tr>
+	<tr>
+		<td>70ft</td>
+		<td>1d6 × 1d20</td>
+	</tr>
+	<tr>
+		<td>80ft</td>
+		<td>1d6 × 1d50</td>
+	</tr>
+	<tr>
+		<td>90+ft</td>
+		<td>1d6 × 1d100</td>
+	</tr>
+</table>
+
+<p>(<i>The average damage is about the same, but the higher variance makes falling potentially deadly even for high level characters and potentially survivable even for low level characters, which is much more interesting</i>).</p>
+
+</div>
+
+
+
+<div>
+
+<h2>Hiring Retainers</h2>
+
+<p><strong>Succeeds automatically</strong> but takes a variable length of time. (<i>Having to roll for every day of searching and make reaction rolls for every candidate takes a huge amount of time and doesn't really add anything</i>).</p>
+
+<p><strong>Hiring a specific class</strong> (e.g. a Magic-User): spend 50gp per day for 1d10 days.</p>
+
+<p><strong>Hiring a type of class</strong> (e.g. any martial class): spend 50gp per day for 1d8 days.</p>
+
+<p><strong>Hiring anyone</strong> regardless of class: spend 50gp per day for 1d6 days.</p>
+
+<p><strong>Hiring torchbearers</strong>: spend 10gp per day for 1d6 days.</p>
+
+<p><strong>Wages</strong>: classed retainers expect a half share of treasure, torchbearers expect 1gp per day.</p>
+
+</div>
+
+
+
+<div>
+
+<h2>Spells</h2>
+
+<p><strong><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Detect_Evil">Detect Evil</a></strong>: specifically detects demons and undead, or anything with demonic or undead magic/energies. Does not detect anything else. (<i>I don't want to decide what is evil or good, the players have to decide that for themselves</i>).</p>
+
+<p><strong><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dispel_Magic">Dispel Magic</a></strong>: cannot end spells with Permanent duration unless the description explicitly says so, e.g. <a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Animate_Dead">Animate Dead</a>, Blindness/Deafness. (<i>Removing a curse should require Remove Curse, removing a quest should require Remove Quest, etc.</i>).</p>
+
+<p><strong><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Knock">Knock</a></strong>: additionally makes a loud noise, possibly alerting nearby monsters. (<i>Borrowed from later editions of D&D. Without some drawback, a third level Magic-User completely trivialises one of the Thief's most useful skills, which isn't much fun</i>).</p>
+
+<p><strong><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Know_Alignment">Know Alignment</a></strong>: give a very vague and general overview of the target's personality. (<i>I don't use alignment in my game</i>).</p>
+
+<p><strong><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Protection_from_Evil">Protection from Evil</a>/<a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Protection_from_Evil_10%E2%80%99_Radius">Protection from Evil 10' Radius</a></strong>: protects against any hostile creature. (<i>I don't use alignment in my game</i>).</p>
+
+<p><strong><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Reincarnation">Reincarnation</a></strong>: is a 5th level Druid spell, instead of a 6th level Magic-User spell. (<i>Healing and revival should be exclusive to divine magic in my opinion, Magic-Users are powerful enough already</i>).</p>
+
+</div>
+
+
+
+<div>
+
+<h2>Miscellaneous</h2>
+
+<p><strong>Gaining XP</strong>: 1gp of treasure acquired or spent grants 1XP. No XP from other sources.</p>
+
+<p><strong>Item-based encumbrance</strong>: can carry items equal to STR unencumbered, plus five more per encumbrance level.</p>
+
+<p><strong>Drowning</strong>: use table below.</p>
+
+<table>
+	<tr>
+		<td>Conditions</td>
+		<td>Unencumbered</td>
+		<td>Light encumbrance</td>
+		<td>Medium encumbrance</td>
+		<td>Heavy encumbrance</td>
+	</tr>
+	<tr>
+		<td>Fair (warm placid lake)</td>
+		<td>Safe</td>
+		<td>Safe</td>
+		<td>2-in-6</td>
+		<td>4-in-6</td>
+	</tr>
+	<tr>
+		<td>Dangerous (cold turbulent river)</td>
+		<td>2-in-6</td>
+		<td>3-in-6</td>
+		<td>4-in-6</td>
+		<td>5-in-6</td>
+	</tr>
+	<tr>
+		<td>Deadly (sea during storm)</td>
+		<td>4-in-6</td>
+		<td>5-in-6</td>
+		<td>Certain death</td>
+		<td>Certain death</td>
+	</tr>
+</table>
+
+<ul>
+
+	<li><strong>Wearing metal armour</strong>: automatically places character in at least medium encumbrance.</li>
+	
+</ul>
+
+<p><strong>Starvation</strong>: use table below.</p>
+
+<table>
+	<tr>
+		<td>Days without food</td>
+		<td>Effects</td>
+	</tr>
+	<tr>
+		<td>1-3</td>
+		<td>Don't recover HP when resting, prepare spells as though one level lower</td>
+	</tr>
+	<tr>
+		<td>4-6</td>
+		<td>Don't recover HP when resting, prepare spells as though two levels lower, -2 to attack and damage</td>
+	</tr>
+	<tr>
+		<td>7-9</td>
+		<td>Max HP reduced by one per day, prepare spells as though three levels lower, -2 to attack and damage, half movement speed</td>
+	</tr>
+	<tr>
+		<td>10+</td>
+		<td>Save vs death or die of starvation when resting</td>
+	</tr>
+</table>
+
+<p>(<i>This is pretty unrealistic, in reality you can go weeks without food before dying of starvation, but it works well enough for game purposes</i>).</p>
+
+<p><strong>Random hit locations</strong>: use table below.</p>
+
+<table>
+	<tr>
+		<td>1</td>
+		<td>Head</td>
+	</tr>
+	<tr>
+		<td>2-3</td>
+		<td>Upper body</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Lower body</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Left hand</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Left arm</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Right hand</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Right arm</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Left foot</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Left leg</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Right foot</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Right leg</td>
+	</tr>
+</table>
+
+</div>

@@ -1,0 +1,53 @@
+<table>
+
+	<tr>
+		<td><p>text</td>
+		<td>text text</p></td>
+	</tr>
+
+	<tr>
+		<td></td>
+		<td>Furs [12]</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>Leather armour [12]</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>Studded leather armour [13]</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>Chainmail [14]</td>
+	</tr>
+
+	<tr>
+		<td>6</td>
+		<td>Scale mail [14]</td>
+	</tr>
+
+	<tr>
+		<td>7</td>
+		<td>Banded mail [15]</td>
+	</tr>
+
+	<tr>
+		<td>8</td>
+		<td>Laminar mail [15]</td>
+	</tr>
+
+	<tr>
+		<td>9</td>
+		<td>Breastplate [15]</td>
+	</tr>
+
+	<tr>
+		<td>10</td>
+		<td>Plate mail [16]</td>
+	</tr>
+
+</table>

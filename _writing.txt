@@ -57,7 +57,7 @@
 
 <ul class="centred">
 
-	<li class="horizontal"><a href="question_one.html">HTML (requires JavaScript)</a></li>
+	<li class="horizontal"><a href="question_one.html">HTML</a></li>
 	<li class="horizontal"><a href="question_one_screen_reader_friendly.html">HTML (screen reader friendly)</a></li>
 	<li class="horizontal"><a href="question_one.pdf" title="Question One">PDF</a></li>
 
@@ -104,6 +104,21 @@
 <ul class="centred">
 
 	<li class="horizontal"><a href="variations_on_yoshinoya.html" title="Variations on Yoshinoya">HTML</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h2>Discontinuity</h2>
+
+<p>A short story about denial. This piece was written for a local Halloween event in Norwich.</p>
+
+<ul class="centred">
+
+	<li class="horizontal"><a href="discontinuity.html" title="Discontinuity">HTML</a></li>
+	<li class="horizontal"><a href="discontinuity.pdf" title="Discontinuity">PDF</a></li>
 
 </ul>
 

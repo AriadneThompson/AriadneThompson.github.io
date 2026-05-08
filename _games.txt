@@ -1,5 +1,17 @@
 <h1>Ariadne's Games</h1>
 
+
+
+<div>
+
+<h2><a href="making_peace.html">Making Peace</a></h2>
+
+<p>A short puzzle game about navigating the world after trauma. Made using <a href="https://twinery.org/">Twine</a>.</p>
+
+</div>
+
+
+
 <div>
 
 <h2><a href="year_of_the_jellyfish.html">The Year of the Jellyfish</a></h2>
@@ -7,6 +19,8 @@
 <p>A very silly short text adventure about being immunocompromised. Made using <a href="https://twinery.org/">Twine</a>.</p>
 
 </div>
+
+
 
 <div>
 

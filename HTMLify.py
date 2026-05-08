@@ -9,7 +9,7 @@ import io
 
 
 
-FILENAME = 0
+FILENAME = 0    
 TITLE = 1
 RETURNTO = 2
 RETURNTEXT = 3
@@ -17,24 +17,29 @@ MATHJAX = 4
 
 
 
-pages = ({FILENAME: "index", TITLE: "Ariadne's Website", RETURNTO: None, RETURNTEXT: None, MATHJAX: False},
-         {FILENAME: "writing", TITLE: "Ariadne's Writing", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
-         {FILENAME: "contact_me", TITLE: "Contact Me", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
-         {FILENAME: "a_mountain_inverted", TITLE: "A Mountain, Inverted", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
-         {FILENAME: "practical_applications_of_fluid_dynamics", TITLE: "Practical Applications of Fluid Dynamics", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
-         {FILENAME: "question_one", TITLE: "Question One", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: True},
-         {FILENAME: "question_one_screen_reader_friendly", TITLE: "Question One", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
-         {FILENAME: "wretched_creatures", TITLE: "Wretched Creatures", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
-         {FILENAME: "the_human_nature", TITLE: "The Human Nature", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
-         {FILENAME: "fifty_princesses", TITLE: "Fifty Princesses", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
-         {FILENAME: "variations_on_yoshinoya", TITLE: "Variations on Yoshinoya", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
-         {FILENAME: "redacted", TITLE: "Redacted", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: True},
-         {FILENAME: "january", TITLE: "January: Temple of the Yearning Maw", RETURNTO: "dungeon_24", RETURNTEXT: "Return to Dungeon 24", MATHJAX: False},
-         {FILENAME: "friends", TITLE: "Ariadne's Friends", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
-         {FILENAME: "work", TITLE: "Ariadne's Work", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
-         {FILENAME: "404", TITLE: "404", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
-         {FILENAME: "haibane_renmei", TITLE: "Haibane Renmei", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
-         {FILENAME: "games", TITLE: "Games", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+pages = (# {FILENAME: "index", TITLE: "Ariadne's Website", RETURNTO: None, RETURNTEXT: None, MATHJAX: False},
+         # {FILENAME: "writing", TITLE: "Ariadne's Writing", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         # {FILENAME: "contact_me", TITLE: "Contact Me", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         # {FILENAME: "a_mountain_inverted", TITLE: "A Mountain, Inverted", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         # {FILENAME: "practical_applications_of_fluid_dynamics", TITLE: "Practical Applications of Fluid Dynamics", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         # {FILENAME: "question_one", TITLE: "Question One", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: True},
+         # {FILENAME: "question_one_screen_reader_friendly", TITLE: "Question One", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         # {FILENAME: "wretched_creatures", TITLE: "Wretched Creatures", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         # {FILENAME: "the_human_nature", TITLE: "The Human Nature", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         # {FILENAME: "fifty_princesses", TITLE: "Fifty Princesses", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         # {FILENAME: "discontinuity", TITLE: "Discontinuity", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         # {FILENAME: "variations_on_yoshinoya", TITLE: "Variations on Yoshinoya", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
+         # {FILENAME: "redacted", TITLE: "Redacted", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: True},
+         # {FILENAME: "friends", TITLE: "Ariadne's Friends", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         # {FILENAME: "work", TITLE: "Ariadne's Work", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         # {FILENAME: "404", TITLE: "404", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         # {FILENAME: "haibane_renmei", TITLE: "Haibane Renmei", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         # {FILENAME: "games", TITLE: "Games", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         # {FILENAME: "ttrpgs", TITLE: "Ariadne's Tabletop Role Playing Games", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         {FILENAME: "betwixt_her_teeth", TITLE: "Betwixt Her Teeth", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
+         # {FILENAME: "random_equipment", TITLE: "Random Starting Equipment", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
+         # {FILENAME: "house_rules", TITLE: "House Rules", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
+         {FILENAME: "cocoon_goddess", TITLE: "Harrowing of the Cocoon Goddess", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
          )
           
           

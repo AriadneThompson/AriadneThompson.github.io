@@ -1,0 +1,34 @@
+<table>
+	<tr>
+		<td>1</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Light_(Darkness)_(MU)">Light</a></i> (targeting eyes)</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Sleep">Sleep</a></i> (single creature)</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Invisibility">Invisibility</a></i></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Dimension_Door">Dimension Door</a></i> (to room #1d30)</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Charm_Person">Charm Person</a></i></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Hold_Person_(MU)">Hold Person</a></i></td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Polymorph_Others">Polymorph Others</a></i> (into an Arcane Blancmange)</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td><i><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Stone_to_Flesh_(Flesh_to_Stone)">Flesh to Stone</a></i></td>
+	</tr>
+</table>

@@ -34,7 +34,7 @@
 
 <p>The raindrops flowing down the window pane can best be described by free film lubrication theory. The equations simplify dramatically when one spatial dimension is negligible compared to another, however the unknown free boundary on the surface of the droplet makes the problem more difficult—and more interesting.</p>
 
-<p>Your formerly close friend—the same one who had driven you to your father's house after his death—is sitting opposite you, talking incessantly about one of her children. Apparently he is aspiring to become a theatrical producer and actor, which she finds abhorren""t. You can't understand what she is upset about, but then again you don't really know anything about theatre.</p>
+<p>Your formerly close friend—the same one who had driven you to your father's house after his death—is sitting opposite you, talking incessantly about one of her children. Apparently he is aspiring to become a theatrical producer and actor, which she finds abhorrent. You can't understand what she is upset about, but then again you don't really know anything about theatre.</p>
 
 <p>The café is cramped and humid, and the air is dense with conversation and the clinking of crockery. The rotund man in the seat behind you keeps periodically exploding in laughter. She asks you a question, but you weren't listening, so she has to repeat it.</p>
 
