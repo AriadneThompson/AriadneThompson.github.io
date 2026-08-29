@@ -4,9 +4,9 @@ Makes "make_numbered_table.txt" into an HTML table with the first column a set o
 """
 
 invisible = False
-prepend_numbers = True # Non-invisible tables only
-add_roll_button = True # Non-invisible tables only
-label = "critic_appearance" # Label for <span> tag for roll button result
+prepend_numbers = False # Non-invisible tables only
+add_roll_button = False # Non-invisible tables only
+label = "victorys_secret_riddles" # Label for <span> tag for roll button result
 
 
 

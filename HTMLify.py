@@ -17,7 +17,7 @@ MATHJAX = 4
 
 
 
-pages = (# {FILENAME: "index", TITLE: "Ariadne's Website", RETURNTO: None, RETURNTEXT: None, MATHJAX: False},
+pages = ({FILENAME: "index", TITLE: "Ariadne's Website", RETURNTO: None, RETURNTEXT: None, MATHJAX: False},
          # {FILENAME: "writing", TITLE: "Ariadne's Writing", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
          # {FILENAME: "contact_me", TITLE: "Contact Me", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
          # {FILENAME: "a_mountain_inverted", TITLE: "A Mountain, Inverted", RETURNTO: "writing", RETURNTEXT: "Return to Writing", MATHJAX: False},
@@ -36,10 +36,11 @@ pages = (# {FILENAME: "index", TITLE: "Ariadne's Website", RETURNTO: None, RETUR
          # {FILENAME: "haibane_renmei", TITLE: "Haibane Renmei", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
          # {FILENAME: "games", TITLE: "Games", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
          # {FILENAME: "ttrpgs", TITLE: "Ariadne's Tabletop Role Playing Games", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
-         {FILENAME: "betwixt_her_teeth", TITLE: "Betwixt Her Teeth", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
+         # {FILENAME: "betwixt_her_teeth", TITLE: "Betwixt Her Teeth", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
          # {FILENAME: "random_equipment", TITLE: "Random Starting Equipment", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
          # {FILENAME: "house_rules", TITLE: "House Rules", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
-         {FILENAME: "cocoon_goddess", TITLE: "Harrowing of the Cocoon Goddess", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
+         {FILENAME: "friends_of_penelope", TITLE: "Friends of Penelope", RETURNTO: "index", RETURNTEXT: "Return to Main Page", MATHJAX: False},
+         # {FILENAME: "cocoon_goddess", TITLE: "Harrowing of the Cocoon Goddess", RETURNTO: "ttrpgs", RETURNTEXT: "Return to TTRPGs", MATHJAX: False},
          )
           
           
